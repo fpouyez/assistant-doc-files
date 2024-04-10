@@ -1,1732 +1,1240 @@
-<p><strong>Contenu</strong></p>
-<p><a href="#contexte-et-objet">I. Contexte et objet
-<span>3</span></a></p>
-<p><a href="#contexte">Contexte <span>3</span></a></p>
-<p><a href="#objet">Objet <span>3</span></a></p>
-<p><a href="#prerequis">II. Prerequis <span>3</span></a></p>
-<p><a href="#ère-utilisation-dun-logiciel-nouvellement-installé">III.
-1ère utilisation d’un logiciel nouvellement installé
-<span>4</span></a></p>
-<p><a
-href="#cas-dun-client-en-mode-non-fah-sur-un-poste-connecté-à-internet">Cas
-d’un client en mode non FAH, sur un poste connecté à Internet
-<span>4</span></a></p>
-<p><a
-href="#cas-dun-client-non-fah-sur-un-poste-non-connecté-à-internet">Cas
-d’un client non FAH sur un poste non connecté à Internet
-<span>9</span></a></p>
-<p><a href="#cas-dun-client-en-mode-fah-mode-hébergé">Cas d’un client en
-mode FAH (mode hébergé) <span>11</span></a></p>
-<p><a href="#utilisation-du-logiciel-en-rythme-de-croisière">IV.
-Utilisation du logiciel en rythme de croisière <span>12</span></a></p>
-<p><a href="#cas-dun-client-en-mode-non-fah-mode-local-ou-réseau">Cas
-d’un client en mode non FAH (mode local ou réseau)
-<span>12</span></a></p>
-<p><a href="#cas-dun-client-en-mode-fah-mode-hébergé-1">Cas d’un client
-en mode FAH (mode hébergé) <span>12</span></a></p>
-<p><a href="#contrôle-des-volumétries">Contrôle des volumétries
-<span>12</span></a></p>
-<p><a href="#ère-utilisation-dune-nouvelle-version-du-logiciel">V. 1ère
-utilisation d’une nouvelle version du logiciel <span>14</span></a></p>
-<p><a href="#changement-de-machine">VI. Changement de machine
-<span>15</span></a></p>
-<p><a href="#pour-les-clients-non-fah">Pour les clients non FAH
-<span>15</span></a></p>
-<p><a href="#pour-les-clients-en-fah">Pour les clients en FAH
-<span>15</span></a></p>
-<p><a href="#changement-du-contexte-dutilisation-du-logiciel">VII.
-Changement du contexte d’utilisation du logiciel <span>16</span></a></p>
-<p><a
-href="#achat-de-modules-complémentaires-de-volumétrie-supplémentaire">Achat
-de modules complémentaires / de volumétrie supplémentaire
-<span>16</span></a></p>
-<p><a
-href="#résiliation-de-modules-diminution-de-volumétrie">Résiliation de
-modules, diminution de volumétrie <span>16</span></a></p>
-<p><a href="#résiliation-de-logiciel">Résiliation de logiciel
-<span>16</span></a></p>
-<p><a href="#changement-de-raison-sociale-du-client">Changement de
-raison sociale du client <span>17</span></a></p>
-<p><a href="#changement-de-libellé-de-domaine">Changement de libellé de
-domaine <span>17</span></a></p>
-<p><a
-href="#passage-dun-mode-local-à-un-mode-hébergé-et-inversement">Passage
-d’un mode local à un mode hébergé (et inversement)
-<span>17</span></a></p>
-<p><a href="#péremption-fin-de-validité-de-licence-impayés">VIII.
-Péremption, fin de validité de licence, impayés <span>18</span></a></p>
-<p><a href="#date-de-péremption">Date de péremption
-<span>18</span></a></p>
-<p><a href="#date-de-fin-de-validité-de-la-licence">Date de fin de
-validité de la licence <span>19</span></a></p>
-<p><a href="#impayé">Impayé <span>20</span></a></p>
-<p><a href="#cas-particuliers">IX. Cas particuliers
-<span>21</span></a></p>
-<p><a href="#agriculteurs-en-mode-partenaire">Agriculteurs en mode
-partenaire <span>21</span></a></p>
-<p><a href="#licences-pédagogiques">Licences pédagogiques
-<span>22</span></a></p>
-<p><a href="#licences-secondaires">Licences secondaires
-<span>23</span></a></p>
-<p><a href="#démos">Démos <span>24</span></a></p>
-<p><a href="#liste-des-erreurs">X. Liste des erreurs
-<span>26</span></a></p>
-<p><a href="#dépannage">XI. Dépannage <span>32</span></a></p>
-<p><a href="#isagestlic">IsaGestLic <span>32</span></a></p>
-<p><a href="#im.application">IM.Application <span>32</span></a></p>
-<p><a href="#historique">XII. Historique <span>36</span></a></p>
-<h1 id="contexte-et-objet">Contexte et objet</h1>
-<h2 class="unnumbered" id="contexte">Contexte</h2>
-<p>La protection a pour objectif de contrôler que nos clients utilisent
-leur logiciel conformément à ce qu’ils ont acheté.  La réécriture des
-applications Isagri a nécessité une réécriture complète du système de
-protection « Protection 2013 »). Sa mise en œuvre est complexe et fait
-intervenir de nombreuses équipes (Dev outils, DRI « GISA » et « GRC »,
-MktM, MktPr, Dev Progiciel, CQL Progiciel, ADV – Clientèle, SL, IAH, ...
-France et export).</p>
-<p>Ce document fait partie d’une série de documentations expliquant le
-fonctionnement et la mise en œuvre de la protection 2013 dans les
-applications Convergence. Pour une vision générale des documentations
-disponibles, cf. <a
-href="http://projectsrv2010/sites/Coordination/SystemeDocumentaire/_layouts/DocIdRedir.aspx?ID=R6RHQAPNUWS3-52-255">ici</a></p>
-<h2 class="unnumbered" id="objet">Objet</h2>
-<p>Ce document a pour objectif de décrire le fonctionnement de la
-protection 2013, tel qu’il est vu par les utilisateurs du logiciel
-(clients). En fin de document, sont également abordées les informations
-nécessaires au SL pour dépanner les clients</p>
-<h1 id="prerequis"> Prerequis</h1>
-<p>Pour comprendre le présent document, il faut avoir lu le document
-« <a
-href="http://projectsrv2010/sites/Coordination/SystemeDocumentaire/_layouts/DocIdRedir.aspx?ID=R6RHQAPNUWS3-52-256">Protection
-2013 : principes généraux</a> »</p>
-<h1 id="ère-utilisation-dun-logiciel-nouvellement-installé">1ère
-utilisation d’un logiciel nouvellement installé</h1>
-<p><mark>@@Dle : rajouter un diagramme d’activité</mark></p>
-<h2 class="unnumbered"
-id="cas-dun-client-en-mode-non-fah-sur-un-poste-connecté-à-internet">Cas
-d’un client en mode non FAH, sur un poste connecté à Internet</h2>
-<h3 class="unnumbered"
-id="choix-entre-la-création-dun-nouveau-domaine-ou-la-remontée-dune-sauvegarde">Choix
-entre la création d’un nouveau domaine ou la remontée d’une sauvegarde
-</h3>
-<p>Au 1<sup>er</sup> lancement de l’application suivant l’installation,
-si aucune licence n’est installée, l’écran suivant apparaît :</p>
-<p><img src="media/image1.jpeg" style="width:2.89583in;height:1.64028in"
-alt="R:\echanges\Pbillaud\Capture écran protection\1 premier écran init domaine.jpg" /></p>
-<p>Si il s’agit d’une 1<sup>ère</sup> installation d’un nouveau
-logiciel, le client doit choisir « Créer un nouveau domaine » puis <a
-href="#installation-de-la-licence">installer sa licence</a>.</p>
-<p>Si il s’agit d’une réinstallation sur un nouveau poste, le client
-doit choisir « Remonter la sauvegarde d’un domaine existant »</p>
-<h3 class="unnumbered" id="installation-de-la-licence">Installation de
-la licence</h3>
-<p>Si aucune licence n’est installée, le client doit installer sa
-licence. Tant que ce n’est pas fait, il ne peut utiliser son
-logiciel.</p>
-<p>Dans l’écran qui apparaît, le client renseigne son n° de licence (qui
-figure sur son BL et sa facture)</p>
-<p><img src="media/image2.png"
-style="width:4.44792in;height:2.04028in" /></p>
-<blockquote>
-<p><img src="media/image3.png"
-style="width:3.72778in;height:2.03194in" /></p>
-</blockquote>
-<p>Si le client ne connaît pas son n° de licence, il peut contacter le
-SL</p>
-<blockquote>
-<p>Le SL peut récupérer le fichier de licence sur <a
-href="http://isagestlic.groupeisagri.fr">http://isagestlic.groupeisagri.fr</a></p>
-</blockquote>
-<ul>
-<li><p>Choisir le <a
-href="http://projectsrv2010/sites/Coordination/SystemeDocumentaire/DocRefIsagriNet/html/d5ffe64b-2927-dc30-6551-7eafa5db1b73.aspx">Menu</a>
-« Gestion d’un client » puis « <a
-href="http://projectsrv2010/sites/Coordination/SystemeDocumentaire/DocRefIsagriNet/html/5768093a-4813-6d82-79e3-9830c14ccf43.aspx">Activation</a> »</p></li>
-<li><p>Renseigner l’ « identifiant client » (dispo dans Hotware, via F11
-ou sur le BL du client)</p></li>
-<li><p>Cliquer sur l’onglet « Licence »</p></li>
-<li><p>Pour chaque logiciel, le n° de licence figure ici</p></li>
-</ul>
-<p><img src="media/image4.png"
-style="width:5.79167in;height:2.35208in" /></p>
-<h3 class="unnumbered" id="initialisation-du-domaine">Initialisation du
-domaine</h3>
-<p>L’étape suivante consiste à « initialiser » le domaine çàd à créer la
-BDD correspondant au domaine et y renseigner les valeurs par défaut
-nécessaires. </p>
-<p>Le client doit notamment renseigner les infos nécessaires pour que
-l’on puisse créer l’administrateur du logiciel</p>
-<blockquote>
-<p><img src="media/image5.png"
-style="width:3.82431in;height:2.00833in" /></p>
-</blockquote>
-<p>Par défaut, le code généré (« utilisateur ») est
-<strong>prénom.nom.</strong></p>
-<h3 class="unnumbered" id="activation-de-la-licence">Activation de la
-licence</h3>
-<p>Si il s’agit d’une licence rattachée à la machine (c’est le cas
-général), le client doit l’activer (cf. « <a
-href="#activation-de-la-licence">Activation de la licence </a>») dans
-les 14 jours, faute de quoi, l’accès au logiciel sera bloqué au bout de
-ce délai.</p>
-<p>Si la licence n’est pas à rattacher à la machine, on passe
-directement à l’étape « <a
-href="#acceptation-des-conditions-dutilisation-du-logiciel">Acceptation
-des conditions d’utilisation</a> »)</p>
-<p>Tant que l’activation n’est pas faite, l’écran suivant apparaît au
-lancement de l’application.</p>
-<blockquote>
-<p><img src="media/image6.png"
-style="width:3.47222in;height:2.18403in" /></p>
-</blockquote>
-<p>Si l’utilisateur clique sur Annuler, on reste en licence « non
-activée » (et on passe à l’étape 4). Le client peut utiliser son
-logiciel pendant 14 jours. Au-delà, il est bloqué.</p>
-<p>Si il clique sur suivant, on vérifie alors si le client a le droit
-d’activer sa licence (étape 2).</p>
-<p><u>Si le client n’a pas activé toutes ses licences</u>, on lui
-rappelle le nombre de licence déjà activées</p>
-<p><img src="media/image7.png"
-style="width:3.45139in;height:2.15903in" /><u><br />
-S’il a déjà activé toutes ses licences mais qu’il n’a pas encore
-consommé sa tolérance</u> (cf. <a
-href="http://projectsrv2010/sites/Coordination/SystemeDocumentaire/_layouts/DocIdRedir.aspx?ID=R6RHQAPNUWS3-52-256#Tolérance">Protection
-2013 : principe généraux – rubrique « Tolérance »</a>), on lui rappelle
-qu’il doit désinstaller sa licence sur un poste (mais on ne bloque pas
-l’activation demandée).</p>
-<blockquote>
-<p><img src="media/image8.png"
-style="width:3.43194in;height:2.15972in" /></p>
-</blockquote>
-<p><u>Si l’activation réussit</u>, on affiche un message de
-confirmation.</p>
-<blockquote>
-<p><img src="media/image9.png"
-style="width:3.52014in;height:2.20833in" /></p>
-</blockquote>
-<p><u>Si l’activation n’a pas réussi</u> (licence inconnue, tolérance
-dépassée, client en impayé, activation demandée pour une version à
-laquelle le client n’a pas droit : il a résilié en V 9.00 et demande une
-activation pour la V10.00 …) alors on affiche un message qui donne un
-code d’erreur et message. Ces informations sont utiles pour le SL.</p>
-<blockquote>
-<p><img src="media/image10.png"
-style="width:3.55208in;height:2.20833in" /></p>
-</blockquote>
-<p><u>Si l’activation a réussi ou si le délai pour activer n’est pas
-dépassé</u>, le client peut utiliser son logiciel.</p>
-<p><u>Si le délai pour activer est dépassé</u> alors on affiche un
-message avant de bloquer l’entrée dans le domaine.</p>
-<blockquote>
-<p><img src="media/image11.png"
-style="width:3.38403in;height:1.37569in" /></p>
-</blockquote>
-<h3 class="unnumbered"
-id="acceptation-des-conditions-dutilisation-du-logiciel">Acceptation des
-conditions d’utilisation du logiciel</h3>
-<p>Que l’activation ait réussi ou non, on affiche ensuite la fenêtre
-d’acceptation des conditions d’utilisation du logiciel.</p>
-<p><img src="media/image12.png"
-style="width:5.52778in;height:2.2in" /></p>
-<p>On ne permet pas au client d’entrer dans son domaine tant qu’il n’a
-pas accepté les conditions d’utilisation.</p>
-<p>Dans le cas d'une application lancée en mode non-visuel (par exemple:
-ligne de commande) le dialogue d'acceptation des conditions
-d'utilisation n’est pas affiché tout en ne changeant pas l'état
-d'acceptation par l'utilisateur. La prochaine fois que l’application est
-lancéé en mode visuel, ce dialogue sera affiché s’il y a le besoin.</p>
-<h3 class="unnumbered"
-id="saisies-des-informations-complémentaires">Saisies des informations
-complémentaires</h3>
-<p>Le client est ensuite invité à saisir un certain nombre
-d’informations (variables selon le logiciel) permettant d’initialiser le
-contexte nécessaire à la 1<sup>ère</sup> utilisation de celui-ci.</p>
-<p>Ex en Geofolia :</p>
-<p><img src="media/image13.png"
-style="width:6.18403in;height:2.75208in" /></p>
-<h2 class="unnumbered"
-id="cas-dun-client-non-fah-sur-un-poste-non-connecté-à-internet">Cas
-d’un client non FAH sur un poste non connecté à Internet</h2>
-<p>Seules les étapes « Installation de la licence » et « <a
-href="http://projectsrv2010/sites/Coordination/SystemeDocumentaire/DocRefIsagriNet/html/5768093a-4813-6d82-79e3-9830c14ccf43.aspx">Activation</a>
-de la licence » diffèrent</p>
-<h3 class="unnumbered" id="installation-de-la-licence-1">Installation de
-la licence</h3>
-<p>Le client doit obtenir son fichier de licence (celui-ci ne lui est
-pas fourni par défaut). <strong>Sans fichier de licence, il ne peut
-aller plus loin</strong></p>
-<p>Pour cela, il peut le télécharger depuis l’extranet client (rubrique
-« Mon assistance » puis « Mes licences ») depuis un autre poste connecté
-à Internet</p>
-<blockquote>
-<p>A défaut il peut contacter Isagri. Le SL peut récupérer le fichier de
-licence sur <a
-href="http://isagestlic.groupeisagri.fr">http://isagestlic.groupeisagri.fr</a>
-:</p>
-</blockquote>
-<ul>
-<li><p>Choisir le <a
-href="http://projectsrv2010/sites/Coordination/SystemeDocumentaire/DocRefIsagriNet/html/d5ffe64b-2927-dc30-6551-7eafa5db1b73.aspx">Menu</a>
-« Gestion d’un client » puis « <a
-href="http://projectsrv2010/sites/Coordination/SystemeDocumentaire/DocRefIsagriNet/html/5768093a-4813-6d82-79e3-9830c14ccf43.aspx">Activation</a> »</p></li>
-<li><p>Renseigner l’ « identifiant client » (dispo dans Hotware, via F11
-ou sur le BL du client)</p></li>
-<li><p>Cliquer sur l’onglet « Licence »</p></li>
-<li><p>Le bouton <img src="media/image14.png"
-style="width:0.14375in;height:0.15208in" /> permet d’obtenir le fichier
-de licence</p></li>
-</ul>
-<blockquote>
-<p><img src="media/image4.png"
-style="width:5.79167in;height:2.35208in" /></p>
-</blockquote>
-<p>Il est conseillé aux CIMS qui vont en formation chez un client qui
-n’a pas accès à internet d’appeler le support au préalable afin
-d’obtenir le fichier de licence.</p>
-<p>Une fois le fichier de licence obtenu, le client doit indiquer sa
-localisation pour que l’application l’installe</p>
-<blockquote>
-<p><img src="media/image15.png"
-style="width:3.44792in;height:2.04792in" /></p>
-</blockquote>
-<h3 class="unnumbered" id="activation-de-la-licence-1">Activation de la
-licence</h3>
-<p>Tant que l’activation n’est pas faite, l’écran suivant apparaît au
-lancement de l’application :</p>
-<p><img src="media/image16.png"
-style="width:3.52778in;height:2.20833in" /></p>
-<p>En cliquant sur « Annuler », on reste en licence « non activée ». Le
-client peut utiliser son logiciel pendant 14 jours. Au-delà, il est
-bloqué.</p>
-<p>Pour activer, le client doit renseigner une clé d’activation
-dépendant de son n° de licence et de la machine.</p>
-<p>Pour obtenir cette clé d’activation, il peut se connecter sur le site
-<a
-href="http://www.licence-registration.com">www.licence-registration.com</a>
-s’il dispose d’un autre poste avec une connexion Internet (ou à défaut
-contacter le SL qui se connecte sur le même site à la place du
-client).</p>
-<p><img src="media/image17.png"
-style="width:4.17569in;height:3.63194in" /></p>
-<p>Renseigner la clé d’installation (sans les « - »)</p>
-<p>La clé d’activation apparait. La renseigner dans l’appli</p>
-<p>La liste des activations déjà faites s’affiche</p>
-<p>Cliquer pour confirmer</p>
-<p>Cliquer pour valider</p>
-<p>Dans le cas de tolérance dépassée, client en impayé, licence
-incohérente ou inconnue, … la clé d’activation n’est pas fournie.</p>
-<p>Une fois la clé d’activation récupérée par le client, il la renseigne
-et clique sur le bouton Suivant.</p>
-<p>Le fonctionnement est ensuite le même que pour le poste connecté à
-Internet.</p>
-<h2 class="unnumbered" id="cas-dun-client-en-mode-fah-mode-hébergé">Cas
-d’un client en mode FAH (mode hébergé)</h2>
-<p>La licence est installée par l’équipe infogérance qui initialise
-également le domaine. Un mail est transmis au client avec</p>
-<ul>
-<li><p>le lien pour télécharger le Geofolia Hébergé</p></li>
-<li><p>l’identifiant client</p></li>
-<li><p>le libellé du domaine</p></li>
-<li><p>Le login et le mot de passe de l’utilisateur administrateur du
-domaine</p></li>
-</ul>
-<p>Les étapes ultérieures (activation de la licence / acceptation des
-conditions d’utilisation du logiciel)</p>
-<p>A noter toutefois que l’authentification demande une information
-supplémentaire par rapport au cas non FAH, à savoir l’identifiant
-client :</p>
-<p><img src="media/image18.png"
-style="width:2.86389in;height:1.92778in" /></p>
-<h1 id="utilisation-du-logiciel-en-rythme-de-croisière">Utilisation du
-logiciel en rythme de croisière</h1>
-<h2 class="unnumbered"
-id="cas-dun-client-en-mode-non-fah-mode-local-ou-réseau">Cas d’un client
-en mode non FAH (mode local ou réseau)</h2>
-<p>A l’entrée dans le logiciel, on vérifie la validité de la licence,
-çàd que</p>
-<ul>
-<li><p>la licence existe : à défaut, on tente de la réinstaller (cf. <a
-href="#installation-de-la-licence">Installation de la
-licence</a>)</p></li>
-<li><p>la licence a été activée (pour la version appropriée du logiciel
-et la machine courante) : à défaut, on relance l’activation (cf. <a
-href="#activation-de-la-licence">Activation_licence</a>) </p></li>
-<li><p>la date de péremption de la version, la date de fin de validité
-de la licence (pour les licences à durée limitée), une date de blocage
-de la licence … n’est pas atteinte (pour cause de volumétrie dépassée,
-démo expirée, …). Selon les cas, le client aura un simple message
-d’avertissement mais pourra entrer normalement dans son application,
-l’entrée dans l’application sera refusée ou pourra rentrer dans
-l’application dans un fonctionnement « dégradé » (cf. <a
-href="#péremption-fin-de-validité-de-licence-impayés">Gestion de la date
-de péremption de la version et de la date de fin de validité de la
-licence</a>)</p></li>
-<li><p>s’il s’agit d’une licence de test, on est bien sur un poste
-interne</p></li>
-</ul>
-<p>Par ailleurs, on vérifie que la date système du poste n’a pas été
-reculée. A défaut, on bloque l’entrée dans l’appli</p>
-<h2 class="unnumbered"
-id="cas-dun-client-en-mode-fah-mode-hébergé-1">Cas d’un client en mode
-FAH (mode hébergé)</h2>
-<p>Les mêmes contrôles sont effectués.</p>
-<p>En plus, on vérifie que le client est bien à jour de ses
-règlements.<br />
-Si ce n’est pas le cas, un message s’affiche et le client ne peut pas
-entrer dans le logiciel. Si le client possède plusieurs domaines, il ne
-pourra entrer dans aucun de ses domaines.</p>
-<h2 class="unnumbered" id="contrôle-des-volumétries">Contrôle des
-volumétries</h2>
-<p>La licence peut porter des volumétries maximales autorisées, pour
-chaque nature de volumétrie connue par l’application.</p>
-<p>Pour chaque nature de volumétrie, l’application calcule régulièrement
-(en sortie d’application) la volumétrie consommée.</p>
-<p>Si une volumétrie consommée dépasse une volumétrie autorisée, un
-message avertit le client à la prochaine entrée dans le domaine.</p>
-<p><img src="media/image19.png" style="width:5.375in;height:2.25in"
-alt="cid:image001.png@01D1ABDD.B64DA900" /></p>
-<p>A partir du 1<sup>er</sup> affichage de ce message, le client a 60
-jours pour régulariser en</p>
-<ul>
-<li><p>Diminuant la volumétrie consommée (suppression d’utilisateurs,
-d’animaux, … dans le domaine)</p></li>
-<li><p>Régularisant sa situation auprès d’Isagri (achat de volumétries
-supplémentaires + installation de la licence mise à jour)</p></li>
-</ul>
-<p>Sans action de sa part, au-delà de 60 jours suivant le 1<sup>er</sup>
-affichage du message, il ne pourra plus du tout accéder à son domaine ou
-ne pourra y accéder qu’en accès limité (même fonctionnement que la <a
-href="#date-de-fin-de-validité-de-la-licence">Date de fin de validité de
-la licence</a>)</p>
-<p><img src="media/image20.png" style="width:5.51042in;height:2.11458in"
-alt="cid:image002.png@01D1ABDD.B64DA900" /></p>
-<h1 id="ère-utilisation-dune-nouvelle-version-du-logiciel">1ère
-utilisation d’une nouvelle version du logiciel</h1>
-<p><strong><u>Pour les versions « majeures », une réactivation de la
-licence est obligatoire</u></strong> dans les 14 jours suivant la
-1<sup>ère</sup> utilisation de la version majeure (pour éviter qu’un
-client qui a résilié ne puisse continuer à utiliser la nouvelle version
-si il parvient à se la procurer)</p>
-<blockquote>
-<p>Pour les postes connectés à Internet, la licence est automatiquement
-réinstallée (comme cela, si les modules fonctionnels de la licence ont
-été revus, les clients bénéficient automatiquement de la mise à jour)
-puis activée.</p>
-<p>Pour les postes non connectés, la réinstallation n’est pas
-obligatoire mais l’activation l’est. Le client doit donc renseigner une
-nouvelle clé d’activation calculée à partir de la clé
-d’installation.</p>
-</blockquote>
-<p><strong><u>Pour les versions « mineures », la réactivation de la
-licence n’est pas nécessaire</u></strong> (serait trop contraignant pour
-les postes non connectés à Internet). Toutefois, pour les postes
-connectés à Internet, une réactivation est effectuée de manière
-transparente mais qu’elle aboutisse ou pas, le client peut utiliser
-normalement sa nouvelle version. Cette réactivation facultative permet
-d’enregistrer dans le SI Isagri le n° de release effectivement utilisé
-par le client.</p>
-<p>C’est l’application qui définit si une réactivation est obligatoire
-ou pas (si une version est « majeure » ou « mineure ») (en fait, pour
-chaque version, on indique la version d’activation minimum).</p>
-<h1 id="changement-de-machine">Changement de machine </h1>
-<h2 class="unnumbered" id="pour-les-clients-non-fah">Pour les clients
-non FAH</h2>
-<p>Le client doit commencer par réaliser une sauvegarde de son logiciel
-sur l’ancien ordinateur.</p>
-<p>Ensuite sur le nouvel ordinateur, le client doit installer le
-logiciel (grâce au DVD d’installation fourni). À la première exécution
-du logiciel la fenêtre suivante s’affiche :</p>
-<p><img src="media/image1.jpeg" style="width:2.82431in;height:1.6in"
-alt="R:\echanges\Pbillaud\Capture écran protection\1 premier écran init domaine.jpg" /></p>
-<p>Il doit alors sélectionner « Remonter la sauvegarde d’un domaine
-existant ». Il n’a pas besoin de fournir à nouveau le code (ou le
-fichier) de licence car ce dernier est contenu dans la sauvegarde. Il
-faudra juste qu’il réactive sa licence pour le nouvel ordinateur.</p>
-<h2 class="unnumbered" id="pour-les-clients-en-fah">Pour les clients en
-FAH</h2>
-<p>Il lui suffit d’installer le logiciel (grâce au lien qui lui a été
-envoyé en même temps que ses identifiants de connexion) sur le nouvel
-ordinateur puis de s’authentifier avec ses identifiants de connexion
-habituels. La réactivation n’est pas nécessaire (car le serveur de base
-de donnée ne change pas)</p>
-<h1 id="changement-du-contexte-dutilisation-du-logiciel">Changement du
-contexte d’utilisation du logiciel</h1>
-<h2 class="unnumbered"
-id="achat-de-modules-complémentaires-de-volumétrie-supplémentaire">Achat
-de modules complémentaires / de volumétrie supplémentaire</h2>
-<p>En cas d’achat complémentaire (module, volumétrie, …), la licence
-doit être mise à jour (réinstallée) pour que le client puisse bénéficier
-de ses nouveaux droits.</p>
-<p>En FAH, la mise à jour est faite par Isagri.</p>
-<p>Hors FAH :</p>
-<blockquote>
-<p>Le client doit mettre à jour lui-même sa licence en lançant sa mise à
-jour via le ruban Options</p>
-</blockquote>
-<p><img src="media/image21.png"
-style="width:3.05625in;height:0.92778in" /></p>
-<blockquote>
-<p>Le fonctionnement est alors le même que lors de la 1ère utilisation
-d’un logiciel nouvellement installé (cf. <a
-href="#installation-de-la-licence">Installation de la licence</a>)</p>
-</blockquote>
-<ul>
-<li><p>Si le client ne met pas à jour sa licence, elle le sera
-automatiquement de manière transparente en cas de changement de version
-(1<sup>ère</sup> entrée dans une nouvelle version majeure ou mineure)
-sur un poste connecté à Internet.</p></li>
-</ul>
-<h2 class="unnumbered"
-id="résiliation-de-modules-diminution-de-volumétrie">Résiliation de
-modules, diminution de volumétrie</h2>
-<p>Une fois que l’ADV a mis à jour la/les solutions du client
-(l’équivalent dans IsaGesLic des conventions dans Isagisa), la licence
-est régénérée avec les nouveaux droits.</p>
-<p>En cas d’utilisation en FAH, la licence est réinstallée dans la base
-de données et donc le client fonctionne avec ses nouveaux droits.</p>
-<p>En cas d’utilisation en local, la mise à jour de la licence n’est pas
-immédiate et tant qu’elle n’est pas faite, le client conserve ses droits
-précédents. La mise à jour est faite</p>
-<ul>
-<li><p>automatiquement à chaque 1<sup>ère</sup> utilisation d’une
-nouvelle version en cas de poste connecté à Internet</p></li>
-<li><p>ou sur action volontaire de l’utilisateur</p></li>
-</ul>
-<h2 class="unnumbered" id="résiliation-de-logiciel">Résiliation de
-logiciel</h2>
-<p>En cas de résiliation complète d’un logiciel, l’ADV renseigne un n°
-de version maximum sur <strong>chacune</strong> des solutions du client
-(l’équivalent dans IsaGesLic des conventions dans Isagisa). Il s’agit du
-dernier n° de version auquel a droit le client, compte tenu de la date
-de la résiliation.</p>
-<p>En FAH, le client est immédiatement bloqué. On lui supprime sa
-licence du serveur. On est censé lui restituer ses données (pour qu’il
-puisse continuer d‘y accéder en lecture seule en locale). En réalité, la
-sauvegarde domaine n’existe pas encore et donc on ne peut les lui
-restituer (dev prévu ultérieurement). Mais dans les faits, les clients
-qui résilient arrêtent complètement et ne nous demandent pas de leur
-restituer les données.</p>
-<p>Par contre, en local, rien ne l’empêche de continuer à utiliser sa
-version courante et ses releases (jusqu’à la date de péremption : cf. <a
-href="#date-de-péremption">Date de péremption</a>). Il ne pourra
-toutefois utiliser une version majeure ultérieure (l’activation de
-celle-ci lui sera refusée).</p>
-<h2 class="unnumbered"
-id="changement-de-raison-sociale-du-client">Changement de raison sociale
-du client</h2>
-<p>En cas de changement de raison sociale d’un client, l’ADV crée un
-nouveau client (ne met pas à jour la raison sociale du précédent) et
-transfère les conventions et les solutions clients sur le nouveau
-client. Le n° de licence et le n° de domaine ne changent pas. Le libelle
-de domaine peut éventuellement être mis à jour (pour être en conformité
-avec la nouvelle raison sociale)</p>
-<p>La licence doit être mise à jour (réinstallée) pour que le client
-puisse voir le changement dans son application :</p>
-<ul>
-<li><p>En FAH, la mise à jour est faite par Isagri. Le client doit
-désormais se connecter avec son nouvel identifiant (et nouveau libellé
-de domaine apparaît dans la liste)</p></li>
-<li><p>Hors FAH, Le client doit mettre à jour lui-même sa licence en
-lançant sa mise à jour via le ruban Options</p></li>
-</ul>
-<h2 class="unnumbered" id="changement-de-libellé-de-domaine">Changement
-de libellé de domaine</h2>
-<p>En cas de demande client de changement d’un libellé de domaine, l’ADV
-effectue la mise à jour dans IsaGestLic.</p>
-<p>La licence doit être mise à jour (réinstallée) pour que le client
-puisse voir le changement dans son application :</p>
-<ul>
-<li><p>En FAH, la mise à jour est faite par Isagri. Le client doit
-désormais se connecter avec son nouvel identifiant (et nouveau libellé
-de domaine apparaît dans la liste)</p></li>
-<li><p>Hors FAH, Le client doit mettre à jour lui-même sa licence en
-lançant sa mise à jour via le ruban Options</p></li>
-</ul>
-<h2 class="unnumbered"
-id="passage-dun-mode-local-à-un-mode-hébergé-et-inversement">Passage
-d’un mode local à un mode hébergé (et inversement)</h2>
-<p>Pour le moment il n’est pas possible de passer d’un mode à l’autre,
-c’est une évolution prévue (pas de date précise, dans plusieurs années
-certainement).</p>
-<h1 id="péremption-fin-de-validité-de-licence-impayés">Péremption, fin
-de validité de licence, impayés</h1>
-<h2 class="unnumbered" id="date-de-péremption">Date de péremption</h2>
-<p>Chaque version d’un logiciel possède une date de péremption, fixée
-par la RCP. La règle générale est de prendre la date de sortie de la
-version + 24 mois. Cette date est surchargeable lors de la
-traduction.</p>
-<p>La date de péremption a pour objectif d’inciter le client à utiliser
-la dernière version et d’empêcher les clients qui ont résilié de
-continuer à utiliser normalement leur logiciel.</p>
-<p>Quand la date de péremption approche (&lt;= 2 mois), le client est
-averti par un message à chaque entrée dans le domaine.</p>
-<p><img src="media/image22.png"
-style="width:3.37569in;height:1.37569in" /></p>
-<p>Le blocage effectif interviendra 2 mois après le 1er affichage de ce
-message d’avertissement (même principe que la protection 2007). De cette
-manière, le client dispose toujours d’un délai de 2 mois pour changer de
-version (qu’il ait utilisé ou non son logiciel dans les 2 mois qui
-précédent la date de péremption prévue)</p>
-<p>Lorsque le client entre dans son domaine une fois la date effective
-de blocage atteinte, le comportement de l’application dépendra de la
-licence installée.</p>
-<ul>
-<li><p><u>Si la licence est activée</u>, le client pourra continuer
-accéder à son domaine en « accès limité ».<br />
-Dans ce mode, pour rendre l’utilisation du logiciel en production
-impossible, une fonctionnalité majeure de l’application est bloquée (au
-choix de la filière). Pour Geofolia, le choix retenu est le passage
-total de l’application en lecture seule.<br />
-Un message avertit le client à l’entrée dans son domaine :</p></li>
-</ul>
-<p><img src="media/image23.png"
-style="width:3.39167in;height:1.37569in" /></p>
-<ul>
-<li><p><u>Si la licence n’est pas activée (licence non liée à la
-machine)</u>, le client ne peut plus du tout entrer dans son domaine. Un
-message avertit le client à l’entrée.</p></li>
-</ul>
-<p><img src="media/image24.png"
-style="width:3.38403in;height:1.37569in" /> <mark></mark></p>
-<p>Le délai d’avertissement avant blocage peut être réinitialisé dans
-IM.Application (cf. <a href="#im.application">#IM.Application</a>,
-fonctionnalité protégée par un code SAV)</p>
-<h2 class="unnumbered" id="date-de-fin-de-validité-de-la-licence">Date
-de fin de validité de la licence</h2>
-<p>Il est possible d’affecter une date de fin de validité à la
-licence.<br />
-Cette date est utile pour les contrats essais, les locations, les
-licences écoles. Elle sera renseignée en général que pour des licences
-non liées à la machine. Elle est également gérée pour les démos (cf. <a
-href="#démos">#Démos</a>)</p>
-<p>Le fonctionnement est le même que pour la date de péremption de la
-version (avertissement 2 mois avant ; blocage effectif 2 mois après le
-1<sup>er</sup> avertissement : accès limité ou blocage complet selon que
-la licence est activée ou non)</p>
-<p><a
-href="http://projectsrv2010/sites/Coordination/SystemeDocumentaire/DocRefIsagriNet/html/45d3c02b-8adb-a721-8e5a-e161873ca6d4.aspx">Message</a>
-d’avertissement quand blocage proche (accès limité ou blocage complet)
-:</p>
-<p><img src="media/image25.png"
-style="width:3.30417in;height:1.35208in" /> <mark></mark></p>
-<p><a
-href="http://projectsrv2010/sites/Coordination/SystemeDocumentaire/DocRefIsagriNet/html/45d3c02b-8adb-a721-8e5a-e161873ca6d4.aspx">Message</a>
-d’avertissement quand blocage effectif (accès limité) :</p>
-<p><img src="media/image26.png"
-style="width:3.38403in;height:1.37569in" /></p>
-<p><a
-href="http://projectsrv2010/sites/Coordination/SystemeDocumentaire/DocRefIsagriNet/html/45d3c02b-8adb-a721-8e5a-e161873ca6d4.aspx">Message</a>
-d’avertissement quand blocage effectif (aucun droit) :</p>
-<p><img src="media/image27.png"
-style="width:3.37569in;height:1.37569in" /></p>
-<p>Le délai d’avertissement avant blocage peut être réinitialisé dans
-IM.Application (cf. <a href="#im.application">#IM.Application</a>,
-fonctionnalité protégée par un code SAV)</p>
-<h2 class="unnumbered" id="impayé">Impayé</h2>
-<p>Un client en « zone rouge » ne peut plus utiliser son logiciel si il
-est en FAH.</p>
-<p>Par contre, en local, rien ne l’empêche de continuer à utiliser sa
-version courante et ses releases (jusqu’à la date de péremption : cf. <a
-href="#date-de-péremption">Date de péremption</a>). Il ne peut plus non
-plus activer de licence (çàd qu’il ne peut utiliser une nouvelle version
-majeure ni même changer de machine).</p>
-<h1 id="cas-particuliers">Cas particuliers</h1>
-<h2 class="unnumbered" id="agriculteurs-en-mode-partenaire">Agriculteurs
-en mode partenaire</h2>
-<h3 class="unnumbered" id="définition">Définition</h3>
-<p>Un agriculteur en mode partenaire est un agriculteur qui travaille en
-collaboration avec un prestataire et dont les données sont hébergées
-dans la base (et donc dans le domaine) de son prestataire (organisme)
-(et non pas dans son domaine personnel). Il utilise forcément son
-logiciel en mode FAH.</p>
-<p>Actuellement seul Geofolia gère cette notion.</p>
-<h3 class="unnumbered" id="impact-sur-la-licence">Impact sur la
-licence</h3>
-<p>Dans ce cas, il y a plusieurs licences pour le domaine du prestataire
-:</p>
-<p>- Une licence pour le prestataire<br />
-- Une licence pour chaque agriculteur en mode partenaire</p>
-<p>Dans tous les cas, le domaine est celui du prestataire ; le client
-propriétaire du domaine est l’organisme ; le client utilisateur du
-domaine est le prestataire dans la licence prestataire et l’agriculteur
-dans la licence agriculteur.</p>
-<h3 class="unnumbered"
-id="entrée-dans-le-domaine-par-lagriculteur">Entrée dans le domaine par
-l’agriculteur</h3>
-<p>Lors de l’entrée dans le domaine, le logiciel se base sur la licence
-de l’agriculteur pour déterminer :<br />
-- si une activation est à lancer (ou si on bloque l’accès au logiciel si
-la date limite pour activer est dépassée)<br />
-- le comportement à adopter par rapport à la date de péremption et la
-date de fin de validité de la licence (message à afficher pour date
-proche, domaine en « accès limité » ou inaccessible, …)<br />
-- …</p>
-<p>Par contre, pour calculer les droits de l’agriculteur
-(modules/fonctionnalités accessibles), le logiciel se base sur la
-licence du prestataire et la licence de l’agriculteur. En effet, les
-droits effectifs sur un module fonctionnel peuvent dépendre du fait que
-le module est autorisé par la licence du prestataire, de l’individuel ou
-par les 2 (les règles sont définies par l’application).</p>
-<h3 class="unnumbered"
-id="entrée-dans-le-domaine-par-un-technicien-du-prestataire">Entrée dans
-le domaine par un technicien du prestataire</h3>
-<p>Quand un technicien du prestataire entre dans l’application, on ne
-tient compte que de la licence du prestataire pour déterminer si une
-activation et nécessaire, s’il faut afficher un avertissement ou bloquer
-pour date de péremption ou de fin de validité de licence proche ou
-atteinte, pour déterminer les modules fonctionnels autorisés ...</p>
-<h3 class="unnumbered" id="mise-à-jour-de-la-licence">Mise à jour de la
-licence</h3>
-<p>En FAH, les licences des agriculteurs ne sont pas installées
-automatiquement (car on n’initialise pas de domaine). Et donc, c’est à
-l’organisme de le faire.</p>
-<p>Quand le prestataire met à jour sa licence, on met également à jour
-les licences de tous les agriculteurs en mode partenaires qui lui sont
-rattachés.<mark><br />
-</mark>Geofolia permet en plus de déclencher via une option dans le
-ruban une mise à jour de toutes les licences des agriculteurs en mode
-partenaire (mais pas de la licence du prestataire) dès qu’il y a
-création d’un nouvel utilisateur.</p>
-<h2 class="unnumbered" id="licences-pédagogiques">Licences
-pédagogiques</h2>
-<h3 class="unnumbered"
-id="caractéristiques-de-la-licence">Caractéristiques de la licence</h3>
-<p>Pour une école, la solution client créé par l’ADV pour l'enseignement
-présente les particularités suivantes :</p>
-<ul>
-<li><p>Elles ne sont pas liées à la machine (pas d'activation donc) car
-elles doivent pouvoir être librement installées sur les postes de
-l'école ou des élèves mais, en contre-partie ont une date de fin de
-validité renseignée au moment de l’achat (01/10 de l’année scolaire
-suivante).</p></li>
-<li><p>La typologie clientèle renseignée est « Ecole » pour conditionner
-certains fonctionnements spécifiques (cf. <a
-href="#comportement-du-logiciel">+ loin</a>)</p></li>
-</ul>
-<p>En juin-juillet, l’ADV doit prolonger d’un an la validité des
-solutions client toujours actives (en fonction du nombre d’école l’ADV
-pourra demander à la DRI une évolution pour gérer une mise à jour
-groupée). Chaque école doit ensuite réinstaller la licence.</p>
-<h3 class="unnumbered" id="comportement-du-logiciel">Comportement du
-logiciel</h3>
-<p>Les particularités de fonctionnement (elles sont gérées par le cadre
-outils) :</p>
-<ul>
-<li><p>A chaque entrée dans le domaine on affiche un message qui précise
-que la licence est réservée à l’enseignement et ne peut être utilisée en
-production.</p></li>
-</ul>
-<p><img src="media/image28.png" style="width:3.54375in;height:1.37569in"
-alt="cid:image003.png@01D03F9F.F1EE7170" /></p>
-<ul>
-<li><p>Dans les éditions, on affiche un bandeau « Utilisation réservée à
-un usage pédagogique"</p></li>
-<li><p><u>Quand la date de fin de validité approche ou est atteinte</u>,
-le client est averti (pendant 2 mois) puis bloqué (cf. <a
-href="#date-de-fin-de-validité-de-la-licence">Date de fin de validité de
-la licence</a>)</p></li>
-</ul>
-<h3 class="unnumbered"
-id="fonctionnement-pour-le-client">Fonctionnement pour le client</h3>
-<p>1-A la réception de la licence, le responsable de l’école installe
-l’appli (mode local) et initialise le domaine. Il doit faire une
-sauvegarde de la BDD</p>
-<p>2-Ensuite, il installe l’appli et remonte la sauvegarde faite en 1
-sur les postes destinés aux étudiants. Ceux-ci peuvent l’utiliser
-pendant toute l’année scolaire. Deux mois avant la date de fin de
-validité de la licence renseignée par l’ADV, un message les prévient de
-la fin de validité proche. Le blocage effectif intervient 2 mois après
-le 1<sup>er</sup> avertissement</p>
-<p>3-Après la prolongation de la date de fin de validité de la licence
-par l’ADV, le responsable de l’école doit :</p>
-<blockquote>
-<p>- Remonter sur un poste la sauvegarde faite en 1 (si il veut repartir
-d'un jeu de donnée initial pour la nouvelle année scolaire)</p>
-<p>- Lancer une maj de la licence</p>
-<p>- Refaire une sauvegarde</p>
-<p>- La remonter sur chaque poste pour repartir pour une année scolaire
-(retour à l’étape 2)</p>
-</blockquote>
-<p>Isagri n’a donc plus besoin de renvoyer chaque année un domaine
-vierge ou un code licence à chaque école (comme c’était le cas en
-protection 2007) mais doit chaque année prolonger d’un an la date de fin
-de validité de chaque licence école</p>
-<p>N.B. : chaque filière concernée doit faire en sorte que les licences
-pédagogiques fonctionnent en FAH. Dans ce cas évidemment, chaque élève
-ne peut disposer de son propre jeu de données ; celui-ci est unique pour
-l'école. Geofolia a d'ailleurs choisi de ne gérer que le FAH</p>
-<h3 class="unnumbered"
-id="utilisation-de-données-de-production-ou-de-démo">Utilisation de
-données de production ou de démo</h3>
-<p>Il est fréquent que des écoles aient une ferme pédagogique et
-utilisent le logiciel pour gérer celle-ci. Elles ont alors besoin de 2
-licences</p>
-<ul>
-<li><p>Une licence pédagogique pour l'enseignement</p></li>
-<li><p>Une licence de production "classique" pour la tenue de la
-ferme</p></li>
-</ul>
-<p>Chacune des 2 licences a son propre domaine.</p>
-<p>Pour utiliser les données de la ferme pour l'enseignement, la
-sauvegarde / remontée de sauvegarde standard du cadre outil ne convient
-pas puisque celle-ci contient le domaine et la licence. Un développement
-outil permettant de sauvegarder les données d'un domaine (sans la
-licence) (local ou FAH, peu importe) et de les remonter dans un autre
-domaine (local ou FAH, peu importe) a été demandé. Il permettrait de
-traiter également le cas du passage local vers le FAH et inversement ou
-du mode autonome au mode partenaire ou inversement ou le changement de
-partenaire. Mais ce développement n'a pas été réalisé à ce jour
-(30/09/2020). Les filières concernées peuvent utiliser leurs
-fonctionnalités existantes d'import / export de données</p>
-<blockquote>
-<p>Point au 01/03/21 :</p>
-<p>Fonctionnalité existe en PO / PV / CO / GC</p>
-<p>Troup’O va creuser le sujet sur base des travaux de PigUp :</p>
-<p>« Le sujet est toujours important pour la filière, donc mon équipe va
-creuser le sujet pendant 2-3 j (non encore planifiés) pour affiner le
-chiffrage afin qu’on puisse valider la réalisation pour notre V7.00 (fin
-des devs prévus sur juillet). »</p>
-<p>Si, suite à ces travaux PR, des briques communes sont réutilisables
-pour un autre projet, en l’occurrence Paye, on fera en sorte de remonter
-l’outillage commun dans le cadre outils.</p>
-</blockquote>
-<h2 class="unnumbered" id="licences-secondaires">Licences
-secondaires</h2>
-<h3 class="unnumbered" id="notion-de-poste-secondaire">Notion de poste
-secondaire</h3>
-<p>Les prestataires (ou même certains clients individuels) installent
-les données sur un poste principal mais aussi sur des « postes
-secondaires » qui sont synchronisés avec le poste principal :</p>
-<ul>
-<li><p>portables de techniciens (Geofolia) ou de comptables (IsaCompta)
-qui se déplacent chez les clients,</p></li>
-<li><p>serveurs d’agences en complément du serveur principal au siège
-central en IsaCompta, …</p></li>
-<li><p>saisie décentralisée en GC</p></li>
-<li><p>…</p></li>
-</ul>
-<p>Il est nécessaire de disposer de licence sur ces postes secondaires
-(pour que l’appli connaisse les modules actifs ou non etc …).</p>
-<p>On ne veut toutefois pas de licences liées à la machine pour ces
-postes secondaires (trop lourd à gérer, beaucoup de machines concernées
-et donc de changements de machine : cf. la protection 2007 sur laquelle
-il avait fallu revenir en arrière ; il n’est pas nécessaire de contrôler
-le nombre d’installations de postes secondaires : les contrôles de
-volumétrie notamment sur le nombre d’utilisateurs suffisent). On veut
-par contre empêcher une utilisation de l’application en dehors de
-l’entreprise cliente Isagri (diffusion à un tiers non client,
-utilisation par un salarié qui quitte le prestataire, …).</p>
-<h3 class="unnumbered" id="fonctionnement">Fonctionnement</h3>
-<p>Seul le serveur principal dispose d’une licence gérée dans le SI
-Isagri (activée).</p>
-<p>Les postes secondaires disposent de licences particulières, les
-licences secondaires.</p>
-<p>Les licences secondaires ne sont pas générées par le SI Isagri mais
-par l’application installée chez le client sur un poste principal (ou
-même un poste secondaire : serveurs d’agence par exemple). Ces licences
-secondaires sont censées être régulièrement régénérées et diffusées sur
-les postes secondaires à l’occasion des synchronisations de données
-entre le poste principal et le poste secondaire. Elles ne sont pas liées
-à un poste (une même licence secondaire peut être installée sur autant
-de poste que nécessaire) mais en contrepartie, ont une durée de vie
-limitée à 3 mois à partir de leur génération. L’utilisateur d’un poste
-secondaire commence à être averti de l’expiration prochaine de sa
-licence secondaire 2 mois avant le blocage effectif (même fonctionnement
-que la <a href="#date-de-fin-de-validité-de-la-licence">Date de fin de
-validité de la licence</a>)</p>
-<p>Les licences secondaires doivent entraîner des limites fonctionnelles
-dans les applications, de telle sorte qu’un tiers qui aurait obtenu de
-manière illicite une licence secondaire sans licence principale ne
-puisse utiliser normalement l’application. C’est ainsi qu’a priori, dans
-toutes les applications, la gestion des utilisateurs et des droits
-devrait nécessiter une licence principale. (A charge des
-applications)</p>
-<h2 class="unnumbered" id="démos">Démos</h2>
-<h3 class="unnumbered" id="caractéristiques">Caractéristiques</h3>
-<p>Les démos se font sur des domaines particuliers typés « démo »</p>
-<p>Ces domaines requièrent des licences, comme tous les domaines.</p>
-<p>Pour permettre la diffusion des démos, les licences rattachées à ces
-domaines ne sont pas liées à la machine. Elles ne sont pas limitées sur
-le plan fonctionnel.</p>
-<p>Les démos se comportent différemment sur un poste interne (= de
-salarié) ou externe (= de client)</p>
-<h3 class="unnumbered"
-id="comportement-sur-un-poste-externe">Comportement sur un poste
-« externe »</h3>
-<p>Sur un poste de client, une démo est utilisable 30 jours à partir de
-sa première utilisation.</p>
-<p><u>Tant que cette date n’est pas atteinte</u>, la démo est utilisable
-normalement (il n’y a aucune limite fonctionnelle). La seule
-particularité est qu’à chaque entrée dans le domaine, on affiche un
-message qui précise cette date d’expiration puis un message pour
-rappeler que l’on est dans une démo.</p>
-<p><img src="media/image29.png" style="width:3.80833in;height:1.37569in"
-alt="cid:image002.png@01D03F9F.D9802BB0" /></p>
-<p><u>Une fois la date d’expiration est dépassée</u>, l’accès au domaine
-démo est bloqué.</p>
-<p>Le blocage peut être levé dans IM.Application (cf. <a
-href="#im.application">#IM.Application</a>, fonctionnalité protégée par
-un code SAV)</p>
-<p>La remontée d’une sauvegarde faite sur le poste du client sur le même
-poste ou sur un autre poste de client n’a pas pour effet de prolonger
-cette date (la date d’expiration de la démo est sauvegardée et
-remontée).</p>
-<p>La seule solution pour pouvoir continuer à utiliser la démo est de
-repartir de la sauvegarde d’origine (çàd fournie par Isagri au
-client)</p>
-<h3 class="unnumbered"
-id="comportement-sur-un-poste-interne">Comportement sur un poste
-« interne »</h3>
-<p>Lorsque l’on entre dans un domaine démo sur un poste de salarié, on
-vide alors la date d’expiration de la démo. La durée de vie de 30 jours
-pour les postes clients ne s’applique donc pas aux postes salariés. La
-démo est utilisable normalement (il n’y a aucune limite
-fonctionnelle).</p>
-<h3 class="unnumbered" id="comportement-en-fah">Comportement en FAH</h3>
-<p>Selon que le poste où est installée la couche cliente de
-l’application est un poste interne ou externe, le comportement sera
-celui de la démo en interne ou en externe.</p>
-<h1 id="liste-des-erreurs">Liste des erreurs</h1>
-<p>En cas d’erreur lors de l’activation, les codes indiquent la nature
-de l’erreur et peuvent vous orienter vers la solution</p>
-<p>Voici la liste des erreurs possibles (Mise à jour du 18/09/2017):</p>
-<table>
-<colgroup>
-<col style="width: 28%" />
-<col style="width: 42%" />
-<col style="width: 28%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>5000</th>
-<th>Le service isalicence n'est pas disponible pour le moment ({0})</th>
-<th>Erreur inconnue</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>5903</td>
-<td>Le code licence est inconnu. Merci de contacter le service clientèle
-pour plus d'informations. (5903)</td>
-<td>Erreur à l'insertion des logs</td>
-</tr>
-<tr class="even">
-<td>5501</td>
-<td>Le service isalicence n'est pas disponible pour le moment ({0})</td>
-<td>Erreur SQL</td>
-</tr>
-<tr class="odd">
-<td>5901</td>
-<td>L'identifiant de licence n'existe pas.</td>
-<td>La licence n'existe pas</td>
-</tr>
-<tr class="even">
-<td>5902</td>
-<td>La licence demandée n'est pas disponible pour le moment. Merci de
-contacter le service clientèle pour plus d'informations. (5902)</td>
-<td>La licence est résiliée</td>
-</tr>
-<tr class="odd">
-<td>5900</td>
-<td>Le service isalicence n'est pas disponible pour le moment suite à
-une exception</td>
-<td>Une erreur inconnue s'est produite</td>
-</tr>
-<tr class="even">
-<td>5000</td>
-<td>Le service isalicence n'est pas disponible pour le moment ({0})</td>
-<td>Erreur inconnue</td>
-</tr>
-<tr class="odd">
-<td>5251</td>
-<td> </td>
-<td>Erreur de vérification concordance domaine</td>
-</tr>
-<tr class="even">
-<td>5952</td>
-<td>L'identifiant d'application n'existe pas.</td>
-<td>L'application technique n'existe pas</td>
-</tr>
-<tr class="odd">
-<td>5951</td>
-<td>L'identifiant partenaire de licence n'existe pas.</td>
-<td>Il n'y a aucune licence sur le domaine du partenaire</td>
-</tr>
-<tr class="even">
-<td>5950</td>
-<td>Le service isalicence n'est pas disponible pour le moment suite à
-une exception</td>
-<td> </td>
-</tr>
-<tr class="odd">
-<td>5708</td>
-<td>ActivationKeyHelper_GetInstallKeyInformations</td>
-<td>Erreur à l'extraction des informations de la clé</td>
-</tr>
-<tr class="even">
-<td>5701</td>
-<td>Erreur lors de l'activation : sauvegarde de la machine</td>
-<td>Erreur à l'enregistrement de la machine</td>
-</tr>
-<tr class="odd">
-<td>5501</td>
-<td>Le service isalicence n'est pas disponible pour le moment ({0})</td>
-<td>Erreur SQL</td>
-</tr>
-<tr class="even">
-<td>5502</td>
-<td>Le service isalicence n'est pas disponible pour le moment</td>
-<td>Erreur à l'insertion</td>
-</tr>
-<tr class="odd">
-<td>5901</td>
-<td>L'identifiant de licence n'existe pas.</td>
-<td>La licence n'existe pas</td>
-</tr>
-<tr class="even">
-<td>5902</td>
-<td>La licence demandée n'est pas disponible pour le moment. Merci de
-contacter le service clientèle pour plus d'informations. (5902)</td>
-<td>La licence est résiliée</td>
-</tr>
-<tr class="odd">
-<td>5900</td>
-<td>Le service isalicence n'est pas disponible pour le moment suite à
-une exception</td>
-<td>Une erreur inconnue s'est produite</td>
-</tr>
-<tr class="even">
-<td>5712</td>
-<td>La licence demandée n'est pas disponible pour le moment. Merci de
-contacter le service clientèle pour plus d'informations. (5712)</td>
-<td>La licence est désactivée</td>
-</tr>
-<tr class="odd">
-<td>5710</td>
-<td>Erreur lors de l'activation</td>
-<td>La version maximale autorisée est dépassée</td>
-</tr>
-<tr class="even">
-<td>5709</td>
-<td>Zone Rouge</td>
-<td>Le client est en zone rouge</td>
-</tr>
-<tr class="odd">
-<td>5702</td>
-<td>Le nombre d'activation maximum est atteint.</td>
-<td>Le client a déjà activé le nombre de machines spécifié sur sa
-licence</td>
-</tr>
-<tr class="even">
-<td>5707</td>
-<td>Erreur lors de la vérification pour l'activation de la licence.</td>
-<td>Erreur à la génération de la clé d'activation</td>
-</tr>
-<tr class="odd">
-<td>5706</td>
-<td>Erreur lors de la vérification pour l'activation de la licence.</td>
-<td>Erreur générale à l'activation</td>
-</tr>
-<tr class="even">
-<td>5705</td>
-<td>Erreur lors de la création du fichier.</td>
-<td>Erreur à l'écriture du fichier de licence dans le stream</td>
-</tr>
-<tr class="odd">
-<td>5706</td>
-<td>Erreur lors de la vérification pour l'activation de la licence.</td>
-<td>Erreur générale à l'activation</td>
-</tr>
-<tr class="even">
-<td>5701</td>
-<td>Erreur lors de l'activation : sauvegarde de la machine</td>
-<td>Erreur à l'enregistrement de la machine</td>
-</tr>
-<tr class="odd">
-<td>5501</td>
-<td>Le service isalicence n'est pas disponible pour le moment ({0})</td>
-<td>Erreur SQL</td>
-</tr>
-<tr class="even">
-<td>5502</td>
-<td>Le service isalicence n'est pas disponible pour le moment</td>
-<td>Erreur à l'insertion</td>
-</tr>
-<tr class="odd">
-<td>5901</td>
-<td>L'identifiant de licence n'existe pas.</td>
-<td>La licence n'existe pas</td>
-</tr>
-<tr class="even">
-<td>5902</td>
-<td>La licence demandée n'est pas disponible pour le moment. Merci de
-contacter le service clientèle pour plus d'informations. (5902)</td>
-<td>La licence est résiliée</td>
-</tr>
-<tr class="odd">
-<td>5900</td>
-<td>Le service isalicence n'est pas disponible pour le moment suite à
-une exception</td>
-<td>Une erreur inconnue s'est produite</td>
-</tr>
-<tr class="even">
-<td>5712</td>
-<td>La licence demandée n'est pas disponible pour le moment. Merci de
-contacter le service clientèle pour plus d'informations. (5712)</td>
-<td>Licence désactivée</td>
-</tr>
-<tr class="odd">
-<td>5709</td>
-<td>Zone Rouge</td>
-<td>Client en zone rouge</td>
-</tr>
-<tr class="even">
-<td>5702</td>
-<td>Le nombre d'activation maximum est atteint.</td>
-<td>Le client a déjà activé le nombre de machines spécifié sur sa
-licence</td>
-</tr>
-<tr class="odd">
-<td>5703</td>
-<td>Erreur lors de l'activation</td>
-<td>Erreur générale</td>
-</tr>
-<tr class="even">
-<td>5903</td>
-<td>Le code licence est inconnu. Merci de contacter le service clientèle
-pour plus d'informations. (5903)</td>
-<td>Erreur à l'insertion</td>
-</tr>
-<tr class="odd">
-<td>5501</td>
-<td>Le service isalicence n'est pas disponible pour le moment ({0})</td>
-<td>Erreur SQL</td>
-</tr>
-<tr class="even">
-<td>5931</td>
-<td> </td>
-<td>Les licences demandées n'existent pas</td>
-</tr>
-<tr class="odd">
-<td>5930</td>
-<td> </td>
-<td>Erreur générale</td>
-</tr>
-<tr class="even">
-<td>5000</td>
-<td>Le service isalicence n'est pas disponible pour le moment ({0})</td>
-<td>Erreur inconnue</td>
-</tr>
-</tbody>
-</table>
-<p>Liste des erreurs qui ne devraient se produire qu’à Isagri (outils
-interne comme IsaGenLic notamment)</p>
-<table>
-<colgroup>
-<col style="width: 9%" />
-<col style="width: 90%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>0</th>
-<th>Le WebService est disponible</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>6000</td>
-<td>Le WebService est indisponible</td>
-</tr>
-<tr class="even">
-<td>6001</td>
-<td>L'identification au WebService est incorrecte</td>
-</tr>
-<tr class="odd">
-<td>6002</td>
-<td>Les champs fournis sont invalides</td>
-</tr>
-<tr class="even">
-<td>6003</td>
-<td>Le WebService est indisponible dû à une exception</td>
-</tr>
-<tr class="odd">
-<td>6051</td>
-<td>Aucune information n'a été retournée</td>
-</tr>
-<tr class="even">
-<td>6052</td>
-<td>Echec lors de l'insertion</td>
-</tr>
-<tr class="odd">
-<td>6053</td>
-<td>Echec lors de la récupération</td>
-</tr>
-<tr class="even">
-<td>6100</td>
-<td>Le domaine est inexistant dans la base de test</td>
-</tr>
-<tr class="odd">
-<td>6101</td>
-<td>Le domaine est inexistant</td>
-</tr>
-<tr class="even">
-<td>6102</td>
-<td>Le WebService est indisponible dû à une erreur lors de la
-création</td>
-</tr>
-<tr class="odd">
-<td>6103</td>
-<td>Le WebService est indisponible dû à une exception</td>
-</tr>
-<tr class="even">
-<td>6104</td>
-<td>Le pays demandé n'est pas géré par les logiciels Isagri</td>
-</tr>
-<tr class="odd">
-<td>6105</td>
-<td>Le WebService est indisponible dû à une exception</td>
-</tr>
-<tr class="even">
-<td>6106</td>
-<td>Le WebService est indisponible dû à une exception</td>
-</tr>
-<tr class="odd">
-<td>6107</td>
-<td>Le WebService est indisponible dû à une exception</td>
-</tr>
-<tr class="even">
-<td>6108</td>
-<td>Le WebService est indisponible dû à une exception</td>
-</tr>
-<tr class="odd">
-<td>6109</td>
-<td>Il ne s'agit pas d'un domaine de test</td>
-</tr>
-<tr class="even">
-<td>6110</td>
-<td>Le WebService est indisponible dû à une exception</td>
-</tr>
-<tr class="odd">
-<td>6111</td>
-<td>Le WebService est indisponible dû à une exception</td>
-</tr>
-<tr class="even">
-<td>6112</td>
-<td>Un domaine existe déjà avec ce libellé.</td>
-</tr>
-<tr class="odd">
-<td>6113</td>
-<td>Le WebService est indisponible dû à une exception</td>
-</tr>
-<tr class="even">
-<td>6114</td>
-<td>Le WebService est indisponible dû à une exception</td>
-</tr>
-<tr class="odd">
-<td>6115</td>
-<td>Le WebService est indisponible dû à une exception</td>
-</tr>
-<tr class="even">
-<td>6116</td>
-<td>Le WebService est indisponible dû à une exception</td>
-</tr>
-<tr class="odd">
-<td>6117</td>
-<td>Le WebService est indisponible dû à une exception</td>
-</tr>
-<tr class="even">
-<td>6118</td>
-<td>Le WebService est indisponible dû à une exception</td>
-</tr>
-<tr class="odd">
-<td>6119</td>
-<td></td>
-</tr>
-<tr class="even">
-<td>6120</td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>6121</td>
-<td></td>
-</tr>
-<tr class="even">
-<td>6122</td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>6200</td>
-<td>La typologie cible est inexistante</td>
-</tr>
-<tr class="even">
-<td>6300</td>
-<td>Le WebService est indisponible dû à une exception</td>
-</tr>
-<tr class="odd">
-<td>6301</td>
-<td>Le WebService est indisponible dû à une exception</td>
-</tr>
-<tr class="even">
-<td>6302</td>
-<td>Le WebService est indisponible dû à une exception</td>
-</tr>
-<tr class="odd">
-<td>6303</td>
-<td>Le code du distributeur est inexistant</td>
-</tr>
-<tr class="even">
-<td>6304</td>
-<td>L'identifiant client est inexistant</td>
-</tr>
-<tr class="odd">
-<td>6305</td>
-<td>L'identifiant client est déjà existant</td>
-</tr>
-<tr class="even">
-<td>6306</td>
-<td>Le WebService est indisponible dû à une exception</td>
-</tr>
-<tr class="odd">
-<td>6307</td>
-<td>Le WebService est indisponible dû à une exception</td>
-</tr>
-<tr class="even">
-<td>6308</td>
-<td>Le WebService est indisponible dû à une exception</td>
-</tr>
-<tr class="odd">
-<td>6309</td>
-<td>Le WebService est indisponible dû à une exception</td>
-</tr>
-<tr class="even">
-<td>6310</td>
-<td>Le WebService est indisponible dû à une exception</td>
-</tr>
-<tr class="odd">
-<td>6311</td>
-<td>Le WebService est indisponible dû à une exception</td>
-</tr>
-<tr class="even">
-<td>6312</td>
-<td>Le WebService est indisponible dû à une exception</td>
-</tr>
-<tr class="odd">
-<td>6313</td>
-<td>Le WebService est indisponible dû à une exception</td>
-</tr>
-<tr class="even">
-<td>6314</td>
-<td>Le WebService est indisponible dû à une exception</td>
-</tr>
-<tr class="odd">
-<td>6315</td>
-<td>Le WebService est indisponible dû à une exception</td>
-</tr>
-<tr class="even">
-<td>6316</td>
-<td>Le WebService est indisponible dû à une exception</td>
-</tr>
-<tr class="odd">
-<td>6317</td>
-<td>Le WebService est indisponible dû à une exception</td>
-</tr>
-<tr class="even">
-<td>6318</td>
-<td>Le distributeur est déjà existant</td>
-</tr>
-<tr class="odd">
-<td>6319</td>
-<td>Le distributeur est inexistant</td>
-</tr>
-<tr class="even">
-<td>6320</td>
-<td>La taille du code distributeur est incorrecte</td>
-</tr>
-<tr class="odd">
-<td>6321</td>
-<td>Le CodeISA existe déjà pour un client</td>
-</tr>
-<tr class="even">
-<td>6322</td>
-<td>Le WebService est indisponible dû à une exception</td>
-</tr>
-<tr class="odd">
-<td>6323</td>
-<td></td>
-</tr>
-<tr class="even">
-<td>6324</td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>6325</td>
-<td></td>
-</tr>
-<tr class="even">
-<td>6326</td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>6327</td>
-<td></td>
-</tr>
-<tr class="even">
-<td>6400</td>
-<td>Le pays demandé n'existe pas</td>
-</tr>
-<tr class="odd">
-<td>6401</td>
-<td>Le WebService est indisponible dû à une exception</td>
-</tr>
-<tr class="even">
-<td>6402</td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>6403</td>
-<td></td>
-</tr>
-<tr class="even">
-<td>6404</td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>6500</td>
-<td>Le WebService est indisponible dû à une exception</td>
-</tr>
-<tr class="even">
-<td>6501</td>
-<td>Le WebService est indisponible dû à une exception</td>
-</tr>
-<tr class="odd">
-<td>6600</td>
-<td></td>
-</tr>
-<tr class="even">
-<td>6601</td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>6602</td>
-<td></td>
-</tr>
-<tr class="even">
-<td>6603</td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>6604</td>
-<td></td>
-</tr>
-<tr class="even">
-<td>6605</td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>6606</td>
-<td>Le WebService est indisponible dû à une exception lors de la
-génération de la licence.</td>
-</tr>
-<tr class="even">
-<td>6607</td>
-<td>La solution commerciale client n'appartient pas au client
-source.</td>
-</tr>
-<tr class="odd">
-<td>6608</td>
-<td>Tous les paramètres de transfert n'ont pas été fournis.</td>
-</tr>
-<tr class="even">
-<td>6609</td>
-<td>La solution commerciale a déjà fait l'objet d'un transfert vers le
-client {0}.</td>
-</tr>
-<tr class="odd">
-<td>6610</td>
-<td>La solution commerciale est résiliée.</td>
-</tr>
-<tr class="even">
-<td>6611</td>
-<td>Le transfert de cette solution commerciale a déjà fait l'objet d'une
-erreur par le passé. Contactez support@isagri.fr.</td>
-</tr>
-<tr class="odd">
-<td>6612</td>
-<td>Le switch de la solution commerciale a échouée.</td>
-</tr>
-<tr class="even">
-<td>6613</td>
-<td>Le transfert demandé a déjà été réalisé puis annulé par la
-suite.</td>
-</tr>
-<tr class="odd">
-<td>6614</td>
-<td>La modification des licences a échouée.</td>
-</tr>
-<tr class="even">
-<td>6615</td>
-<td>L'identifiant client est incorrecte.</td>
-</tr>
-<tr class="odd">
-<td>6616</td>
-<td>La solution commerciale est déjà résiliée.</td>
-</tr>
-<tr class="even">
-<td>6617</td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>6618</td>
-<td></td>
-</tr>
-<tr class="even">
-<td>6619</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h1 id="dépannage">Dépannage</h1>
-<h2 class="unnumbered" id="isagestlic">IsaGestLic</h2>
-<p>Dans IsaGestLic (<a
-href="http://isagestlic.groupeisagri.fr">http://isagestlic.groupeisagri.fr</a><u>)</u></p>
-<ul>
-<li><p>Choisir le <a
-href="http://projectsrv2010/sites/Coordination/SystemeDocumentaire/DocRefIsagriNet/html/d5ffe64b-2927-dc30-6551-7eafa5db1b73.aspx">Menu</a>
-« Gestion d’un client » puis « <a
-href="http://projectsrv2010/sites/Coordination/SystemeDocumentaire/DocRefIsagriNet/html/5768093a-4813-6d82-79e3-9830c14ccf43.aspx">Activation</a> »</p></li>
-<li><p>Renseigner l’ « identifiant client » (dispo dans Hotware, via F11
-ou sur le BL du client)</p></li>
-<li><p>Cliquer sur l’onglet « Licence »</p></li>
-</ul>
-<p><img src="media/image30.png"
-style="width:6.83194in;height:2.64792in" /></p>
-<p>Pour chaque licence, le CTL peut</p>
-<ul>
-<li><p>visualiser son n° pour le communiquer au client,</p></li>
-<li><p>visualiser son contenu (modules fonctionnels, volumétries, …) :
-bouton <img src="media/image31.png"
-style="width:0.18403in;height:0.22431in" /></p></li>
-<li><p>télécharger le fichier de licence pour le renvoyer au client :
-bouton <img src="media/image32.png"
-style="width:0.19167in;height:0.20833in" /></p></li>
-<li><p>visualiser l’historique des activations (et supprimer une ou
-plusieurs activations de manière à permettre au client d’installer sur
-une autre machine : il aura toujours le droit d’utiliser son application
-sur les machines désactivées jusqu’à la nouvelle version majeure) :
-bouton <img src="media/image33.png"
-style="width:0.19167in;height:0.20833in" /></p></li>
-<li><p><mark>@@DLe A quoi sert le bouton « Régénérer »</mark> <img
-src="media/image34.png"
-style="width:0.18403in;height:0.19167in" /><mark> ? @@</mark></p></li>
-</ul>
-<h2 class="unnumbered" id="im.application">IM.Application</h2>
-<p>Des fonctionnalités existent dans l’utilitaire de maintenance
-« IM.Application » livré au client avec son progiciel Isagri pour lever
-divers blocages.</p>
-<p><span id="_Hlk414019658" class="anchor"></span>Pour y accéder</p>
-<ol type="1">
-<li><p>Fermer le logiciel bloqué</p></li>
-<li><p>Lancer l’utilitaire de maintenance «IM.Application»</p></li>
-<li><p>Passer en Mode utilisateur avancé via le clic sur le bouton
-« Mode utilisateur avancé» présent dans le ruban « Configuration ».
-Renseigner le code SAV demandé</p></li>
-<li><p>Aller dans le ruban « Protection » et cliquer sur le bouton
-« Déblocage de licence »</p></li>
-<li><p>Renseigner les informations permettant de s’authentifier sur la
-licence à débloquer :</p></li>
-</ol>
-<p><img src="media/image35.png"
-style="width:6.53611in;height:5.50417in" /></p>
-<p>Tapez l’adresse du serveur (localhost pour un poste local) puis le
-nom de l’instance SQLServer = IP08R2.</p>
-<p>Sélectionner ensuite la base de données contenant la licence via la
-liste déroulante ou tapez son nom.</p>
-<p>Les zones « Domaine » et « Identifiant du client » ne sont pas
-toujours affichées.</p>
-<p>Si la base de données contient plusieurs domaines alors la zone
-« Domaine » apparait. Il faut ensuite sélectionner le domaine contenant
-la licence via la liste déroulante.</p>
-<p>Si le domaine contient plusieurs licences pour des clients différents
-alors la zone « Identifiant du client » apparait.<br />
-Il faut ensuite saisir l’identifiant du client attaché à la licence via
-la liste déroulante si celui proposé par défaut n’est pas le bon.</p>
-<h3 class="unnumbered"
-id="blocage-suite-date-de-péremption-de-la-version-ou-date-de-fin-de-validité-de-licence-dépassée">Blocage
-suite date de péremption de la version ou date de fin de validité de
-licence dépassée</h3>
-<p>Pour débloquer le client, après avoir effectué les étapes 1 à 5 <a
-href="#_Hlk414019658">(voir ci-dessus)</a></p>
-<ol start="6" type="1">
-<li><p>Cliquer sur le bouton « Débloquer la licence ».<br />
-Si la réinitialisation a fonctionné, le message suivant
-s’affiche :</p></li>
-</ol>
-<p><img src="media/image36.png"
-style="width:2.95208in;height:1.30417in" /></p>
-<ol start="7" type="1">
-<li><p>Relancer le logiciel.</p></li>
-</ol>
-<p><strong><u>Remarques</u></strong> :</p>
-<p>Le déblocage ne modifie pas la date de péremption ou de fin de
-validité mais a pour effet de réinitialiser le délai d’avertissement. Le
-client peut donc continuer d’utiliser son appli pendant 2 mois (1 mois
-pour les démos)</p>
-<p>Le déblocage d'une licence ne réinitialise pas le délai d'activation
-d'une licence. Dans ce cas, il faut activer la licence (soit en ligne,
-soit par téléphone en appelant le support)</p>
-<h3 class="unnumbered"
-id="blocage-suite-modification-de-la-date-système-du-pc">Blocage suite
-modification de la date système du PC</h3>
-<p>La protection a besoin d’une date système à jour. Un changement de
-celle-ci peut bloquer l’accès à l’application avec le message
-suivant</p>
-<p><img src="media/image37.png"
-style="width:3.39167in;height:1.37569in" /></p>
-<p>Pour débloquer le client, après avoir effectué les étapes 1 à 5 <a
-href="#_Hlk414019658">(voir ci-dessus)</a></p>
-<ol start="6" type="1">
-<li><p>Cliquer sur le bouton « Réinitialiser la date de
-référence ».<br />
-Si la réinitialisation a fonctionné, le message suivant
-s’affiche :</p></li>
-</ol>
-<p><img src="media/image38.png"
-style="width:3.68819in;height:1.30417in" /></p>
-<ol start="7" type="1">
-<li><p>Relancer le logiciel</p></li>
-</ol>
-<h3 class="unnumbered"
-id="blocage-suite-dépassement-des-volumétries">Blocage suite dépassement
-des volumétries</h3>
-<p>Pour débloquer le client, après avoir effectué les étapes 1 à 5 <a
-href="#_Hlk414019658">(voir ci-dessus)</a></p>
-<ol start="6" type="1">
-<li><p>Cliquer sur le bouton « Réinitialiser les volumétries ».<br />
-Si la réinitialisation a fonctionné, le message suivant
-s’affiche :</p></li>
-</ol>
-<p><img src="media/image39.png"
-style="width:2.8in;height:1.30417in" /></p>
-<ol start="7" type="1">
-<li><p>Relancer le logiciel.</p></li>
-</ol>
-<p><strong><u>Remarque</u></strong> :</p>
-<p>La réinitialisation des volumétries ne corrige pas le dépassement en
-augmentant la volumétrie autorisée ou en supprimant dans le domaine ce
-qui induit le dépassement. Elle permet simplement d’autoriser l’accès au
-domaine pour aller mettre à jour la licence avec des volumétries
-autorisées plus importantes ou pour aller supprimer les données qui
-provoque le dépassement, jusqu’au prochain contrôle de volumétrie.</p>
-<h1 id="historique">Historique</h1>
-<table>
-<colgroup>
-<col style="width: 18%" />
-<col style="width: 81%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><blockquote>
-<p>Date et auteur des modifications</p>
-</blockquote></th>
-<th><blockquote>
-<p>Détail des modifications apportées</p>
-</blockquote></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><blockquote>
-<p>03/01/2022<br />
-D. Lemal</p>
-</blockquote></td>
-<td><blockquote>
-<p>Précisions sur le fonctionnement des licences pédagogiques</p>
-</blockquote></td>
-</tr>
-<tr class="even">
-<td><blockquote>
-<p>03/07/2019<br />
-L. Chorley</p>
-</blockquote></td>
-<td><blockquote>
-<p>Explication sur le fonctionnement de l’acceptation des conditions
-d’utilisation en cas de lancement de l’application en mode
-non-visuel</p>
-</blockquote></td>
-</tr>
-<tr class="odd">
-<td><blockquote>
-<p>03/01/2018<br />
-O. Coursière</p>
-</blockquote></td>
-<td><blockquote>
-<p>Maj de la liste des erreurs</p>
-</blockquote></td>
-</tr>
-<tr class="even">
-<td><blockquote>
-<p>25/01/2017<br />
-O. Coursière</p>
-</blockquote></td>
-<td><blockquote>
-<p>Maj de la liste des erreurs</p>
-</blockquote></td>
-</tr>
-<tr class="odd">
-<td><blockquote>
-<p>23/06/2016<br />
-D. Lemal</p>
-</blockquote></td>
-<td><blockquote>
-<p>Maj pour les écoles</p>
-</blockquote></td>
-</tr>
-<tr class="even">
-<td><blockquote>
-<p>27/05/2016<br />
-D. Lemal</p>
-</blockquote></td>
-<td><blockquote>
-<p>Maj pour les versions démos (plus de message d’avertissement sur un
-poste salarié)</p>
-</blockquote></td>
-</tr>
-<tr class="odd">
-<td><blockquote>
-<p>13/05/2016<br />
-D. Lemal</p>
-</blockquote></td>
-<td><blockquote>
-<p>Ajout de copies d’écrans (msg concernant volumétrie dépassée)</p>
-</blockquote></td>
-</tr>
-<tr class="even">
-<td><blockquote>
-<p>17/03/2016<br />
-D. Lemal</p>
-</blockquote></td>
-<td><blockquote>
-<p>Mise en forme pour publication dans le système documentaire
-production</p>
-</blockquote></td>
-</tr>
-<tr class="odd">
-<td><blockquote>
-<p>23/10/2015<br />
-D. Lemal</p>
-</blockquote></td>
-<td><blockquote>
-<p>Relecture et compléments</p>
-</blockquote></td>
-</tr>
-<tr class="even">
-<td><blockquote>
-<p>24/01/2014<br />
-A.Schneider</p>
-</blockquote></td>
-<td><blockquote>
-<p>Création</p>
-</blockquote></td>
-</tr>
-</tbody>
-</table>
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Protection 2013 : Fonctionnement client</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+      }
+      header,
+      footer {
+        background-color: #007bff;
+        color: white;
+        text-align: center;
+        padding: 1em;
+      }
+      main {
+        padding: 20px;
+      }
+      section {
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Protection 2013 : Fonctionnement client</h1>
+    </header>
+
+    <main>
+      <div class="content">
+        <h1 id="contexte-et-objet">Contexte et objet</h1>
+        <h2 class="unnumbered" id="contexte">Contexte</h2>
+        <p>
+          La protection a pour objectif de contrôler que nos clients utilisent
+          leur logiciel conformément à ce qu’ils ont acheté.  La réécriture des
+          applications Isagri a nécessité une réécriture complète du système de
+          protection « Protection 2013 »). Sa mise en œuvre est complexe et fait
+          intervenir de nombreuses équipes (Dev outils, DRI « GISA » et « GRC »,
+          MktM, MktPr, Dev Progiciel, CQL Progiciel, ADV – Clientèle, SL, IAH,
+          ... France et export).
+        </p>
+        <p>
+          Ce document fait partie d’une série de documentations expliquant le
+          fonctionnement et la mise en œuvre de la protection 2013 dans les
+          applications Convergence. Pour une vision générale des documentations
+          disponibles, cf.
+          <a
+            href="http://projectsrv2010/sites/Coordination/SystemeDocumentaire/_layouts/DocIdRedir.aspx?ID=R6RHQAPNUWS3-52-255"
+            >ici</a
+          >
+        </p>
+        <h2 class="unnumbered" id="objet">Objet</h2>
+        <p>
+          Ce document a pour objectif de décrire le fonctionnement de la
+          protection 2013, tel qu’il est vu par les utilisateurs du logiciel
+          (clients). En fin de document, sont également abordées les
+          informations nécessaires au SL pour dépanner les clients
+        </p>
+        <h1 id="prerequis">Prerequis</h1>
+        <p>
+          Pour comprendre le présent document, il faut avoir lu le document « <a
+            href="http://projectsrv2010/sites/Coordination/SystemeDocumentaire/_layouts/DocIdRedir.aspx?ID=R6RHQAPNUWS3-52-256"
+            >Protection 2013 : principes généraux</a
+          > »
+        </p>
+        <h1 id="ère-utilisation-dun-logiciel-nouvellement-installé">
+          1ère utilisation d’un logiciel nouvellement installé
+        </h1>
+        <h2
+          class="unnumbered"
+          id="cas-dun-client-en-mode-non-fah-sur-un-poste-connecté-à-internet"
+        >
+          Cas d’un client en mode non FAH, sur un poste connecté à Internet
+        </h2>
+        <h3
+          class="unnumbered"
+          id="choix-entre-la-création-dun-nouveau-domaine-ou-la-remontée-dune-sauvegarde"
+        >
+          Choix entre la création d’un nouveau domaine ou la remontée d’une
+          sauvegarde
+        </h3>
+        <p>
+          Au 1<sup>er</sup> lancement de l’application suivant l’installation,
+          si aucune licence n’est installée, l’écran suivant apparaît :
+        </p>
+        <p>
+          Si il s’agit d’une 1<sup>ère</sup> installation d’un nouveau logiciel,
+          le client doit choisir « Créer un nouveau domaine » puis
+          <a href="#installation-de-la-licence">installer sa licence</a>.
+        </p>
+        <p>
+          Si il s’agit d’une réinstallation sur un nouveau poste, le client doit
+          choisir « Remonter la sauvegarde d’un domaine existant »
+        </p>
+        <h3 class="unnumbered" id="installation-de-la-licence">
+          Installation de la licence
+        </h3>
+        <p>
+          Si aucune licence n’est installée, le client doit installer sa
+          licence. Tant que ce n’est pas fait, il ne peut utiliser son logiciel.
+        </p>
+        <p>
+          Dans l’écran qui apparaît, le client renseigne son n° de licence (qui
+          figure sur son BL et sa facture)
+        </p>
+        <p>
+          Si le client ne connaît pas son n° de licence, il peut contacter le SL
+        </p>
+
+        <h3 class="unnumbered" id="initialisation-du-domaine">
+          Initialisation du domaine
+        </h3>
+        <p>
+          L’étape suivante consiste à « initialiser » le domaine çàd à créer la
+          BDD correspondant au domaine et y renseigner les valeurs par défaut
+          nécessaires. 
+        </p>
+        <p>
+          Le client doit notamment renseigner les infos nécessaires pour que
+          l’on puisse créer l’administrateur du logiciel
+        </p>
+        <p>
+          Par défaut, le code généré (« utilisateur ») est
+          <strong>prénom.nom.</strong>
+        </p>
+        <h3 class="unnumbered" id="activation-de-la-licence">
+          Activation de la licence
+        </h3>
+        <p>
+          Si il s’agit d’une licence rattachée à la machine (c’est le cas
+          général), le client doit l’activer (cf. « <a
+            href="#activation-de-la-licence"
+            >Activation de la licence </a
+          >») dans les 14 jours, faute de quoi, l’accès au logiciel sera bloqué
+          au bout de ce délai.
+        </p>
+        <p>
+          Si la licence n’est pas à rattacher à la machine, on passe directement
+          à l’étape « <a
+            href="#acceptation-des-conditions-dutilisation-du-logiciel"
+            >Acceptation des conditions d’utilisation</a
+          > »)
+        </p>
+        <p>
+          Tant que l’activation n’est pas faite, l’écran suivant apparaît au
+          lancement de l’application.
+        </p>
+        <p>
+          Si l’utilisateur clique sur Annuler, on reste en licence « non
+          activée » (et on passe à l’étape 4). Le client peut utiliser son
+          logiciel pendant 14 jours. Au-delà, il est bloqué.
+        </p>
+        <p>
+          Si il clique sur suivant, on vérifie alors si le client a le droit
+          d’activer sa licence (étape 2).
+        </p>
+        <p>
+          <u>Si le client n’a pas activé toutes ses licences</u>, on lui
+          rappelle le nombre de licence déjà activées
+        </p>
+        <p>
+          <u>Si l’activation réussit</u>, on affiche un message de confirmation.
+        </p>
+        <p>
+          <u>Si l’activation n’a pas réussi</u> (licence inconnue, tolérance
+          dépassée, client en impayé, activation demandée pour une version à
+          laquelle le client n’a pas droit : il a résilié en V 9.00 et demande
+          une activation pour la V10.00 …) alors on affiche un message qui donne
+          un code d’erreur et message. Ces informations sont utiles pour le SL.
+        </p>
+        <p>
+          <u
+            >Si l’activation a réussi ou si le délai pour activer n’est pas
+            dépassé</u
+          >, le client peut utiliser son logiciel.
+        </p>
+        <p>
+          <u>Si le délai pour activer est dépassé</u> alors on affiche un
+          message avant de bloquer l’entrée dans le domaine.
+        </p>
+        <h3
+          class="unnumbered"
+          id="acceptation-des-conditions-dutilisation-du-logiciel"
+        >
+          Acceptation des conditions d’utilisation du logiciel
+        </h3>
+        <p>
+          Que l’activation ait réussi ou non, on affiche ensuite la fenêtre
+          d’acceptation des conditions d’utilisation du logiciel.
+        </p>
+        <p>
+          On ne permet pas au client d’entrer dans son domaine tant qu’il n’a
+          pas accepté les conditions d’utilisation.
+        </p>
+        <p>
+          Dans le cas d'une application lancée en mode non-visuel (par exemple:
+          ligne de commande) le dialogue d'acceptation des conditions
+          d'utilisation n’est pas affiché tout en ne changeant pas l'état
+          d'acceptation par l'utilisateur. La prochaine fois que l’application
+          est lancéé en mode visuel, ce dialogue sera affiché s’il y a le
+          besoin.
+        </p>
+        <h3 class="unnumbered" id="saisies-des-informations-complémentaires">
+          Saisies des informations complémentaires
+        </h3>
+        <p>
+          Le client est ensuite invité à saisir un certain nombre d’informations
+          (variables selon le logiciel) permettant d’initialiser le contexte
+          nécessaire à la 1<sup>ère</sup> utilisation de celui-ci.
+        </p>
+        <p>Ex en Geofolia :</p>
+        <h2
+          class="unnumbered"
+          id="cas-dun-client-non-fah-sur-un-poste-non-connecté-à-internet"
+        >
+          Cas d’un client non FAH sur un poste non connecté à Internet
+        </h2>
+        <p>
+          Seules les étapes « Installation de la licence » et « <a
+            href="http://projectsrv2010/sites/Coordination/SystemeDocumentaire/DocRefIsagriNet/html/5768093a-4813-6d82-79e3-9830c14ccf43.aspx"
+            >Activation</a
+          >
+          de la licence » diffèrent
+        </p>
+        <h3 class="unnumbered" id="installation-de-la-licence-1">
+          Installation de la licence
+        </h3>
+        <p>
+          Le client doit obtenir son fichier de licence (celui-ci ne lui est pas
+          fourni par défaut).
+          <strong>Sans fichier de licence, il ne peut aller plus loin</strong>
+        </p>
+        <p>
+          Pour cela, il peut le télécharger depuis l’extranet client (rubrique
+          « Mon assistance » puis « Mes licences ») depuis un autre poste
+          connecté à Internet
+        </p>
+        <blockquote>
+          <p>
+            A défaut il peut contacter Isagri. Le SL peut récupérer le fichier
+            de licence sur
+          </p>
+        </blockquote>
+        <ul>
+          <li>
+            <p>
+              Choisir le
+              <a
+                href="http://projectsrv2010/sites/Coordination/SystemeDocumentaire/DocRefIsagriNet/html/d5ffe64b-2927-dc30-6551-7eafa5db1b73.aspx"
+                >Menu</a
+              >
+              « Gestion d’un client » puis « <a
+                href="http://projectsrv2010/sites/Coordination/SystemeDocumentaire/DocRefIsagriNet/html/5768093a-4813-6d82-79e3-9830c14ccf43.aspx"
+                >Activation</a
+              > »
+            </p>
+          </li>
+          <li>
+            <p>
+              Renseigner l’ « identifiant client » (dispo dans Hotware, via F11
+              ou sur le BL du client)
+            </p>
+          </li>
+          <li><p>Cliquer sur l’onglet « Licence »</p></li>
+          <li>
+            <p>Le bouton permet d’obtenir le fichier de licence</p>
+          </li>
+        </ul>
+        <p>
+          Il est conseillé aux CIMS qui vont en formation chez un client qui n’a
+          pas accès à internet d’appeler le support au préalable afin d’obtenir
+          le fichier de licence.
+        </p>
+        <p>
+          Une fois le fichier de licence obtenu, le client doit indiquer sa
+          localisation pour que l’application l’installe
+        </p>
+        <h3 class="unnumbered" id="activation-de-la-licence-1">
+          Activation de la licence
+        </h3>
+        <p>
+          Tant que l’activation n’est pas faite, l’écran suivant apparaît au
+          lancement de l’application :
+        </p>
+
+        <p>
+          En cliquant sur « Annuler », on reste en licence « non activée ». Le
+          client peut utiliser son logiciel pendant 14 jours. Au-delà, il est
+          bloqué.
+        </p>
+        <p>
+          Pour activer, le client doit renseigner une clé d’activation dépendant
+          de son n° de licence et de la machine.
+        </p>
+        <p>
+          Pour obtenir cette clé d’activation, il peut se connecter sur le site
+          <a href="http://www.licence-registration.com"
+            >www.licence-registration.com</a
+          >
+          s’il dispose d’un autre poste avec une connexion Internet (ou à défaut
+          contacter le SL qui se connecte sur le même site à la place du
+          client).
+        </p>
+
+        <p>Renseigner la clé d’installation (sans les « - »)</p>
+        <p>La clé d’activation apparait. La renseigner dans l’appli</p>
+        <p>La liste des activations déjà faites s’affiche</p>
+        <p>Cliquer pour confirmer</p>
+        <p>Cliquer pour valider</p>
+        <p>
+          Dans le cas de tolérance dépassée, client en impayé, licence
+          incohérente ou inconnue, … la clé d’activation n’est pas fournie.
+        </p>
+        <p>
+          Une fois la clé d’activation récupérée par le client, il la renseigne
+          et clique sur le bouton Suivant.
+        </p>
+        <p>
+          Le fonctionnement est ensuite le même que pour le poste connecté à
+          Internet.
+        </p>
+        <h2 class="unnumbered" id="cas-dun-client-en-mode-fah-mode-hébergé">
+          Cas d’un client en mode FAH (mode hébergé)
+        </h2>
+        <p>
+          La licence est installée par l’équipe infogérance qui initialise
+          également le domaine. Un mail est transmis au client avec
+        </p>
+        <ul>
+          <li><p>le lien pour télécharger le Geofolia Hébergé</p></li>
+          <li><p>l’identifiant client</p></li>
+          <li><p>le libellé du domaine</p></li>
+          <li>
+            <p>
+              Le login et le mot de passe de l’utilisateur administrateur du
+              domaine
+            </p>
+          </li>
+        </ul>
+        <p>
+          Les étapes ultérieures (activation de la licence / acceptation des
+          conditions d’utilisation du logiciel)
+        </p>
+        <p>
+          A noter toutefois que l’authentification demande une information
+          supplémentaire par rapport au cas non FAH, à savoir l’identifiant
+          client :
+        </p>
+
+        <h1 id="utilisation-du-logiciel-en-rythme-de-croisière">
+          Utilisation du logiciel en rythme de croisière
+        </h1>
+        <h2
+          class="unnumbered"
+          id="cas-dun-client-en-mode-non-fah-mode-local-ou-réseau"
+        >
+          Cas d’un client en mode non FAH (mode local ou réseau)
+        </h2>
+        <p>
+          A l’entrée dans le logiciel, on vérifie la validité de la licence, çàd
+          que
+        </p>
+        <ul>
+          <li>
+            <p>
+              la licence existe : à défaut, on tente de la réinstaller (cf.
+              <a href="#installation-de-la-licence"
+                >Installation de la licence</a
+              >)
+            </p>
+          </li>
+          <li>
+            <p>
+              la licence a été activée (pour la version appropriée du logiciel
+              et la machine courante) : à défaut, on relance l’activation
+            </p>
+          </li>
+          <li>
+            <p>
+              la date de péremption de la version, la date de fin de validité de
+              la licence (pour les licences à durée limitée), une date de
+              blocage de la licence … n’est pas atteinte (pour cause de
+              volumétrie dépassée, démo expirée, …). Selon les cas, le client
+              aura un simple message d’avertissement mais pourra entrer
+              normalement dans son application, l’entrée dans l’application sera
+              refusée ou pourra rentrer dans l’application dans un
+              fonctionnement « dégradé » cf. Gestion de la date de péremption de
+              la version et de la date de fin de validité de la licence
+            </p>
+          </li>
+          <li>
+            <p>
+              s’il s’agit d’une licence de test, on est bien sur un poste
+              interne
+            </p>
+          </li>
+        </ul>
+        <p>
+          Par ailleurs, on vérifie que la date système du poste n’a pas été
+          reculée. A défaut, on bloque l’entrée dans l’appli
+        </p>
+        <h2 class="unnumbered" id="cas-dun-client-en-mode-fah-mode-hébergé-1">
+          Cas d’un client en mode FAH (mode hébergé)
+        </h2>
+        <p>Les mêmes contrôles sont effectués.</p>
+        <p>
+          En plus, on vérifie que le client est bien à jour de ses
+          règlements.<br />
+          Si ce n’est pas le cas, un message s’affiche et le client ne peut pas
+          entrer dans le logiciel. Si le client possède plusieurs domaines, il
+          ne pourra entrer dans aucun de ses domaines.
+        </p>
+        <h2 class="unnumbered" id="contrôle-des-volumétries">
+          Contrôle des volumétries
+        </h2>
+        <p>
+          La licence peut porter des volumétries maximales autorisées, pour
+          chaque nature de volumétrie connue par l’application.
+        </p>
+        <p>
+          Pour chaque nature de volumétrie, l’application calcule régulièrement
+          (en sortie d’application) la volumétrie consommée.
+        </p>
+        <p>
+          Si une volumétrie consommée dépasse une volumétrie autorisée, un
+          message avertit le client à la prochaine entrée dans le domaine.
+        </p>
+        <p>
+          A partir du 1<sup>er</sup> affichage de ce message, le client a 60
+          jours pour régulariser en
+        </p>
+        <ul>
+          <li>
+            <p>
+              Diminuant la volumétrie consommée (suppression d’utilisateurs,
+              d’animaux, … dans le domaine)
+            </p>
+          </li>
+          <li>
+            <p>
+              Régularisant sa situation auprès d’Isagri (achat de volumétries
+              supplémentaires + installation de la licence mise à jour)
+            </p>
+          </li>
+        </ul>
+        <p>
+          Sans action de sa part, au-delà de 60 jours suivant le 1<sup>er</sup>
+          affichage du message, il ne pourra plus du tout accéder à son domaine
+          ou ne pourra y accéder qu’en accès limité (même fonctionnement que la
+          <a href="#date-de-fin-de-validité-de-la-licence"
+            >Date de fin de validité de la licence</a
+          >)
+        </p>
+        <h1 id="ère-utilisation-dune-nouvelle-version-du-logiciel">
+          1ère utilisation d’une nouvelle version du logiciel
+        </h1>
+        <p>
+          <strong
+            ><u
+              >Pour les versions « majeures », une réactivation de la licence
+              est obligatoire</u
+            ></strong
+          >
+          dans les 14 jours suivant la 1<sup>ère</sup> utilisation de la version
+          majeure (pour éviter qu’un client qui a résilié ne puisse continuer à
+          utiliser la nouvelle version si il parvient à se la procurer)
+        </p>
+        <blockquote>
+          <p>
+            Pour les postes connectés à Internet, la licence est automatiquement
+            réinstallée (comme cela, si les modules fonctionnels de la licence
+            ont été revus, les clients bénéficient automatiquement de la mise à
+            jour) puis activée.
+          </p>
+          <p>
+            Pour les postes non connectés, la réinstallation n’est pas
+            obligatoire mais l’activation l’est. Le client doit donc renseigner
+            une nouvelle clé d’activation calculée à partir de la clé
+            d’installation.
+          </p>
+        </blockquote>
+        <p>
+          <strong
+            ><u
+              >Pour les versions « mineures », la réactivation de la licence
+              n’est pas nécessaire</u
+            ></strong
+          >
+          (serait trop contraignant pour les postes non connectés à Internet).
+          Toutefois, pour les postes connectés à Internet, une réactivation est
+          effectuée de manière transparente mais qu’elle aboutisse ou pas, le
+          client peut utiliser normalement sa nouvelle version. Cette
+          réactivation facultative permet d’enregistrer dans le SI Isagri le n°
+          de release effectivement utilisé par le client.
+        </p>
+        <p>
+          C’est l’application qui définit si une réactivation est obligatoire ou
+          pas (si une version est « majeure » ou « mineure ») (en fait, pour
+          chaque version, on indique la version d’activation minimum).
+        </p>
+        <h1 id="changement-de-machine">Changement de machine</h1>
+        <h2 class="unnumbered" id="pour-les-clients-non-fah">
+          Pour les clients non FAH
+        </h2>
+        <p>
+          Le client doit commencer par réaliser une sauvegarde de son logiciel
+          sur l’ancien ordinateur.
+        </p>
+        <p>
+          Ensuite sur le nouvel ordinateur, le client doit installer le logiciel
+          (grâce au DVD d’installation fourni). À la première exécution du
+          logiciel la fenêtre suivante s’affiche :
+        </p>
+        <p>
+          Il doit alors sélectionner « Remonter la sauvegarde d’un domaine
+          existant ». Il n’a pas besoin de fournir à nouveau le code (ou le
+          fichier) de licence car ce dernier est contenu dans la sauvegarde. Il
+          faudra juste qu’il réactive sa licence pour le nouvel ordinateur.
+        </p>
+        <h2 class="unnumbered" id="pour-les-clients-en-fah">
+          Pour les clients en FAH
+        </h2>
+        <p>
+          Il lui suffit d’installer le logiciel (grâce au lien qui lui a été
+          envoyé en même temps que ses identifiants de connexion) sur le nouvel
+          ordinateur puis de s’authentifier avec ses identifiants de connexion
+          habituels. La réactivation n’est pas nécessaire (car le serveur de
+          base de donnée ne change pas)
+        </p>
+        <h1 id="changement-du-contexte-dutilisation-du-logiciel">
+          Changement du contexte d’utilisation du logiciel
+        </h1>
+        <h2
+          class="unnumbered"
+          id="achat-de-modules-complémentaires-de-volumétrie-supplémentaire"
+        >
+          Achat de modules complémentaires / de volumétrie supplémentaire
+        </h2>
+        <p>
+          En cas d’achat complémentaire (module, volumétrie, …), la licence doit
+          être mise à jour (réinstallée) pour que le client puisse bénéficier de
+          ses nouveaux droits.
+        </p>
+        <p>En FAH, la mise à jour est faite par Isagri.</p>
+        <p>Hors FAH :</p>
+        <blockquote>
+          <p>
+            Le client doit mettre à jour lui-même sa licence en lançant sa mise
+            à jour via le ruban Options
+          </p>
+        </blockquote>
+        <blockquote>
+          <p>
+            Le fonctionnement est alors le même que lors de la 1ère utilisation
+            d’un logiciel nouvellement installé (cf.
+            <a href="#installation-de-la-licence">Installation de la licence</a
+            >)
+          </p>
+        </blockquote>
+        <ul>
+          <li>
+            <p>
+              Si le client ne met pas à jour sa licence, elle le sera
+              automatiquement de manière transparente en cas de changement de
+              version (1<sup>ère</sup>
+              entrée dans une nouvelle version majeure ou mineure) sur un poste
+              connecté à Internet.
+            </p>
+          </li>
+        </ul>
+        <h2
+          class="unnumbered"
+          id="résiliation-de-modules-diminution-de-volumétrie"
+        >
+          Résiliation de modules, diminution de volumétrie
+        </h2>
+        <p>
+          Une fois que l’ADV a mis à jour la/les solutions du client
+          (l’équivalent dans IsaGesLic des conventions dans Isagisa), la licence
+          est régénérée avec les nouveaux droits.
+        </p>
+        <p>
+          En cas d’utilisation en FAH, la licence est réinstallée dans la base
+          de données et donc le client fonctionne avec ses nouveaux droits.
+        </p>
+        <p>
+          En cas d’utilisation en local, la mise à jour de la licence n’est pas
+          immédiate et tant qu’elle n’est pas faite, le client conserve ses
+          droits précédents. La mise à jour est faite
+        </p>
+        <ul>
+          <li>
+            <p>
+              automatiquement à chaque 1<sup>ère</sup> utilisation d’une
+              nouvelle version en cas de poste connecté à Internet
+            </p>
+          </li>
+          <li><p>ou sur action volontaire de l’utilisateur</p></li>
+        </ul>
+        <h2 class="unnumbered" id="résiliation-de-logiciel">
+          Résiliation de logiciel
+        </h2>
+        <p>
+          En cas de résiliation complète d’un logiciel, l’ADV renseigne un n° de
+          version maximum sur <strong>chacune</strong> des solutions du client
+          (l’équivalent dans IsaGesLic des conventions dans Isagisa). Il s’agit
+          du dernier n° de version auquel a droit le client, compte tenu de la
+          date de la résiliation.
+        </p>
+        <p>
+          En FAH, le client est immédiatement bloqué. On lui supprime sa licence
+          du serveur. On est censé lui restituer ses données (pour qu’il puisse
+          continuer d‘y accéder en lecture seule en locale). En réalité, la
+          sauvegarde domaine n’existe pas encore et donc on ne peut les lui
+          restituer (dev prévu ultérieurement). Mais dans les faits, les clients
+          qui résilient arrêtent complètement et ne nous demandent pas de leur
+          restituer les données.
+        </p>
+        <p>
+          Par contre, en local, rien ne l’empêche de continuer à utiliser sa
+          version courante et ses releases (jusqu’à la date de péremption : cf.
+          <a href="#date-de-péremption">Date de péremption</a>). Il ne pourra
+          toutefois utiliser une version majeure ultérieure (l’activation de
+          celle-ci lui sera refusée).
+        </p>
+        <h2 class="unnumbered" id="changement-de-raison-sociale-du-client">
+          Changement de raison sociale du client
+        </h2>
+        <p>
+          En cas de changement de raison sociale d’un client, l’ADV crée un
+          nouveau client (ne met pas à jour la raison sociale du précédent) et
+          transfère les conventions et les solutions clients sur le nouveau
+          client. Le n° de licence et le n° de domaine ne changent pas. Le
+          libelle de domaine peut éventuellement être mis à jour (pour être en
+          conformité avec la nouvelle raison sociale)
+        </p>
+        <p>
+          La licence doit être mise à jour (réinstallée) pour que le client
+          puisse voir le changement dans son application :
+        </p>
+        <ul>
+          <li>
+            <p>
+              En FAH, la mise à jour est faite par Isagri. Le client doit
+              désormais se connecter avec son nouvel identifiant (et nouveau
+              libellé de domaine apparaît dans la liste)
+            </p>
+          </li>
+          <li>
+            <p>
+              Hors FAH, Le client doit mettre à jour lui-même sa licence en
+              lançant sa mise à jour via le ruban Options
+            </p>
+          </li>
+        </ul>
+        <h2 class="unnumbered" id="changement-de-libellé-de-domaine">
+          Changement de libellé de domaine
+        </h2>
+        <p>
+          En cas de demande client de changement d’un libellé de domaine, l’ADV
+          effectue la mise à jour dans IsaGestLic.
+        </p>
+        <p>
+          La licence doit être mise à jour (réinstallée) pour que le client
+          puisse voir le changement dans son application :
+        </p>
+        <ul>
+          <li>
+            <p>
+              En FAH, la mise à jour est faite par Isagri. Le client doit
+              désormais se connecter avec son nouvel identifiant (et nouveau
+              libellé de domaine apparaît dans la liste)
+            </p>
+          </li>
+          <li>
+            <p>
+              Hors FAH, Le client doit mettre à jour lui-même sa licence en
+              lançant sa mise à jour via le ruban Options
+            </p>
+          </li>
+        </ul>
+        <h2
+          class="unnumbered"
+          id="passage-dun-mode-local-à-un-mode-hébergé-et-inversement"
+        >
+          Passage d’un mode local à un mode hébergé (et inversement)
+        </h2>
+        <p>
+          Pour le moment il n’est pas possible de passer d’un mode à l’autre,
+          c’est une évolution prévue (pas de date précise, dans plusieurs années
+          certainement).
+        </p>
+        <h1 id="péremption-fin-de-validité-de-licence-impayés">
+          Péremption, fin de validité de licence, impayés
+        </h1>
+        <h2 class="unnumbered" id="date-de-péremption">Date de péremption</h2>
+        <p>
+          Chaque version d’un logiciel possède une date de péremption, fixée par
+          la RCP. La règle générale est de prendre la date de sortie de la
+          version + 24 mois. Cette date est surchargeable lors de la traduction.
+        </p>
+        <p>
+          La date de péremption a pour objectif d’inciter le client à utiliser
+          la dernière version et d’empêcher les clients qui ont résilié de
+          continuer à utiliser normalement leur logiciel.
+        </p>
+        <p>
+          Quand la date de péremption approche (&lt;= 2 mois), le client est
+          averti par un message à chaque entrée dans le domaine.
+        </p>
+        <p>
+          Le blocage effectif interviendra 2 mois après le 1er affichage de ce
+          message d’avertissement (même principe que la protection 2007). De
+          cette manière, le client dispose toujours d’un délai de 2 mois pour
+          changer de version (qu’il ait utilisé ou non son logiciel dans les 2
+          mois qui précédent la date de péremption prévue)
+        </p>
+        <p>
+          Lorsque le client entre dans son domaine une fois la date effective de
+          blocage atteinte, le comportement de l’application dépendra de la
+          licence installée.
+        </p>
+        <ul>
+          <li>
+            <p>
+              <u>Si la licence est activée</u>, le client pourra continuer
+              accéder à son domaine en « accès limité ».<br />
+              Dans ce mode, pour rendre l’utilisation du logiciel en production
+              impossible, une fonctionnalité majeure de l’application est
+              bloquée (au choix de la filière). Pour Geofolia, le choix retenu
+              est le passage total de l’application en lecture seule.<br />
+              Un message avertit le client à l’entrée dans son domaine :
+            </p>
+          </li>
+        </ul>
+
+        <ul>
+          <li>
+            <p>
+              <u
+                >Si la licence n’est pas activée (licence non liée à la
+                machine)</u
+              >, le client ne peut plus du tout entrer dans son domaine. Un
+              message avertit le client à l’entrée.
+            </p>
+          </li>
+        </ul>
+        <p>
+          Le délai d’avertissement avant blocage peut être réinitialisé dans
+          IM.Application (cf. <a href="#im.application">#IM.Application</a>,
+          fonctionnalité protégée par un code SAV)
+        </p>
+        <h2 class="unnumbered" id="date-de-fin-de-validité-de-la-licence">
+          Date de fin de validité de la licence
+        </h2>
+        <p>
+          Il est possible d’affecter une date de fin de validité à la
+          licence.<br />
+          Cette date est utile pour les contrats essais, les locations, les
+          licences écoles. Elle sera renseignée en général que pour des licences
+          non liées à la machine. Elle est également gérée pour les démos (cf.
+          <a href="#démos">#Démos</a>)
+        </p>
+        <p>
+          Le fonctionnement est le même que pour la date de péremption de la
+          version (avertissement 2 mois avant ; blocage effectif 2 mois après le
+          1<sup>er</sup>
+          avertissement : accès limité ou blocage complet selon que la licence
+          est activée ou non)
+        </p>
+        <p>
+          Message d’avertissement quand blocage proche (accès limité ou blocage
+          complet) :
+        </p>
+        <p>Message< d’avertissement quand blocage effectif (accès limité) :</p>
+        <p>Message d’avertissement quand blocage effectif (aucun droit) :</p>
+        <p>
+          Le délai d’avertissement avant blocage peut être réinitialisé dans
+          IM.Application (cf. <a href="#im.application">#IM.Application</a>,
+          fonctionnalité protégée par un code SAV)
+        </p>
+        <h2 class="unnumbered" id="impayé">Impayé</h2>
+        <p>
+          Un client en « zone rouge » ne peut plus utiliser son logiciel si il
+          est en FAH.
+        </p>
+        <p>
+          Par contre, en local, rien ne l’empêche de continuer à utiliser sa
+          version courante et ses releases (jusqu’à la date de péremption : cf.
+          <a href="#date-de-péremption">Date de péremption</a>). Il ne peut plus
+          non plus activer de licence (çàd qu’il ne peut utiliser une nouvelle
+          version majeure ni même changer de machine).
+        </p>
+        <h1 id="cas-particuliers">Cas particuliers</h1>
+        <h2 class="unnumbered" id="agriculteurs-en-mode-partenaire">
+          Agriculteurs en mode partenaire
+        </h2>
+        <h3 class="unnumbered" id="définition">Définition</h3>
+        <p>
+          Un agriculteur en mode partenaire est un agriculteur qui travaille en
+          collaboration avec un prestataire et dont les données sont hébergées
+          dans la base (et donc dans le domaine) de son prestataire (organisme)
+          (et non pas dans son domaine personnel). Il utilise forcément son
+          logiciel en mode FAH.
+        </p>
+        <p>Actuellement seul Geofolia gère cette notion.</p>
+        <h3 class="unnumbered" id="impact-sur-la-licence">
+          Impact sur la licence
+        </h3>
+        <p>
+          Dans ce cas, il y a plusieurs licences pour le domaine du prestataire
+          :
+        </p>
+        <p>
+          - Une licence pour le prestataire<br />
+          - Une licence pour chaque agriculteur en mode partenaire
+        </p>
+        <p>
+          Dans tous les cas, le domaine est celui du prestataire ; le client
+          propriétaire du domaine est l’organisme ; le client utilisateur du
+          domaine est le prestataire dans la licence prestataire et
+          l’agriculteur dans la licence agriculteur.
+        </p>
+        <h3 class="unnumbered" id="entrée-dans-le-domaine-par-lagriculteur">
+          Entrée dans le domaine par l’agriculteur
+        </h3>
+        <p>
+          Lors de l’entrée dans le domaine, le logiciel se base sur la licence
+          de l’agriculteur pour déterminer :<br />
+          - si une activation est à lancer (ou si on bloque l’accès au logiciel
+          si la date limite pour activer est dépassée)<br />
+          - le comportement à adopter par rapport à la date de péremption et la
+          date de fin de validité de la licence (message à afficher pour date
+          proche, domaine en « accès limité » ou inaccessible, …)<br />
+          - …
+        </p>
+        <p>
+          Par contre, pour calculer les droits de l’agriculteur
+          (modules/fonctionnalités accessibles), le logiciel se base sur la
+          licence du prestataire et la licence de l’agriculteur. En effet, les
+          droits effectifs sur un module fonctionnel peuvent dépendre du fait
+          que le module est autorisé par la licence du prestataire, de
+          l’individuel ou par les 2 (les règles sont définies par
+          l’application).
+        </p>
+        <h3
+          class="unnumbered"
+          id="entrée-dans-le-domaine-par-un-technicien-du-prestataire"
+        >
+          Entrée dans le domaine par un technicien du prestataire
+        </h3>
+        <p>
+          Quand un technicien du prestataire entre dans l’application, on ne
+          tient compte que de la licence du prestataire pour déterminer si une
+          activation et nécessaire, s’il faut afficher un avertissement ou
+          bloquer pour date de péremption ou de fin de validité de licence
+          proche ou atteinte, pour déterminer les modules fonctionnels autorisés
+          ...
+        </p>
+        <h3 class="unnumbered" id="mise-à-jour-de-la-licence">
+          Mise à jour de la licence
+        </h3>
+        <p>
+          En FAH, les licences des agriculteurs ne sont pas installées
+          automatiquement (car on n’initialise pas de domaine). Et donc, c’est à
+          l’organisme de le faire.
+        </p>
+        <p>
+          Quand le prestataire met à jour sa licence, on met également à jour
+          les licences de tous les agriculteurs en mode partenaires qui lui sont
+          rattachés.<mark><br /> </mark>Geofolia permet en plus de déclencher
+          via une option dans le ruban une mise à jour de toutes les licences
+          des agriculteurs en mode partenaire (mais pas de la licence du
+          prestataire) dès qu’il y a création d’un nouvel utilisateur.
+        </p>
+        <h2 class="unnumbered" id="licences-pédagogiques">
+          Licences pédagogiques
+        </h2>
+        <h3 class="unnumbered" id="caractéristiques-de-la-licence">
+          Caractéristiques de la licence
+        </h3>
+        <p>
+          Pour une école, la solution client créé par l’ADV pour l'enseignement
+          présente les particularités suivantes :
+        </p>
+        <ul>
+          <li>
+            <p>
+              Elles ne sont pas liées à la machine (pas d'activation donc) car
+              elles doivent pouvoir être librement installées sur les postes de
+              l'école ou des élèves mais, en contre-partie ont une date de fin
+              de validité renseignée au moment de l’achat (01/10 de l’année
+              scolaire suivante).
+            </p>
+          </li>
+          <li>
+            <p>
+              La typologie clientèle renseignée est « Ecole » pour conditionner
+              certains fonctionnements spécifiques (cf.
+              <a href="#comportement-du-logiciel">+ loin</a>)
+            </p>
+          </li>
+        </ul>
+        <p>
+          En juin-juillet, l’ADV doit prolonger d’un an la validité des
+          solutions client toujours actives (en fonction du nombre d’école l’ADV
+          pourra demander à la DRI une évolution pour gérer une mise à jour
+          groupée). Chaque école doit ensuite réinstaller la licence.
+        </p>
+        <h3 class="unnumbered" id="comportement-du-logiciel">
+          Comportement du logiciel
+        </h3>
+        <p>
+          Les particularités de fonctionnement (elles sont gérées par le cadre
+          outils) :
+        </p>
+        <ul>
+          <li>
+            <p>
+              A chaque entrée dans le domaine on affiche un message qui précise
+              que la licence est réservée à l’enseignement et ne peut être
+              utilisée en production.
+            </p>
+          </li>
+        </ul>
+
+        <ul>
+          <li>
+            <p>
+              Dans les éditions, on affiche un bandeau « Utilisation réservée à
+              un usage pédagogique"
+            </p>
+          </li>
+          <li>
+            <p>
+              <u>Quand la date de fin de validité approche ou est atteinte</u>,
+              le client est averti (pendant 2 mois) puis bloqué
+            </p>
+          </li>
+        </ul>
+        <h3 class="unnumbered" id="fonctionnement-pour-le-client">
+          Fonctionnement pour le client
+        </h3>
+        <p>
+          1-A la réception de la licence, le responsable de l’école installe
+          l’appli (mode local) et initialise le domaine. Il doit faire une
+          sauvegarde de la BDD
+        </p>
+        <p>
+          2-Ensuite, il installe l’appli et remonte la sauvegarde faite en 1 sur
+          les postes destinés aux étudiants. Ceux-ci peuvent l’utiliser pendant
+          toute l’année scolaire. Deux mois avant la date de fin de validité de
+          la licence renseignée par l’ADV, un message les prévient de la fin de
+          validité proche. Le blocage effectif intervient 2 mois après le 1<sup
+            >er</sup
+          >
+          avertissement
+        </p>
+        <p>
+          3-Après la prolongation de la date de fin de validité de la licence
+          par l’ADV, le responsable de l’école doit :
+        </p>
+        <blockquote>
+          <p>
+            - Remonter sur un poste la sauvegarde faite en 1 (si il veut
+            repartir d'un jeu de donnée initial pour la nouvelle année scolaire)
+          </p>
+          <p>- Lancer une maj de la licence</p>
+          <p>- Refaire une sauvegarde</p>
+          <p>
+            - La remonter sur chaque poste pour repartir pour une année scolaire
+            (retour à l’étape 2)
+          </p>
+        </blockquote>
+        <p>
+          Isagri n’a donc plus besoin de renvoyer chaque année un domaine vierge
+          ou un code licence à chaque école (comme c’était le cas en protection
+          2007) mais doit chaque année prolonger d’un an la date de fin de
+          validité de chaque licence école
+        </p>
+        <p>
+          N.B. : chaque filière concernée doit faire en sorte que les licences
+          pédagogiques fonctionnent en FAH. Dans ce cas évidemment, chaque élève
+          ne peut disposer de son propre jeu de données ; celui-ci est unique
+          pour l'école. Geofolia a d'ailleurs choisi de ne gérer que le FAH
+        </p>
+        <h3
+          class="unnumbered"
+          id="utilisation-de-données-de-production-ou-de-démo"
+        >
+          Utilisation de données de production ou de démo
+        </h3>
+        <p>
+          Il est fréquent que des écoles aient une ferme pédagogique et
+          utilisent le logiciel pour gérer celle-ci. Elles ont alors besoin de 2
+          licences
+        </p>
+        <ul>
+          <li><p>Une licence pédagogique pour l'enseignement</p></li>
+          <li>
+            <p>
+              Une licence de production "classique" pour la tenue de la ferme
+            </p>
+          </li>
+        </ul>
+        <p>Chacune des 2 licences a son propre domaine.</p>
+        <p>
+          Pour utiliser les données de la ferme pour l'enseignement, la
+          sauvegarde / remontée de sauvegarde standard du cadre outil ne
+          convient pas puisque celle-ci contient le domaine et la licence. Un
+          développement outil permettant de sauvegarder les données d'un domaine
+          (sans la licence) (local ou FAH, peu importe) et de les remonter dans
+          un autre domaine (local ou FAH, peu importe) a été demandé. Il
+          permettrait de traiter également le cas du passage local vers le FAH
+          et inversement ou du mode autonome au mode partenaire ou inversement
+          ou le changement de partenaire. Mais ce développement n'a pas été
+          réalisé à ce jour (30/09/2020). Les filières concernées peuvent
+          utiliser leurs fonctionnalités existantes d'import / export de données
+        </p>
+        <blockquote>
+          <p>Point au 01/03/21 :</p>
+          <p>Fonctionnalité existe en PO / PV / CO / GC</p>
+          <p>Troup’O va creuser le sujet sur base des travaux de PigUp :</p>
+          <p>
+            « Le sujet est toujours important pour la filière, donc mon équipe
+            va creuser le sujet pendant 2-3 j (non encore planifiés) pour
+            affiner le chiffrage afin qu’on puisse valider la réalisation pour
+            notre V7.00 (fin des devs prévus sur juillet). »
+          </p>
+          <p>
+            Si, suite à ces travaux PR, des briques communes sont réutilisables
+            pour un autre projet, en l’occurrence Paye, on fera en sorte de
+            remonter l’outillage commun dans le cadre outils.
+          </p>
+        </blockquote>
+        <h2 class="unnumbered" id="licences-secondaires">
+          Licences secondaires
+        </h2>
+        <h3 class="unnumbered" id="notion-de-poste-secondaire">
+          Notion de poste secondaire
+        </h3>
+        <p>
+          Les prestataires (ou même certains clients individuels) installent les
+          données sur un poste principal mais aussi sur des « postes
+          secondaires » qui sont synchronisés avec le poste principal :
+        </p>
+        <ul>
+          <li>
+            <p>
+              portables de techniciens (Geofolia) ou de comptables (IsaCompta)
+              qui se déplacent chez les clients,
+            </p>
+          </li>
+          <li>
+            <p>
+              serveurs d’agences en complément du serveur principal au siège
+              central en IsaCompta, …
+            </p>
+          </li>
+          <li><p>saisie décentralisée en GC</p></li>
+          <li><p>…</p></li>
+        </ul>
+        <p>
+          Il est nécessaire de disposer de licence sur ces postes secondaires
+          (pour que l’appli connaisse les modules actifs ou non etc …).
+        </p>
+        <p>
+          On ne veut toutefois pas de licences liées à la machine pour ces
+          postes secondaires (trop lourd à gérer, beaucoup de machines
+          concernées et donc de changements de machine : cf. la protection 2007
+          sur laquelle il avait fallu revenir en arrière ; il n’est pas
+          nécessaire de contrôler le nombre d’installations de postes
+          secondaires : les contrôles de volumétrie notamment sur le nombre
+          d’utilisateurs suffisent). On veut par contre empêcher une utilisation
+          de l’application en dehors de l’entreprise cliente Isagri (diffusion à
+          un tiers non client, utilisation par un salarié qui quitte le
+          prestataire, …).
+        </p>
+        <h3 class="unnumbered" id="fonctionnement">Fonctionnement</h3>
+        <p>
+          Seul le serveur principal dispose d’une licence gérée dans le SI
+          Isagri (activée).
+        </p>
+        <p>
+          Les postes secondaires disposent de licences particulières, les
+          licences secondaires.
+        </p>
+        <p>
+          Les licences secondaires ne sont pas générées par le SI Isagri mais
+          par l’application installée chez le client sur un poste principal (ou
+          même un poste secondaire : serveurs d’agence par exemple). Ces
+          licences secondaires sont censées être régulièrement régénérées et
+          diffusées sur les postes secondaires à l’occasion des synchronisations
+          de données entre le poste principal et le poste secondaire. Elles ne
+          sont pas liées à un poste (une même licence secondaire peut être
+          installée sur autant de poste que nécessaire) mais en contrepartie,
+          ont une durée de vie limitée à 3 mois à partir de leur génération.
+          L’utilisateur d’un poste secondaire commence à être averti de
+          l’expiration prochaine de sa licence secondaire 2 mois avant le
+          blocage effectif (même fonctionnement que la
+          <a href="#date-de-fin-de-validité-de-la-licence"
+            >Date de fin de validité de la licence</a
+          >)
+        </p>
+        <p>
+          Les licences secondaires doivent entraîner des limites fonctionnelles
+          dans les applications, de telle sorte qu’un tiers qui aurait obtenu de
+          manière illicite une licence secondaire sans licence principale ne
+          puisse utiliser normalement l’application. C’est ainsi qu’a priori,
+          dans toutes les applications, la gestion des utilisateurs et des
+          droits devrait nécessiter une licence principale. (A charge des
+          applications)
+        </p>
+        <h2 class="unnumbered" id="démos">Démos</h2>
+        <h3 class="unnumbered" id="caractéristiques">Caractéristiques</h3>
+        <p>Les démos se font sur des domaines particuliers typés « démo »</p>
+        <p>Ces domaines requièrent des licences, comme tous les domaines.</p>
+        <p>
+          Pour permettre la diffusion des démos, les licences rattachées à ces
+          domaines ne sont pas liées à la machine. Elles ne sont pas limitées
+          sur le plan fonctionnel.
+        </p>
+        <p>
+          Les démos se comportent différemment sur un poste interne (= de
+          salarié) ou externe (= de client)
+        </p>
+        <h3 class="unnumbered" id="comportement-sur-un-poste-externe">
+          Comportement sur un poste « externe »
+        </h3>
+        <p>
+          Sur un poste de client, une démo est utilisable 30 jours à partir de
+          sa première utilisation.
+        </p>
+        <p>
+          <u>Tant que cette date n’est pas atteinte</u>, la démo est utilisable
+          normalement (il n’y a aucune limite fonctionnelle). La seule
+          particularité est qu’à chaque entrée dans le domaine, on affiche un
+          message qui précise cette date d’expiration puis un message pour
+          rappeler que l’on est dans une démo.
+        </p>
+
+        <p>
+          <u>Une fois la date d’expiration est dépassée</u>, l’accès au domaine
+          démo est bloqué.
+        </p>
+        <p>
+          Le blocage peut être levé dans IM.Application (cf.
+          <a href="#im.application">#IM.Application</a>, fonctionnalité protégée
+          par un code SAV)
+        </p>
+        <p>
+          La remontée d’une sauvegarde faite sur le poste du client sur le même
+          poste ou sur un autre poste de client n’a pas pour effet de prolonger
+          cette date (la date d’expiration de la démo est sauvegardée et
+          remontée).
+        </p>
+        <p>
+          La seule solution pour pouvoir continuer à utiliser la démo est de
+          repartir de la sauvegarde d’origine (çàd fournie par Isagri au client)
+        </p>
+        <h3 class="unnumbered" id="comportement-sur-un-poste-interne">
+          Comportement sur un poste « interne »
+        </h3>
+        <p>
+          Lorsque l’on entre dans un domaine démo sur un poste de salarié, on
+          vide alors la date d’expiration de la démo. La durée de vie de 30
+          jours pour les postes clients ne s’applique donc pas aux postes
+          salariés. La démo est utilisable normalement (il n’y a aucune limite
+          fonctionnelle).
+        </p>
+        <h3 class="unnumbered" id="comportement-en-fah">Comportement en FAH</h3>
+        <p>
+          Selon que le poste où est installée la couche cliente de l’application
+          est un poste interne ou externe, le comportement sera celui de la démo
+          en interne ou en externe.
+        </p>
+        <h1 id="liste-des-erreurs">Liste des erreurs</h1>
+        <p>
+          En cas d’erreur lors de l’activation, les codes indiquent la nature de
+          l’erreur et peuvent vous orienter vers la solution
+        </p>
+        <p>Voici la liste des erreurs possibles (Mise à jour du 18/09/2017):</p>
+
+        <p>
+          Liste des erreurs qui ne devraient se produire qu’à Isagri (outils
+          interne comme IsaGenLic notamment)
+        </p>
+
+        <h1 id="historique">Historique</h1>
+        <table>
+          <colgroup>
+            <col style="width: 18%" />
+            <col style="width: 81%" />
+          </colgroup>
+          <thead>
+            <tr class="header">
+              <th>
+                <blockquote>
+                  <p>Date et auteur des modifications</p>
+                </blockquote>
+              </th>
+              <th>
+                <blockquote>
+                  <p>Détail des modifications apportées</p>
+                </blockquote>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="odd">
+              <td>
+                <blockquote>
+                  <p>
+                    03/01/2022<br />
+                    D. Lemal
+                  </p>
+                </blockquote>
+              </td>
+              <td>
+                <blockquote>
+                  <p>
+                    Précisions sur le fonctionnement des licences pédagogiques
+                  </p>
+                </blockquote>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+
+    <footer>
+      <p>© 2024 Isagri. Tous droits réservés.</p>
+    </footer>
+  </body>
+</html>

@@ -1,44 +1,56 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Index doc test</title>
-    <!-- Lien vers une feuille de style CSS externe -->
-    <!-- <link rel="stylesheet" href="styles.css"> -->
-    <!-- CSS intégré pour des ajustements rapides -->
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
+          font-family: Arial, sans-serif;
+          margin: 0;
+          padding: 0;
+          background-color: #f4f4f4;
         }
-        .container {
-            max-width: 800px;
-            margin: auto;
-            background: white;
-            padding: 20px;
+        header,
+        footer {
+          background-color: #007bff;
+          color: white;
+          text-align: center;
+          padding: 1em;
         }
-        h1 {
-            color: #333;
+        main {
+          padding: 20px;
         }
-    </style>
-</head>
-<body>
-    <div class="container">
+        section {
+          margin-bottom: 20px;
+        }
+      </style>
+  </head>
+  <body>
+    <header>
+      <!-- L'en-tête peut contenir le logo, le titre du site, la navigation, etc. -->
+      <div class="container">
         <h1>Bienvenue sur l’index documentaire !</h1>
-        <p>Pour démarrer, commencez par la page <a href="./Protection_2013_organisation_de_la_documentation.html">
-            Organisation de la documentation
-        </a></p>
-    </div>
+      </div>
+    </header>
 
-    <!-- Inclusion d'un script JavaScript à la fin du body pour un chargement de page optimisé -->
-    <script src="script.js"></script>
-    <!-- Script JavaScript intégré pour des fonctionnalités simples -->
-    <script>
-        console.log("Bienvenue sur l’index documentaire !");
-    </script>
+    <main>
+      <!-- La partie principale du contenu de votre page -->
+      <div class="container">
+        <p>
+          Pour démarrer, commencez par la page
+          <a href="./Protection_2013_organisation_de_la_documentation.html"
+            >Organisation de la documentation</a
+          >
+        </p>
+      </div>
+    </main>
 
-</body>
+    <footer>
+      <!-- Le pied de page, pour les informations de copyright, les liens utiles, etc. -->
+      <div class="container">
+        <p>© 2024 Votre Nom ou votre Organisation. Tous droits réservés.</p>
+      </div>
+    </footer>
+  </body>
 </html>

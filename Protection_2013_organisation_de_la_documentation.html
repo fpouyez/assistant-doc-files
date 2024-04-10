@@ -1,273 +1,123 @@
-<p><strong>Contenu</strong></p>
-<p><a href="#contexte-et-objet">I. Contexte et objet
-<span>2</span></a></p>
-<p><a href="#contexte">Contexte <span>2</span></a></p>
-<p><a href="#objet">Objet <span>2</span></a></p>
-<p><a href="#organisation-de-la-documentation">II. Organisation de la
-documentation <span>2</span></a></p>
-<p><a href="#historique">III. Historique <span>4</span></a></p>
-<h1 id="contexte-et-objet">Contexte et objet</h1>
-<h2 class="unnumbered" id="contexte">Contexte</h2>
-<p>La protection a pour objectif de contrôler que nos clients utilisent
-leur logiciel conformément à ce qu’ils ont acheté. La réécriture des
-applications Isagri a nécessité une réécriture complète du système de
-protection « Protection 2013 »). Sa mise en œuvre est complexe et fait
-intervenir de nombreuses équipes (Dev outils, DRI « GISA » et « GRC »,
-MktM, MktPr, Dev Progiciel, CQL Progiciel, ADV – Clientèle, SL, IAH, ...
-France et export).</p>
-<p>Ce document fait partie d’une série de documentations expliquant le
-fonctionnement et la mise en œuvre de la protection 2013 dans les
-applications Convergence.</p>
-<h2 class="unnumbered" id="objet">Objet</h2>
-<p>Ce document décrit l’organisation de la documentation relative à la
-protection 2013 et donne les points d’entrée vers les divers documents
-qui composent celle-ci</p>
-<h1 id="organisation-de-la-documentation">Organisation de la
-documentation</h1>
-<p>(en rouge = ce qui reste à faire)</p>
-<p>Les divers documents disponibles sont organisés comme suit</p>
-<ul>
-<li><p>Présentation générale de la documentation : objectif, public
-visé, contenu pour chaque document : = ce document</p></li>
-<li><p><a
-href="./Protection_2013_principes_generaux.html">Principes
-généraux</a></p>
-<ul>
-<li><p>Notion de domaine (pour + de détails, cf. la <a
-href="http://projectsrv2010/sites/Coordination/SystemeDocumentaire/_layouts/DocIdRedir.aspx?ID=R6RHQAPNUWS3-52-271">documentation
-spécialisée sur le sujet</a>)</p></li>
-<li><p>Notions d’appli technique, modules fonctionnels, nature de
-volumétrie</p></li>
-<li><p>Notions d’activité / de typologie clientèle</p></li>
-<li><p>Licence = logiciel, domaine, client</p></li>
-<li><p>Lien machine et activation</p></li>
-<li><p>Lien avec la version</p></li>
-<li><p>Les diverses applications impliquées : Isagisa / IsaGestLic /
-IsaGenLic / IsaBosc / IsadminFAH</p></li>
-<li><p>Environnements de test / production</p></li>
-</ul></li>
-<li><p><a
-href="./Protection_2013_fonctionnement_client.html">Fonctionnement
-du point de vue du client</a></p>
-<ul>
-<li><p>1<sup>ère</sup> utilisation d’un nouveau produit (poste local
-connecté ou non / FAH)</p></li>
-<li><p>Utilisation en régime de croisière</p></li>
-<li><p>Installation d’une nouvelle version</p></li>
-<li><p>Achat d’un module complémentaire</p></li>
-<li><p>Changement de poste / de raison sociale client / de libellé de
-domaine</p></li>
-<li><p>Résiliation</p></li>
-<li><p>Cas particuliers</p>
-<ul>
-<li><p>Ecoles</p></li>
-<li><p>AMP</p></li>
-<li><p>Postes secondaires</p></li>
-<li><p>Démos</p></li>
-</ul></li>
-<li><p>Pour le support</p>
-<ul>
-<li><p>Codes erreurs (PSW)</p></li>
-<li><p>Utilitaires de dépannage</p></li>
-</ul></li>
-</ul></li>
-<li><p><a
-href="./Protection_2013_fonctionnement_salarie.html">Fonctionnement
-pour les salariés</a> :</p>
-<ul>
-<li><p>Notion de poste interne</p></li>
-<li><p>Notion de licence de test</p></li>
-</ul></li>
-<li><p><a
-href="./Protection_2013_mise_en_oeuvre_dans_appli.html">Mise
-en œuvre dans une application (dev et tests)</a> :</p>
-<ul>
-<li><p>API outils et code à implémenter</p>
-<ul>
-<li><p>Application technique, modules fonctionnels, activités, natures
-de volumétries, …</p></li>
-<li><p>Calcul des volumétries</p></li>
-<li><p>Fonctionnalités bloquées quand accès en lecture seule</p></li>
-<li><p>Génération, diffusion, installation des licences
-secondaires</p></li>
-<li><p>Date de péremption de version</p></li>
-</ul></li>
-<li><p>Tests</p>
-<ul>
-<li><p>Pour vérifier que la licence est bien interprétée par l’appli :
-liens entre modules et fonctionnalités, volumétrie</p></li>
-<li><p>Pour vérifier le bon fonctionnement de l’intégration complète
-(récupération de la licence)</p></li>
-</ul></li>
-</ul></li>
-<li><p><a
-href="http://projectsrv2010/sites/Coordination/SystemeDocumentaire/_layouts/DocIdRedir.aspx?ID=R6RHQAPNUWS3-52-259">Définition
-des solutions commerciales dans IsaGestLic</a></p>
-<ul>
-<li><p>Notion de modules commerciaux, solutions commerciales, solutions
-client</p></li>
-<li><p>Règles de gestion pour générer les licences à partir des
-solutions clients</p></li>
-<li><p>Paramétrage d’IsaGestLic : création de l’appli, des modules
-fonctionnels, natures de volumétrie, … , solutions commerciales</p>
-<ul>
-<li><p>Fonctionnel</p></li>
-<li><p>Conseils et exemples de paramétrages</p></li>
-</ul></li>
-<li><p>Modification de solutions commerciales existantes et conséquences
-pour les solutions client existantes</p></li>
-<li><p>Distributeurs et droits d’accès</p></li>
-<li><p>Tests </p>
-<ul>
-<li><p>Pour vérifier que la licence est correcte (= contient les bons
-modules, volumétries, …)</p></li>
-</ul></li>
-</ul></li>
-<li><p>Autres paramétrages pour le déploiement dans un pays
-(1<sup>ère</sup> version / versions suivantes) (CW, en consultant
-SBécourt / NBracaval ?)</p>
-<ul>
-<li><p>Mise en place d’une 1<sup>ère</sup> version dans un pays</p>
-<ul>
-<li><p>Process : qui fait quoi / dans quel ordre ?</p></li>
-<li><p>Création des clients / domaines pour les démos, référentiels,
-settings, …</p></li>
-<li><p>Mise en place de serveurs pour le FAH, installation de la
-version, initialisation des BDD</p></li>
-<li><p>Tests à effectuer</p></li>
-</ul></li>
-<li><p>Mise en place des versions suivantes</p></li>
-</ul></li>
-<li><p>Vente par le commercial</p>
-<ul>
-<li><p>Nouveau client</p></li>
-<li><p>Client ayant déjà un autre logiciel Isagri</p>
-<ul>
-<li><p>Se poser la question du domaine</p></li>
-</ul></li>
-<li><p>Module complémentaire ou changement de volumétrie ou de nbe de
-machines</p></li>
-</ul></li>
-<li><p><a
-href="http://projectsrv2010/sites/Coordination/SystemeDocumentaire/_layouts/DocIdRedir.aspx?ID=R6RHQAPNUWS3-52-260">Administration
-des licences par l’ADV + livraison</a> (si GISA / si pas GISA) :</p>
-<ul>
-<li><p>Création du client (GISA ou Isabosc)</p></li>
-<li><p>Création du domaine</p></li>
-<li><p>Achat d’un logiciel nouveau pour le client (sur nouveau domaine /
-domaine existant) :</p>
-<ul>
-<li><p>Création de la convention</p></li>
-<li><p>Création de la solution client</p></li>
-</ul></li>
-<li><p>Livraison au client, transmission de ses codes de connexion (en
-local / en FAH)</p></li>
-<li><p>Module complémentaire ou changement de volumétrie</p></li>
-<li><p>Changement du nbe de machines</p></li>
-<li><p>Résiliation</p></li>
-<li><p>Changement de raison sociale du client / de libellé de
-domaine</p></li>
-</ul></li>
-<li><p>Conversion des licences ancienne protection en licence protection
-2013</p>
-<ul>
-<li><p>Collecte des infos nécessaires</p></li>
-<li><p>Génération des licences</p>
-<ul>
-<li><p>Règles particulières concernant les postes
-supplémentaires</p></li>
-</ul></li>
-<li><p>1<sup>er</sup> envoi de masse de la version</p></li>
-</ul></li>
-</ul>
-<ul>
-<li></li>
-<li><p><a
-href="http://projectsrv2010/sites/Coordination/SystemeDocumentaire/_layouts/WordViewer.aspx?id=/sites/Coordination/SystemeDocumentaire/ArticlesLibres/Utilisation_de_Isagestlic_pour_le_test.docx">Utilisation
-d’IsaGestlic de test (Doc 1)</a><a
-href="http://projectsrv2010/sites/Coordination/SystemeDocumentaire/_layouts/WordViewer.aspx?id=/sites/Coordination/SystemeDocumentaire/Documents/Utilisation_de_IsaGestLic.docx">Utilisation
-d’IsaGestlic de test (Doc 2)</a></p>
-<ul>
-<li><p>Modules et solutions commerciales</p></li>
-<li><p>Gestion d’un client existant</p></li>
-<li><p>Création d’un client de test</p></li>
-</ul></li>
-<li><p><a
-href="./Comment_utiliser_IsaGenLic.html">Utilisation
-de GenLic</a></p>
-<ul>
-<li><p>Présentation générale</p></li>
-<li><p>Paramétrer l’application</p></li>
-<li><p>Créer une licence</p></li>
-<li><p>Ouvrir une licence existante</p></li>
-<li><p>Installer la licence en base</p></li>
-<li><p>Récupérer les modules et les volumétries d’une licence dans le
-presse-papier</p></li>
-<li><p>Créer une licence pour un agriculteur en mode partenaire
-(AMP)</p></li>
-<li><p>Problèmes connus</p></li>
-</ul></li>
-<li><p><a
-href="https://groupeisagri-my.sharepoint.com/:v:/p/fcoppin/EdAQ77alg2RLiOX92_kQmHkBfs8f5dppmpM10eTyHvfN1A?e=FZ4zN5">Vidéo
-d’une présentation sur le fonctionnement de la protection 2013</a></p>
-<ul>
-<li><p>Mise en place du contexte de test (démo ou prod).</p></li>
-<li><p>Création d’un client de test et d’une licence
-(Isagestlic).</p></li>
-<li><p>Mise en place de la protection dans le logiciel</p>
-<ul>
-<li><p>Fenêtre à propos</p></li>
-<li><p>Options liées à la protection dans l’utilitaire
-Im-application</p></li>
-<li><p>Utilitaire Genlic</p></li>
-</ul></li>
-</ul></li>
-</ul>
-<h1 id="historique">Historique</h1>
-<table>
-<colgroup>
-<col style="width: 18%" />
-<col style="width: 81%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><blockquote>
-<p>Date et auteur des modifications</p>
-</blockquote></th>
-<th><blockquote>
-<p>Détail des modifications apportées</p>
-</blockquote></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><blockquote>
-<p>21/09/2021</p>
-</blockquote></td>
-<td><blockquote>
-<p>Ajout de documentation sur les outils pour tester la protection
-(IsaGestLic / GenLic) et ajout d’une vidéo de présentation du
-fonctionnement de la protection 2013</p>
-</blockquote></td>
-</tr>
-<tr class="even">
-<td><blockquote>
-<p>16/03/2016<br />
-D. Lemal</p>
-</blockquote></td>
-<td><blockquote>
-<p>Mise en forme pour publication dans le système documentaire
-production</p>
-</blockquote></td>
-</tr>
-<tr class="odd">
-<td><blockquote>
-<p>22/10/2015<br />
-D. Lemal</p>
-</blockquote></td>
-<td><blockquote>
-<p>Création</p>
-</blockquote></td>
-</tr>
-</tbody>
-</table>
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Documentation Technique: Protection 2013</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+      }
+      header,
+      footer {
+        background-color: #007bff;
+        color: white;
+        text-align: center;
+        padding: 1em;
+      }
+      main {
+        padding: 20px;
+      }
+      section {
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Documentation Technique: Système de Protection 2013</h1>
+    </header>
+
+    <main>
+      <section id="introduction">
+        <h2>Introduction</h2>
+        <p>
+          Cette documentation fournit un guide complet sur le fonctionnement et
+          la gestion du système de protection 2013 pour les applications Isagri.
+        </p>
+      </section>
+
+      <section id="contenu">
+        <h2>Table des Matières</h2>
+        <ul>
+          <li><a href="#contexte-et-objet">I. Contexte et objet</a></li>
+          <li>
+            <a href="#organisation-de-la-documentation"
+              >II. Organisation de la documentation</a
+            >
+          </li>
+          <li><a href="#historique">III. Historique</a></li>
+        </ul>
+      </section>
+
+      <section id="contexte-et-objet">
+        <h2>Contexte et objet</h2>
+        <p>
+          La protection a pour objectif de contrôler que nos clients utilisent
+          leur logiciel conformément à ce qu’ils ont acheté...
+        </p>
+      </section>
+
+      <section id="organisation-de-la-documentation">
+        <h2>Organisation de la documentation</h2>
+        <p>Les divers documents disponibles sont organisés comme suit:</p>
+        <ul>
+          <li>Présentation générale de la documentation</li>
+          <li>
+            <a href="./Protection_2013_principes_generaux.html"
+              >Principes généraux</a
+            >
+          </li>
+          <li>
+            <a href="./Protection_2013_fonctionnement_client.html"
+              >Fonctionnement du point de vue du client</a
+            >
+          </li>
+          <li>
+            <a href="./Protection_2013_fonctionnement_salarie.html"
+              >Fonctionnement pour les salariés</a
+            > 
+          </li>
+          <li>
+            <a href="./Protection_2013_mise_en_oeuvre_dans_appli.html"
+              >Mise en œuvre dans une application (dev et tests)</a
+            >
+          </li>
+          <li>
+            <a href="./Comment_utiliser_IsaGenLic.html"
+              >Utilisation de GenLic</a
+            >
+          </li>
+          >
+        </ul>
+      </section>
+
+      <section id="historique">
+        <h2>Historique</h2>
+        <p>Historique des modifications apportées à la documentation.</p>
+        <table>
+          <tr>
+            <th>Date et auteur des modifications</th>
+            <th>Détail des modifications apportées</th>
+          </tr>
+          <tr>
+            <td>21/09/2021</td>
+            <td>
+              Ajout de documentation sur les outils pour tester la protection
+              (IsaGestLic / GenLic) et ajout d’une vidéo de présentation du
+              fonctionnement de la protection 2013
+            </td>
+          </tr>
+          <!-- D'autres entrées peuvent être ajoutées ici -->
+        </table>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2024 Isagri. Tous droits réservés.</p>
+    </footer>
+  </body>
+</html>

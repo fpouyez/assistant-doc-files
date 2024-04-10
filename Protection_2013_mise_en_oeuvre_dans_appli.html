@@ -1,494 +1,707 @@
-<p><strong>Contenu</strong></p>
-<p><a href="#contexte-et-objet">I. Contexte et objet
-<span>3</span></a></p>
-<p><a href="#contexte">Contexte <span>3</span></a></p>
-<p><a href="#objet">Objet <span>3</span></a></p>
-<p><a href="#prerequis">II. Prerequis <span>3</span></a></p>
-<p><a href="#lien-vers-doc-outils">III. Lien vers doc outils
-<span>4</span></a></p>
-<p><a href="#les-notions-à-gérer-dans-lapplication">IV. Les notions à
-gérer dans l’application <span>4</span></a></p>
-<p><a
-href="#les-points-à-prendre-en-charge-par-lapplication-lors-dune-1ère-mise-en-place-de-la-protection-2013">V.
-Les points à prendre en charge par l’application lors d’une 1ère mise en
-place de la protection 2013 <span>5</span></a></p>
-<p><a href="#gestion-des-droits-de-la-terminologie">Gestion des droits /
-de la terminologie / … <span>5</span></a></p>
-<p><a
-href="#gestion-des-versions-et-de-la-date-de-péremption-de-la-version">Gestion
-des versions et de la date de péremption de la version
-<span>5</span></a></p>
-<p><a
-href="#installation-activation-et-vérification-de-la-validité-de-la-licence">Installation,
-activation et vérification de la validité de la licence
-<span>6</span></a></p>
-<p><a href="#calcul-des-volumétries-consommées">Calcul des volumétries
-consommées <span>6</span></a></p>
-<p><a
-href="#affichage-des-avertissements-concernant-les-volumétries-à-certains-utilisateurs-uniquement">Affichage
-des avertissements concernant les volumétries à certains utilisateurs
-uniquement <span>6</span></a></p>
-<p><a
-href="#affichage-dun-lien-vers-de-laide-en-ligne-sur-le-dialogue-davertissement-de-dépassement-de-volumétrie">Affichage
-d’un lien vers de l’aide en ligne sur le dialogue d’avertissement de
-dépassement de volumétrie <span>6</span></a></p>
-<p><a
-href="#affichage-dun-lien-vers-de-laide-en-ligne-sur-le-dialogue-de-version-périmée">Affichage
-d’un lien vers de l’aide en ligne sur le dialogue de version périmée
-<span>6</span></a></p>
-<p><a href="#gestion-du-mode-accès-limité">Gestion du mode « Accès
-limité » <span>7</span></a></p>
-<p><a href="#mise-à-jour-de-licence">Mise à jour de licence
-<span>7</span></a></p>
-<p><a
-href="#génération-diffusion-installation-des-licences-secondaires">Génération,
-diffusion, installation des licences secondaires <span>7</span></a></p>
-<p><a
-href="#les-points-à-prendre-en-charge-par-lapplication-lors-dune-nouvelle-version">VI.
-Les points à prendre en charge par l’application lors d’une nouvelle
-version <span>8</span></a></p>
-<p><a href="#isagenlic">VII. IsaGenLic <span>8</span></a></p>
-<p><a
-href="#tests-à-mettre-en-œuvre-lors-dune-1ère-mise-en-place-de-la-protection-2013">VIII.
-Tests à mettre en œuvre lors d’une 1ère mise en place de la protection
-2013 <span>8</span></a></p>
-<p><a href="#tests-à-mettre-en-œuvre-pour-une-nouvelle-version">IX.
-Tests à mettre en œuvre pour une nouvelle version
-<span>10</span></a></p>
-<p><a
-href="#comment-gérer-le-besoin-des-projets-de-savoir-si-on-est-dans-un-contexte-de-test-ou-de-maintenance">X.
-Comment gérer le besoin des projets de savoir si on est dans un contexte
-de test ou de maintenance <span>11</span></a></p>
-<p><a href="#historique">XI. Historique <span>11</span></a></p>
-<h1 id="contexte-et-objet">Contexte et objet</h1>
-<h2 class="unnumbered" id="contexte">Contexte</h2>
-<p>La protection a pour objectif de contrôler que nos clients utilisent
-leur logiciel conformément à ce qu’ils ont acheté.  La réécriture des
-applications Isagri a nécessité une réécriture complète du système de
-protection « Protection 2013 »). Sa mise en œuvre est complexe et fait
-intervenir de nombreuses équipes (Dev outils, DRI « GISA » et « GRC »,
-MktM, MktPr, Dev Progiciel, CQL Progiciel, ADV – Clientèle, SL, IAH, ...
-France et export).</p>
-<p>Ce document fait partie d’une série de documentations expliquant le
-fonctionnement et la mise en œuvre de la protection 2013 dans les
-applications Convergence. Pour une vision générale des documentations
-disponibles, cf. <a
-href="http://projectsrv2010/sites/Coordination/SystemeDocumentaire/_layouts/DocIdRedir.aspx?ID=R6RHQAPNUWS3-52-255"><u>ici</u></a></p>
-<h2 class="unnumbered" id="objet">Objet</h2>
-<p>Ce document décrit les développements à réaliser dans les
-applications pour mettre en place la protection 2013 dans une
-application et les tests pour les couvrir. Il s'adresse donc aux chefs
-de produits, développeurs et testeurs des diverses filières</p>
-<h1 id="prerequis">Prerequis</h1>
-<p>Pour comprendre le présent document, il faut avoir lu le document
-« <a
-href="http://projectsrv2010/sites/Coordination/SystemeDocumentaire/_layouts/DocIdRedir.aspx?ID=R6RHQAPNUWS3-52-256">Protection
-2013 : principes généraux</a> ».</p>
-<h1 id="lien-vers-doc-outils">Lien vers doc outils</h1>
-<p>Cf. <a
-href="http://projectsrv2010/sites/Coordination/SystemeDocumentaire/_layouts/DocIdRedir.aspx?ID=R6RHQAPNUWS3-23-770">ici</a></p>
-<h1 id="les-notions-à-gérer-dans-lapplication">Les notions à gérer dans
-l’application</h1>
-<p>L’application reçoit toutes les informations relatives à ce qu’a
-acheté le client (modules fonctionnels, volumétries, …) via la licence.
-Le code source de l’application (et transversal outils) doit se baser
-sur celle-ci (et uniquement sur celle-ci) pour gérer les droits du
-client. La licence est générée à partir du SI Isagri (IsaGestLic). Un
-certain nombre de concepts doivent donc être gérés de manière cohérente
-entre IsaGestLic et l’application : <strong>les identifiants
-correspondants aux occurrences possibles pour chacun de ces concepts
-doivent être identiques entre ceux que s’attend à recevoir l’application
-et ceux qui sont définis dans IsaGestLic</strong></p>
-<p>Les concepts concernés sont</p>
-<ul>
-<li><p>Le logiciel</p></li>
-<li><p>Les modules fonctionnels</p></li>
-<li><p>Les natures de volumétrie</p></li>
-<li><p>Les activités</p></li>
-<li><p>Les typologies de clientèle</p></li>
-<li><p>Les pays</p></li>
-<li><p>Les produits blancs</p></li>
-</ul>
-<p>Les droits disponibles pour le client dépendent de ces divers
-concepts.</p>
-<h1
-id="les-points-à-prendre-en-charge-par-lapplication-lors-dune-1ère-mise-en-place-de-la-protection-2013">Les
-points à prendre en charge par l’application lors d’une 1ère mise en
-place de la protection 2013</h1>
-<h2 class="unnumbered"
-id="gestion-des-droits-de-la-terminologie">Gestion des droits / de la
-terminologie / …</h2>
-<p>Les fonctionnalités accessibles, le vocabulaire utilisé,
-l’iconographie, certains fonctionnements dépendent</p>
-<ul>
-<li><p>des modules fonctionnels qu’a achetés le client</p></li>
-<li><p>de la ou des activités</p></li>
-<li><p>de la typologie de clientèle</p></li>
-<li><p>du pays</p></li>
-<li><p>du produit blanc courant si il y a lieu</p></li>
-<li><p>…</p></li>
-</ul>
-<p>Toutes ces informations (et d’autres : iD du domaine, Id du client
-utilisateur, Id du client propriétaire du domaine, …) sont véhiculées
-par la licence et accessible à l’application (en lecture seule) via la
-classe <a
-href="http://projectsrv2010/sites/Coordination/SystemeDocumentaire/DocRefIsagriNet/html/2a68f0e8-14e9-fbdf-07e7-e33003c06c50.aspx">InstalledLicence</a>
-du cadre Outils.</p>
-<p>L’application doit donc adapter son fonctionnement (visibilité des
-menus, des contrôles visuels, liste des fonctionnalités dans la gestion
-des droits, iconographie, …) selon les informations de la licence
-courante</p>
-<h2 class="unnumbered"
-id="gestion-des-versions-et-de-la-date-de-péremption-de-la-version">Gestion
-des versions et de la date de péremption de la version</h2>
-<p>L’application doit renseigner sa version courante, sa date de
-péremption et la version d’activation minimum.</p>
-<p><strong>Pour la date de péremption</strong>, la valeur conseillée est
-la date de validation du setup + 2 ans (peut être modifiée lors de la
-traduction si la traduction se fait largement après la validation du
-setup France)</p>
-<p><strong>La version d’activation minimum</strong> précise le n° de
-version minimum de l’application avec laquelle doit avoir été activée la
-protection pour être considérée comme valide pour la version en cours
-(çàd sans devoir être réactivée).</p>
-<p>Ex :</p>
-<ul>
-<li><p>La version courante est la 10.50</p></li>
-<li><p>La version d’activation minimum renseignée pour cette version
-10.50 est la 10.00</p></li>
-<li><p>Cela signifie qu’un client qui installe la V10.50 par-dessus un V
-10.00 peut l’utiliser sans devoir réactiver sa licence ; par contre un
-client qui installe la V10.50 par-dessus une V 9.00 doit réactiver sa
-licence</p></li>
-</ul>
-<p>La réactivation consiste à vérifier que la licence est toujours
-valide (le client n’a pas résilié) et que le client n’utilise pas sur
-plus de machine que ce qu’il a acheté. C’est transparent pour les postes
-(serveur de BDD) connectés à Internet mais implique un contact entre
-Isagri et le client pour les postes non connectés à Internet. Pour plus
-de détails, cf. <a
-href="http://projectsrv2010/sites/Coordination/SystemeDocumentaire/_layouts/DocIdRedir.aspx?ID=R6RHQAPNUWS3-52-256#Lien_machine">Protection_2013_:
-principes_generaux - rubrique « Dépendance par rapport à la
-machine »</a></p>
-<p>La consigne est d’obliger à réactiver la licence une fois par an,
-pour chaque version majeure.</p>
-<p>Pour mettre à jour date de péremption et version d’activation
-minimum, cf. la <a
-href="http://www.isaweb.isagri.fr/RessourcesIsaWeb/Prod/Outils/DocExterne/Isagri.Net/Isagri.Net_N/Generale/Developpement%20PC/2.%20Cadre%20developpement/2.%20Mises%20en%20oeuvre/IP.ExtendedResourceWriter_-_Mise_en_place.html">documentation
-Outils</a> correspondante.</p>
-<h2 class="unnumbered"
-id="installation-activation-et-vérification-de-la-validité-de-la-licence">Installation,
-activation et vérification de la validité de la licence</h2>
-<p>Ces points sont entièrement pris en charge par le cadre outils.</p>
-<p>A l’issue de la vérification de la licence, l’entrée dans
-l’application est autorisée en accès complet, autorisée en accès limité
-(à gérer par l’application : cf. <a
-href="#gestion-du-mode-accès-limité">Gestion du mode « Accès limité
-»</a>) ou interdit</p>
-<h2 class="unnumbered" id="calcul-des-volumétries-consommées">Calcul des
-volumétries consommées</h2>
-<p>Pour chaque nature de volumétrie gérée par l’application (et donc
-potentiellement limitée dans la licence), l’application doit calculer la
-volumétrie effectivement utilisée. En effet, la volumétrie est une
-notion métier ; le cadre outils récupère les natures de volumétries et
-volumétries autorisées (éventuellement par activité) par la licence,
-gère les messages d’avertissement et blocages lorsqu’une volumétrie est
-dépassée mais c’est l’application qui doit indiquer où on en est pour
-chaque nature de volumétrie (éventuellement par activité).</p>
-<h2 class="unnumbered"
-id="affichage-des-avertissements-concernant-les-volumétries-à-certains-utilisateurs-uniquement">Affichage
-des avertissements concernant les volumétries à certains utilisateurs
-uniquement</h2>
-<p>Certaines applications, notamment à destination des grands comptes,
-souhaitent n’afficher les avertissements de dépassement de volumétrie
-qu’à certains utilisateurs (typiquement, les administrateurs du
-système).</p>
-<p>Pour cela, la protection met à disposition un événement sur le
-LicenceInputProvider du startupManager. L’application doit renvoyer true
-si l’utilisateur authenticatedUser passé en paramètre doit voir le
-message, false sinon. Le délai de grâce pour régulariser la situation
-commence à partir du moment où l’utilisateur « habilité » a vu le
-message d’avertissement.</p>
-<h2 class="unnumbered"
-id="affichage-dun-lien-vers-de-laide-en-ligne-sur-le-dialogue-davertissement-de-dépassement-de-volumétrie">Affichage
-d’un lien vers de l’aide en ligne sur le dialogue d’avertissement de
-dépassement de volumétrie</h2>
-<p>Il est possible de mettre un lien sur le dialogue d’avertissement
-pour rediriger l’utilisateur directement sur une fiche de l’aide en
-ligne plutôt que lui laisser chercher lui-même.</p>
-<p>Il est possible changer l’URL de ce lien en renseignant la propriété
-statique <a
-href="http://projectsrv2010/sites/Coordination/SystemeDocumentaire/DocRefIsagriNet/html/6c7d1da4-355d-9da6-c088-39a45ffbfa96.aspx">LicenceConfiguration</a>.OnlineLicenceHelpUrl.</p>
-<p>Pour être valide il faut que ce lien commence avec « http:// » ou
-« https:// » et s’il n’a pas de valeur, le lien n’affichera pas.</p>
-<h2 class="unnumbered"
-id="affichage-dun-lien-vers-de-laide-en-ligne-sur-le-dialogue-de-version-périmée">Affichage
-d’un lien vers de l’aide en ligne sur le dialogue de version
-périmée</h2>
-<p>Le dialogue de version périmée a un lien vers l’espace client qui se
-comporte comme le bouton « Espace Client » dans le ruban, il ouvre le
-navigateur par défaut avec un lien récupéré du service SSO.</p>
-<p>Il existe la possibilité de surcharger ce lien en câblant sur
-l’événement <a
-href="http://projectsrv2010/sites/Coordination/SystemeDocumentaire/DocRefIsagriNet/html/6c7d1da4-355d-9da6-c088-39a45ffbfa96.aspx">LicenceConfiguration</a>.
-NeedVersionExpiredDialogLink.</p>
-<p>Pour être valide il faut que ce lien commence avec « http:// » ou
-« https:// ».</p>
-<p>Par défaut le titre de ce lien sera « Aide en ligne » en français.
-Pour le changer il faut changer la valeur de la propriété statique <a
-href="http://projectsrv2010/sites/Coordination/SystemeDocumentaire/DocRefIsagriNet/html/6c7d1da4-355d-9da6-c088-39a45ffbfa96.aspx">LicenceConfiguration</a>.VersionExpiredDialogLinkCaption
-ou la valeur de la ressource
-Licence.Licence.DefaultVersionExpiredDialogLinkCaption.</p>
-<h2 class="unnumbered" id="gestion-du-mode-accès-limité">Gestion du mode
-« Accès limité »</h2>
-<p>Dans certains cas (date de péremption de version atteinte ou
-volumétrie dépassée sur une licence activée et après expiration du délai
-d’avertissement), l’utilisateur entre dans l’application en « accès
-limité ».</p>
-<p>Il appartient à la filière de définir ce qu’est ce mode « limité » et
-de faire les développements correspondants. Le client doit pouvoir
-continuer de consulter toutes ses informations mais, pour rendre
-l’utilisation du logiciel en production impossible, une fonctionnalité
-majeure de l’application est bloquée. Faire au plus simple.</p>
-<blockquote>
-<p>Ex : ne pas pouvoir créer de nouveau mouvement d’animal en
-ruminants ; ne pas pouvoir générer un nouveau BS en Paye, …</p>
-</blockquote>
-<p>Pour les concepts sur lesquelles une volumétrie est gérée, penser à
-laisser accessible la fonctionnalité de suppression pour gérer le cas du
-client qui dépasse la volumétrie, qui ne veut pas acheter la volumétrie
-supérieure et qui a oublié de faire les suppressions avant le passage en
-mode « Accès limité ». Cela lui permettra de supprimer des données et de
-revenir à une volumétrie consommée inférieure à la volumétrie
-autorisée.</p>
-<h2 class="unnumbered" id="mise-à-jour-de-licence">Mise à jour de
-licence</h2>
-<p>Afin de pouvoir gérer les cas de changement de contexte d’utilisation
-du logiciel (Achat de modules complémentaires, modifications des
-volumétries, changement de raison sociale, etc..), l’application doit
-proposer la fonctionnalité de mise à jour de licence via le ruban
-Options.</p>
-<p><img src="media/image1.png"
-style="width:3.20833in;height:1.01042in" /></p>
-<p>Pour + de détails sur les cas d’utilisation, cf. <a
-href="http://projectsrv2010/sites/Coordination/SystemeDocumentaire/_layouts/DocIdRedir.aspx?ID=R6RHQAPNUWS3-52-257#Licences_secondaires">Protection
-2013 : fonctionnement client - rubrique "Changement du contexte
-d’utilisation du logiciel"</a></p>
-<h2 class="unnumbered"
-id="génération-diffusion-installation-des-licences-secondaires">Génération,
-diffusion, installation des licences secondaires</h2>
-<p>Les licences secondaires sont des licences destinées aux postes
-nomades des comptables ou techniciens chez les prestataires comptables
-ou PV qui doivent pouvoir utiliser l’application en local ou aux
-serveurs d’agences ; également utilisées en GC pour les poste de saisie
-décentralisée. Elles ne sont pas rattachées à une machine et en
-contrepartie, ont une durée de vie limité à 3 mois.</p>
-<p>Pour + de détails sur le fonctionnement des licences secondaires, cf.
-<a
-href="http://projectsrv2010/sites/Coordination/SystemeDocumentaire/_layouts/DocIdRedir.aspx?ID=R6RHQAPNUWS3-52-257#Licences_secondaires">Protection
-2013 : fonctionnement client - rubrique "Licences secondaires"</a></p>
-<p>Si l’application y a recours, le projet doit prendre en charge</p>
-<ul>
-<li><p>La génération de ces licences à partir d’une installation de
-l’application protégée par une licence principale ou secondaire. Un
-service Outils est disponible, permettant de générer la licence
-secondaire sous forme de flux</p></li>
-<li><p>La diffusion de cette licence sur le poste secondaire, via les
-mécanismes d’échanges mis en place par l’application pour synchroniser
-postes secondaires et principaux. <strong>A charge de
-l’application</strong>. Aucun service Outils n’a été développé dans ce
-but</p></li>
-<li><p>La limitation du fonctionnel dans le cas d’une utilisation
-protégée par une licence secondaire par rapport à une installation
-protégée par une licence principal (ex : pas de possibilité de mettre à
-jour les droits sur une licence secondaire). <strong>A charge de
-l’application</strong></p></li>
-<li><p>L’installation ou la mise à jour de la licence dans la BDD du
-poste secondaire. Là encore, un service Outils est disponible</p></li>
-<li><p>En cas de blocage pour licence secondaire arrivée à expiration,
-la récupération d’une nouvelle licence secondaire et son installation
-dans la BDD. <strong>A charge de l’application</strong></p></li>
-</ul>
-<p><strong>Remarque</strong></p>
-<p>Dans le cas de licences en mode partenaire, il y a potentiellement
-deux licences à transformer en licences secondaires :</p>
-<ul>
-<li><p>La licence de l’organisme</p></li>
-<li><p>La licence du partenaire (s’il y a plusieurs partenaires, il y a
-potentiellement plusieurs licences partenaires à transformer en licence
-secondaire lors d’une synchronisation)</p></li>
-</ul>
-<p>Jusqu’à présent, on n’avait pas anticipé de cas de déploiement de
-licences secondaires dans des scénarios avec des licences
-partenaires.</p>
-<p>Cette nouvelle fonctionnalité est disponible dans les versions outils
-compilées après le 07/11/2019.</p>
-<h1
-id="les-points-à-prendre-en-charge-par-lapplication-lors-dune-nouvelle-version">Les
-points à prendre en charge par l’application lors d’une nouvelle
-version</h1>
-<p>Pour chaque nouvelle version, l’application doit au minimum mettre à
-jour</p>
-<ul>
-<li><p>La version courante</p></li>
-<li><p>La date de péremption</p></li>
-<li><p>La version d’activation minimum</p></li>
-</ul>
-<p>Selon les évolutions apportées par la nouvelle version, des nouveaux
-modules fonctionnels, natures de volumétrie, activités, typologies de
-clientèles, pays, distributeurs … sont éventuellement à gérer</p>
-<h1 id="isagenlic">IsaGenLic</h1>
-<p>Les développeurs, testeurs … ont besoin de licences « sur mesure »
-pour pouvoir tester le bon fonctionnement de la protection (par exemple
-pour vérifier la désactivation de tel bouton, menu, zone de saisie, …
-selon les modules fonctionnels présents dans la licence). Pour cela, il
-existe une application interne (« IsagenLic »). Pour plus de détails,
-cf. <a
-href="http://projectsrv2010/sites/Coordination/SystemeDocumentaire/_layouts/DocIdRedir.aspx?ID=R6RHQAPNUWS3-52-262#Licences_tests">Protection
-2013 : Fonctionnement salarié - rubrique "Licences de test"</a>.</p>
-<h1
-id="tests-à-mettre-en-œuvre-lors-dune-1ère-mise-en-place-de-la-protection-2013">Tests
-à mettre en œuvre lors d’une 1ère mise en place de la protection
-2013</h1>
-<p>Lorsqu’une nouvelle application met en œuvre la protection 2013 pour
-la première fois, il faut tester ce qui est spécifique à
-l’application.</p>
-<p>Par contre, on peut considérer que le code transversal (Outils, DRI)
-est fiable (car il fait l’objet de tests précédents) et ne doit donc pas
-être retesté.</p>
-<p>Les points à vérifier sont donc les suivants :</p>
-<ul>
-<li><p>Liens entre modules fonctionnels et fonctionnalités : vérifier
-que selon les modules fonctionnels disponibles ou non dans la licence,
-la visibilité des onglets, groupes, boutons … du ruban, des contrôles
-dans les fenêtres, … est correctement gérée. Idem pour la liste des
-fonctionnalités disponibles dans la gestion des droits</p></li>
-<li><p>Prise en compte de la typologie cible : vérifier que le
-fonctionnement de l’application tient compte de la typologie cible
-(individuel, organisme, école, « Isagri ») dans la licence</p></li>
-<li><p>Prise en compte du pays : vérifier que selon le pays de la
-licence, le fonctionnement de l’application est correctement adapté
-(présence des fonctionnels spécifiques au pays de la licence / absence
-du fonctionnel spécifique à d’autres pays)</p></li>
-<li><p>Prise en compte des activités / des typologies de clientèle :
-vérifier que selon la ou les activités disponibles dans la licence, le
-vocabulaire, l’iconographie, … de l’application est correctement
-adapté</p></li>
-<li><p>Gestion des produits blancs : vérifier que selon le distributeur
-mentionné dans la licence, le fonctionnement de l’application est
-correct (fonctionnalités disponibles ; visibilité des onglets, groupes,
-boutons … du ruban et des contrôles dans les fenêtres ; vocabulaire ;
-iconographie ; absence d’accès aux fonctionnalités spécifiques Isagri :
-sauvegarde en ligne, SSO avec l’extranet, envoi de dossier au support,
-…)</p></li>
-<li><p>Calcul des volumétries : Pour chaque nature de volumétrie gérée
-par l’application, vérifier que le calcul se fait correctement</p></li>
-<li><p>La génération, la diffusion et l’installation des licences
-secondaires si l’application les gère</p></li>
-</ul>
-<p>Pour vérifier ces points, l’utilisation de licences de tests
-(générées par IsaGenLic) suffit. Il est inutile de créer des licences
-dans IsaGestLic (beaucoup plus lourd).</p>
-<p>Lien vers un plan de test (à titre d’exemple ; la gestion des
-licences secondaires et des volumétries n’est pas traitée car les
-concepts n’existaient pas à l’époque) : <a
-href="http://prod.groupeisagri.com/pv/Isapv/04.%20Test/01.%20Plans%20de%20test/02.%20Version%201.00/01.%20Transversal/Divers%20Transversal/Protection%20de%20l%27application%20PV.xls">Plan
-test protection PV</a></p>
-<p><strong>Il faut en plus vérifier le bon fonctionnement de
-l’intégration complète</strong> (récupération de la licence). Le but est
-de vérifier que la licence est bien récupérée depuis IsaGestLic et
-s’active correctement. Pour ce faire, il est nécessaire de faire le test
-avec une (et une seule) licence client existant dans IsaGestLic (pour un
-client fictif de manière à ne pas lui consommer une activation) et sur
-un poste non interne connecté à Internet (pour obliger la licence à
-s’activer).</p>
-<p>Par contre, il est inutile de tester des fonctionnements relevant du
-cadre outils ou d’IsaGestLic tels que</p>
-<ul>
-<li><p>L’activation sur une machine connectée ou non à internet</p></li>
-<li><p>Le changement de machine et le bon comptage du nombre
-d’activation</p></li>
-<li><p>Le blocage en cas de changement de la date système, de non
-activation dans les 7 jours, …</p></li>
-<li><p>Le blocage en cas de réactivation si le client est en
-impayé</p></li>
-<li><p>L’existence du message d’avertissement à l’entrée en cas de
-licence école ou démo</p></li>
-<li><p>L’avertissement puis le blocage en cas de volumétrie dépassée, de
-licence secondaire approchant de sa date de fin de validité ou expirée,
-de date de péremption proche ou atteinte …</p></li>
-</ul>
-<p>En effet, tous ces fonctionnements ont été testés lors de la mise en
-place de la protection dans le 1<sup>er</sup> produit qui l’a utilisée
-(Geofolia)</p>
-<h1 id="tests-à-mettre-en-œuvre-pour-une-nouvelle-version">Tests à
-mettre en œuvre pour une nouvelle version</h1>
-<p>En cas de nouvelle version sans changement dans les solutions
-commerciales, les tests peuvent se limiter aux scénarios suivants :</p>
-<ul>
-<li><p>Cas du nouveau client : vérifier qu’on peut rentrer dans l’appli
-(avec une licence de test)</p></li>
-<li><p>Cas d’un passage de la version précédente à la version courante :
-vérifier que l’éventuelle réactivation de la licence : sur un poste non
-interne sur lequel la version précédente est installée et activée
-(licence IsaGestLic et non une licence de test), non connecté à
-Internet, installer la version à tester et vérifier que la clé
-d’activation est bien demandée (ou pas selon qu’une réactivation est
-requise ou pas)</p></li>
-<li><p>Vérifier la date de péremption : mettre la date du micro au-delà
-de la date de péremption de la version et vérifier que le message
-d’avertissement s’affiche bien.</p></li>
-</ul>
-<h1
-id="comment-gérer-le-besoin-des-projets-de-savoir-si-on-est-dans-un-contexte-de-test-ou-de-maintenance">Comment
-gérer le besoin des projets de savoir si on est dans un contexte de test
-ou de maintenance</h1>
-<p>Les projets ont besoin de savoir si on est dans un contexte de test
-ou de maintenance, par rapport au contexte de production. Pour par ex
-éviter d’activer un service Web externe déclaratif (douane, DSN,
-naissance d’animaux, …).</p>
-<p>Il faut alors pouvoir connaitre si le poste est considéré comme un
-poste interne à Isagri sur la base de la présence du jeton interne de la
-protection.</p>
-<p>Pour cela, il faut utiliser la méthode <a
-href="http://projectsrv2010/sites/Coordination/SystemeDocumentaire/DocRefIsagriNet/html/4617b148-f2e5-e770-4236-870e5b7c560f.aspx">InternalLicenceProvider</a>.IsEmployeeMachine()
-qui retourne <a
-href="http://projectsrv2010/sites/Coordination/SystemeDocumentaire/DocRefIsagriNet/html/c824a694-7bad-012b-9dc7-fd46a61bac95.aspx">BusinessResult</a>
-dans la Value vaut true si le l’application s’exécute avec un serveur de
-base de donnée déclaré comme interne à Isagri.</p>
-<p>bool isEmployeeMachine = false;</p>
-<p><a
-href="http://projectsrv2010/sites/Coordination/SystemeDocumentaire/DocRefIsagriNet/html/c824a694-7bad-012b-9dc7-fd46a61bac95.aspx">BusinessResult</a>&lt;bool&gt;
-brIsEmployeeMachine = <a
-href="http://projectsrv2010/sites/Coordination/SystemeDocumentaire/DocRefIsagriNet/html/4617b148-f2e5-e770-4236-870e5b7c560f.aspx">InternalLicenceProvider</a>.IsEmployeeMachine();</p>
-<p>If(brIsEmployeeMachine.IsSuccess)</p>
-<p>{</p>
-<p>isEmployeeMachine = brIsEmployeeMachine.Value;</p>
-<p>}</p>
-<h1 id="historique">Historique</h1>
-<table>
-<colgroup>
-<col style="width: 20%" />
-<col style="width: 79%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><blockquote>
-<p>Date et auteur des modifications</p>
-</blockquote></th>
-<th><blockquote>
-<p>Détail des modifications apportées</p>
-</blockquote></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td></td>
-<td><blockquote>
-<p>Cf. <a
-href="http://projectsrv2010/sites/Coordination/SystemeDocumentaire/_layouts/Versions.aspx?list=%7b1AE2A090-6E82-4AB0-A85C-4A8D523BEB23%7d&amp;ID=264&amp;FileName=%2Fsites%2FCoordination%2FSystemeDocumentaire%2FDocOfficielsSansValidation%2FProtection%5F2013%5Fmise%5Fen%5Foeuvre%5Fdans%5Fappli%2Edocm&amp;Source=http%3A%2F%2Fprojectsrv2010%2Fsites%2FCoordination%2FSystemeDocumentaire%2FSitePages%2FMesDocuments%2Easpx&amp;IsDlg=1">historique
-dans le système documentaire</a></p>
-</blockquote></td>
-</tr>
-</tbody>
-</table>
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Protection 2013 : Mise en œuvre applicative</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+      }
+      header,
+      footer {
+        background-color: #007bff;
+        color: white;
+        text-align: center;
+        padding: 1em;
+      }
+      main {
+        padding: 20px;
+      }
+      section {
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Protection 2013 : Mise en œuvre applicative</h1>
+    </header>
+
+    <main>
+      <h1 id="contexte-et-objet">Contexte et objet</h1>
+      <h2 class="unnumbered" id="contexte">Contexte</h2>
+      <p>
+        La protection a pour objectif de contrôler que nos clients utilisent
+        leur logiciel conformément à ce qu’ils ont acheté.  La réécriture des
+        applications Isagri a nécessité une réécriture complète du système de
+        protection « Protection 2013 »). Sa mise en œuvre est complexe et fait
+        intervenir de nombreuses équipes (Dev outils, DRI « GISA » et « GRC »,
+        MktM, MktPr, Dev Progiciel, CQL Progiciel, ADV – Clientèle, SL, IAH, ...
+        France et export).
+      </p>
+      <p>
+        Ce document fait partie d’une série de documentations expliquant le
+        fonctionnement et la mise en œuvre de la protection 2013 dans les
+        applications Convergence. Pour une vision générale des documentations
+        disponibles, cf.
+        <a
+          href="http://projectsrv2010/sites/Coordination/SystemeDocumentaire/_layouts/DocIdRedir.aspx?ID=R6RHQAPNUWS3-52-255"
+          ><u>ici</u></a
+        >
+      </p>
+      <h2 class="unnumbered" id="objet">Objet</h2>
+      <p>
+        Ce document décrit les développements à réaliser dans les applications
+        pour mettre en place la protection 2013 dans une application et les
+        tests pour les couvrir. Il s'adresse donc aux chefs de produits,
+        développeurs et testeurs des diverses filières
+      </p>
+      <h1 id="prerequis">Prerequis</h1>
+      <p>
+        Pour comprendre le présent document, il faut avoir lu le document « <a
+          href="http://projectsrv2010/sites/Coordination/SystemeDocumentaire/_layouts/DocIdRedir.aspx?ID=R6RHQAPNUWS3-52-256"
+          >Protection 2013 : principes généraux</a
+        > ».
+      </p>
+      <h1 id="lien-vers-doc-outils">Lien vers doc outils</h1>
+      <p>
+        Cf.
+        <a
+          href="http://projectsrv2010/sites/Coordination/SystemeDocumentaire/_layouts/DocIdRedir.aspx?ID=R6RHQAPNUWS3-23-770"
+          >ici</a
+        >
+      </p>
+      <h1 id="les-notions-à-gérer-dans-lapplication">
+        Les notions à gérer dans l’application
+      </h1>
+      <p>
+        L’application reçoit toutes les informations relatives à ce qu’a acheté
+        le client (modules fonctionnels, volumétries, …) via la licence. Le code
+        source de l’application (et transversal outils) doit se baser sur
+        celle-ci (et uniquement sur celle-ci) pour gérer les droits du client.
+        La licence est générée à partir du SI Isagri (IsaGestLic). Un certain
+        nombre de concepts doivent donc être gérés de manière cohérente entre
+        IsaGestLic et l’application :
+        <strong
+          >les identifiants correspondants aux occurrences possibles pour chacun
+          de ces concepts doivent être identiques entre ceux que s’attend à
+          recevoir l’application et ceux qui sont définis dans
+          IsaGestLic</strong
+        >
+      </p>
+      <p>Les concepts concernés sont</p>
+      <ul>
+        <li><p>Le logiciel</p></li>
+        <li><p>Les modules fonctionnels</p></li>
+        <li><p>Les natures de volumétrie</p></li>
+        <li><p>Les activités</p></li>
+        <li><p>Les typologies de clientèle</p></li>
+        <li><p>Les pays</p></li>
+        <li><p>Les produits blancs</p></li>
+      </ul>
+      <p>
+        Les droits disponibles pour le client dépendent de ces divers concepts.
+      </p>
+      <h1
+        id="les-points-à-prendre-en-charge-par-lapplication-lors-dune-1ère-mise-en-place-de-la-protection-2013"
+      >
+        Les points à prendre en charge par l’application lors d’une 1ère mise en
+        place de la protection 2013
+      </h1>
+      <h2 class="unnumbered" id="gestion-des-droits-de-la-terminologie">
+        Gestion des droits / de la terminologie / …
+      </h2>
+      <p>
+        Les fonctionnalités accessibles, le vocabulaire utilisé, l’iconographie,
+        certains fonctionnements dépendent
+      </p>
+      <ul>
+        <li><p>des modules fonctionnels qu’a achetés le client</p></li>
+        <li><p>de la ou des activités</p></li>
+        <li><p>de la typologie de clientèle</p></li>
+        <li><p>du pays</p></li>
+        <li><p>du produit blanc courant si il y a lieu</p></li>
+        <li><p>…</p></li>
+      </ul>
+      <p>
+        Toutes ces informations (et d’autres : iD du domaine, Id du client
+        utilisateur, Id du client propriétaire du domaine, …) sont véhiculées
+        par la licence et accessible à l’application (en lecture seule) via la
+        classe
+        <a
+          href="http://projectsrv2010/sites/Coordination/SystemeDocumentaire/DocRefIsagriNet/html/2a68f0e8-14e9-fbdf-07e7-e33003c06c50.aspx"
+          >InstalledLicence</a
+        >
+        du cadre Outils.
+      </p>
+      <p>
+        L’application doit donc adapter son fonctionnement (visibilité des
+        menus, des contrôles visuels, liste des fonctionnalités dans la gestion
+        des droits, iconographie, …) selon les informations de la licence
+        courante
+      </p>
+      <h2
+        class="unnumbered"
+        id="gestion-des-versions-et-de-la-date-de-péremption-de-la-version"
+      >
+        Gestion des versions et de la date de péremption de la version
+      </h2>
+      <p>
+        L’application doit renseigner sa version courante, sa date de péremption
+        et la version d’activation minimum.
+      </p>
+      <p>
+        <strong>Pour la date de péremption</strong>, la valeur conseillée est la
+        date de validation du setup + 2 ans (peut être modifiée lors de la
+        traduction si la traduction se fait largement après la validation du
+        setup France)
+      </p>
+      <p>
+        <strong>La version d’activation minimum</strong> précise le n° de
+        version minimum de l’application avec laquelle doit avoir été activée la
+        protection pour être considérée comme valide pour la version en cours
+        (çàd sans devoir être réactivée).
+      </p>
+      <p>Ex :</p>
+      <ul>
+        <li><p>La version courante est la 10.50</p></li>
+        <li>
+          <p>
+            La version d’activation minimum renseignée pour cette version 10.50
+            est la 10.00
+          </p>
+        </li>
+        <li>
+          <p>
+            Cela signifie qu’un client qui installe la V10.50 par-dessus un V
+            10.00 peut l’utiliser sans devoir réactiver sa licence ; par contre
+            un client qui installe la V10.50 par-dessus une V 9.00 doit
+            réactiver sa licence
+          </p>
+        </li>
+      </ul>
+      <p>
+        La réactivation consiste à vérifier que la licence est toujours valide
+        (le client n’a pas résilié) et que le client n’utilise pas sur plus de
+        machine que ce qu’il a acheté. C’est transparent pour les postes
+        (serveur de BDD) connectés à Internet mais implique un contact entre
+        Isagri et le client pour les postes non connectés à Internet. Pour plus
+        de détails, cf.
+        <a
+          href="http://projectsrv2010/sites/Coordination/SystemeDocumentaire/_layouts/DocIdRedir.aspx?ID=R6RHQAPNUWS3-52-256#Lien_machine"
+          >Protection_2013_: principes_generaux - rubrique « Dépendance par
+          rapport à la machine »</a
+        >
+      </p>
+      <p>
+        La consigne est d’obliger à réactiver la licence une fois par an, pour
+        chaque version majeure.
+      </p>
+      <p>
+        Pour mettre à jour date de péremption et version d’activation minimum,
+        cf. la
+        <a
+          href="http://www.isaweb.isagri.fr/RessourcesIsaWeb/Prod/Outils/DocExterne/Isagri.Net/Isagri.Net_N/Generale/Developpement%20PC/2.%20Cadre%20developpement/2.%20Mises%20en%20oeuvre/IP.ExtendedResourceWriter_-_Mise_en_place.html"
+          >documentation Outils</a
+        >
+        correspondante.
+      </p>
+      <h2
+        class="unnumbered"
+        id="installation-activation-et-vérification-de-la-validité-de-la-licence"
+      >
+        Installation, activation et vérification de la validité de la licence
+      </h2>
+      <p>Ces points sont entièrement pris en charge par le cadre outils.</p>
+      <p>
+        A l’issue de la vérification de la licence, l’entrée dans l’application
+        est autorisée en accès complet, autorisée en accès limité (à gérer par
+        l’application : cf.
+        <a href="#gestion-du-mode-accès-limité"
+          >Gestion du mode « Accès limité »</a
+        >) ou interdit
+      </p>
+      <h2 class="unnumbered" id="calcul-des-volumétries-consommées">
+        Calcul des volumétries consommées
+      </h2>
+      <p>
+        Pour chaque nature de volumétrie gérée par l’application (et donc
+        potentiellement limitée dans la licence), l’application doit calculer la
+        volumétrie effectivement utilisée. En effet, la volumétrie est une
+        notion métier ; le cadre outils récupère les natures de volumétries et
+        volumétries autorisées (éventuellement par activité) par la licence,
+        gère les messages d’avertissement et blocages lorsqu’une volumétrie est
+        dépassée mais c’est l’application qui doit indiquer où on en est pour
+        chaque nature de volumétrie (éventuellement par activité).
+      </p>
+      <h2
+        class="unnumbered"
+        id="affichage-des-avertissements-concernant-les-volumétries-à-certains-utilisateurs-uniquement"
+      >
+        Affichage des avertissements concernant les volumétries à certains
+        utilisateurs uniquement
+      </h2>
+      <p>
+        Certaines applications, notamment à destination des grands comptes,
+        souhaitent n’afficher les avertissements de dépassement de volumétrie
+        qu’à certains utilisateurs (typiquement, les administrateurs du
+        système).
+      </p>
+      <p>
+        Pour cela, la protection met à disposition un événement sur le
+        LicenceInputProvider du startupManager. L’application doit renvoyer true
+        si l’utilisateur authenticatedUser passé en paramètre doit voir le
+        message, false sinon. Le délai de grâce pour régulariser la situation
+        commence à partir du moment où l’utilisateur « habilité » a vu le
+        message d’avertissement.
+      </p>
+      <h2
+        class="unnumbered"
+        id="affichage-dun-lien-vers-de-laide-en-ligne-sur-le-dialogue-davertissement-de-dépassement-de-volumétrie"
+      >
+        Affichage d’un lien vers de l’aide en ligne sur le dialogue
+        d’avertissement de dépassement de volumétrie
+      </h2>
+      <p>
+        Il est possible de mettre un lien sur le dialogue d’avertissement pour
+        rediriger l’utilisateur directement sur une fiche de l’aide en ligne
+        plutôt que lui laisser chercher lui-même.
+      </p>
+      <p>
+        Il est possible changer l’URL de ce lien en renseignant la propriété
+        statique
+        <a
+          href="http://projectsrv2010/sites/Coordination/SystemeDocumentaire/DocRefIsagriNet/html/6c7d1da4-355d-9da6-c088-39a45ffbfa96.aspx"
+          >LicenceConfiguration</a
+        >.OnlineLicenceHelpUrl.
+      </p>
+      <p>
+        Pour être valide il faut que ce lien commence avec « http:// » ou
+        « https:// » et s’il n’a pas de valeur, le lien n’affichera pas.
+      </p>
+      <h2
+        class="unnumbered"
+        id="affichage-dun-lien-vers-de-laide-en-ligne-sur-le-dialogue-de-version-périmée"
+      >
+        Affichage d’un lien vers de l’aide en ligne sur le dialogue de version
+        périmée
+      </h2>
+      <p>
+        Le dialogue de version périmée a un lien vers l’espace client qui se
+        comporte comme le bouton « Espace Client » dans le ruban, il ouvre le
+        navigateur par défaut avec un lien récupéré du service SSO.
+      </p>
+      <p>
+        Il existe la possibilité de surcharger ce lien en câblant sur
+        l’événement
+        <a
+          href="http://projectsrv2010/sites/Coordination/SystemeDocumentaire/DocRefIsagriNet/html/6c7d1da4-355d-9da6-c088-39a45ffbfa96.aspx"
+          >LicenceConfiguration</a
+        >. NeedVersionExpiredDialogLink.
+      </p>
+      <p>
+        Pour être valide il faut que ce lien commence avec « http:// » ou
+        « https:// ».
+      </p>
+      <p>
+        Par défaut le titre de ce lien sera « Aide en ligne » en français. Pour
+        le changer il faut changer la valeur de la propriété statique
+        <a
+          href="http://projectsrv2010/sites/Coordination/SystemeDocumentaire/DocRefIsagriNet/html/6c7d1da4-355d-9da6-c088-39a45ffbfa96.aspx"
+          >LicenceConfiguration</a
+        >.VersionExpiredDialogLinkCaption ou la valeur de la ressource
+        Licence.Licence.DefaultVersionExpiredDialogLinkCaption.
+      </p>
+      <h2 class="unnumbered" id="gestion-du-mode-accès-limité">
+        Gestion du mode « Accès limité »
+      </h2>
+      <p>
+        Dans certains cas (date de péremption de version atteinte ou volumétrie
+        dépassée sur une licence activée et après expiration du délai
+        d’avertissement), l’utilisateur entre dans l’application en « accès
+        limité ».
+      </p>
+      <p>
+        Il appartient à la filière de définir ce qu’est ce mode « limité » et de
+        faire les développements correspondants. Le client doit pouvoir
+        continuer de consulter toutes ses informations mais, pour rendre
+        l’utilisation du logiciel en production impossible, une fonctionnalité
+        majeure de l’application est bloquée. Faire au plus simple.
+      </p>
+      <blockquote>
+        <p>
+          Ex : ne pas pouvoir créer de nouveau mouvement d’animal en ruminants ;
+          ne pas pouvoir générer un nouveau BS en Paye, …
+        </p>
+      </blockquote>
+      <p>
+        Pour les concepts sur lesquelles une volumétrie est gérée, penser à
+        laisser accessible la fonctionnalité de suppression pour gérer le cas du
+        client qui dépasse la volumétrie, qui ne veut pas acheter la volumétrie
+        supérieure et qui a oublié de faire les suppressions avant le passage en
+        mode « Accès limité ». Cela lui permettra de supprimer des données et de
+        revenir à une volumétrie consommée inférieure à la volumétrie autorisée.
+      </p>
+      <h2 class="unnumbered" id="mise-à-jour-de-licence">
+        Mise à jour de licence
+      </h2>
+      <p>
+        Afin de pouvoir gérer les cas de changement de contexte d’utilisation du
+        logiciel (Achat de modules complémentaires, modifications des
+        volumétries, changement de raison sociale, etc..), l’application doit
+        proposer la fonctionnalité de mise à jour de licence via le ruban
+        Options.
+      </p>
+      <p>
+        Pour + de détails sur les cas d’utilisation, cf.
+        <a
+          href="http://projectsrv2010/sites/Coordination/SystemeDocumentaire/_layouts/DocIdRedir.aspx?ID=R6RHQAPNUWS3-52-257#Licences_secondaires"
+          >Protection 2013 : fonctionnement client - rubrique "Changement du
+          contexte d’utilisation du logiciel"</a
+        >
+      </p>
+      <h2
+        class="unnumbered"
+        id="génération-diffusion-installation-des-licences-secondaires"
+      >
+        Génération, diffusion, installation des licences secondaires
+      </h2>
+      <p>
+        Les licences secondaires sont des licences destinées aux postes nomades
+        des comptables ou techniciens chez les prestataires comptables ou PV qui
+        doivent pouvoir utiliser l’application en local ou aux serveurs
+        d’agences ; également utilisées en GC pour les poste de saisie
+        décentralisée. Elles ne sont pas rattachées à une machine et en
+        contrepartie, ont une durée de vie limité à 3 mois.
+      </p>
+      <p>
+        Pour + de détails sur le fonctionnement des licences secondaires, cf.
+        <a
+          href="http://projectsrv2010/sites/Coordination/SystemeDocumentaire/_layouts/DocIdRedir.aspx?ID=R6RHQAPNUWS3-52-257#Licences_secondaires"
+          >Protection 2013 : fonctionnement client - rubrique "Licences
+          secondaires"</a
+        >
+      </p>
+      <p>Si l’application y a recours, le projet doit prendre en charge</p>
+      <ul>
+        <li>
+          <p>
+            La génération de ces licences à partir d’une installation de
+            l’application protégée par une licence principale ou secondaire. Un
+            service Outils est disponible, permettant de générer la licence
+            secondaire sous forme de flux
+          </p>
+        </li>
+        <li>
+          <p>
+            La diffusion de cette licence sur le poste secondaire, via les
+            mécanismes d’échanges mis en place par l’application pour
+            synchroniser postes secondaires et principaux.
+            <strong>A charge de l’application</strong>. Aucun service Outils n’a
+            été développé dans ce but
+          </p>
+        </li>
+        <li>
+          <p>
+            La limitation du fonctionnel dans le cas d’une utilisation protégée
+            par une licence secondaire par rapport à une installation protégée
+            par une licence principal (ex : pas de possibilité de mettre à jour
+            les droits sur une licence secondaire).
+            <strong>A charge de l’application</strong>
+          </p>
+        </li>
+        <li>
+          <p>
+            L’installation ou la mise à jour de la licence dans la BDD du poste
+            secondaire. Là encore, un service Outils est disponible
+          </p>
+        </li>
+        <li>
+          <p>
+            En cas de blocage pour licence secondaire arrivée à expiration, la
+            récupération d’une nouvelle licence secondaire et son installation
+            dans la BDD. <strong>A charge de l’application</strong>
+          </p>
+        </li>
+      </ul>
+      <p><strong>Remarque</strong></p>
+      <p>
+        Dans le cas de licences en mode partenaire, il y a potentiellement deux
+        licences à transformer en licences secondaires :
+      </p>
+      <ul>
+        <li><p>La licence de l’organisme</p></li>
+        <li>
+          <p>
+            La licence du partenaire (s’il y a plusieurs partenaires, il y a
+            potentiellement plusieurs licences partenaires à transformer en
+            licence secondaire lors d’une synchronisation)
+          </p>
+        </li>
+      </ul>
+      <p>
+        Jusqu’à présent, on n’avait pas anticipé de cas de déploiement de
+        licences secondaires dans des scénarios avec des licences partenaires.
+      </p>
+      <p>
+        Cette nouvelle fonctionnalité est disponible dans les versions outils
+        compilées après le 07/11/2019.
+      </p>
+      <h1
+        id="les-points-à-prendre-en-charge-par-lapplication-lors-dune-nouvelle-version"
+      >
+        Les points à prendre en charge par l’application lors d’une nouvelle
+        version
+      </h1>
+      <p>
+        Pour chaque nouvelle version, l’application doit au minimum mettre à
+        jour
+      </p>
+      <ul>
+        <li><p>La version courante</p></li>
+        <li><p>La date de péremption</p></li>
+        <li><p>La version d’activation minimum</p></li>
+      </ul>
+      <p>
+        Selon les évolutions apportées par la nouvelle version, des nouveaux
+        modules fonctionnels, natures de volumétrie, activités, typologies de
+        clientèles, pays, distributeurs … sont éventuellement à gérer
+      </p>
+      <h1 id="isagenlic">IsaGenLic</h1>
+      <p>
+        Les développeurs, testeurs … ont besoin de licences « sur mesure » pour
+        pouvoir tester le bon fonctionnement de la protection (par exemple pour
+        vérifier la désactivation de tel bouton, menu, zone de saisie, … selon
+        les modules fonctionnels présents dans la licence). Pour cela, il existe
+        une application interne (« IsagenLic »). Pour plus de détails, cf.
+        <a
+          href="http://projectsrv2010/sites/Coordination/SystemeDocumentaire/_layouts/DocIdRedir.aspx?ID=R6RHQAPNUWS3-52-262#Licences_tests"
+          >Protection 2013 : Fonctionnement salarié - rubrique "Licences de
+          test"</a
+        >.
+      </p>
+      <h1
+        id="tests-à-mettre-en-œuvre-lors-dune-1ère-mise-en-place-de-la-protection-2013"
+      >
+        Tests à mettre en œuvre lors d’une 1ère mise en place de la protection
+        2013
+      </h1>
+      <p>
+        Lorsqu’une nouvelle application met en œuvre la protection 2013 pour la
+        première fois, il faut tester ce qui est spécifique à l’application.
+      </p>
+      <p>
+        Par contre, on peut considérer que le code transversal (Outils, DRI) est
+        fiable (car il fait l’objet de tests précédents) et ne doit donc pas
+        être retesté.
+      </p>
+      <p>Les points à vérifier sont donc les suivants :</p>
+      <ul>
+        <li>
+          <p>
+            Liens entre modules fonctionnels et fonctionnalités : vérifier que
+            selon les modules fonctionnels disponibles ou non dans la licence,
+            la visibilité des onglets, groupes, boutons … du ruban, des
+            contrôles dans les fenêtres, … est correctement gérée. Idem pour la
+            liste des fonctionnalités disponibles dans la gestion des droits
+          </p>
+        </li>
+        <li>
+          <p>
+            Prise en compte de la typologie cible : vérifier que le
+            fonctionnement de l’application tient compte de la typologie cible
+            (individuel, organisme, école, « Isagri ») dans la licence
+          </p>
+        </li>
+        <li>
+          <p>
+            Prise en compte du pays : vérifier que selon le pays de la licence,
+            le fonctionnement de l’application est correctement adapté (présence
+            des fonctionnels spécifiques au pays de la licence / absence du
+            fonctionnel spécifique à d’autres pays)
+          </p>
+        </li>
+        <li>
+          <p>
+            Prise en compte des activités / des typologies de clientèle :
+            vérifier que selon la ou les activités disponibles dans la licence,
+            le vocabulaire, l’iconographie, … de l’application est correctement
+            adapté
+          </p>
+        </li>
+        <li>
+          <p>
+            Gestion des produits blancs : vérifier que selon le distributeur
+            mentionné dans la licence, le fonctionnement de l’application est
+            correct (fonctionnalités disponibles ; visibilité des onglets,
+            groupes, boutons … du ruban et des contrôles dans les fenêtres ;
+            vocabulaire ; iconographie ; absence d’accès aux fonctionnalités
+            spécifiques Isagri : sauvegarde en ligne, SSO avec l’extranet, envoi
+            de dossier au support, …)
+          </p>
+        </li>
+        <li>
+          <p>
+            Calcul des volumétries : Pour chaque nature de volumétrie gérée par
+            l’application, vérifier que le calcul se fait correctement
+          </p>
+        </li>
+        <li>
+          <p>
+            La génération, la diffusion et l’installation des licences
+            secondaires si l’application les gère
+          </p>
+        </li>
+      </ul>
+      <p>
+        Pour vérifier ces points, l’utilisation de licences de tests (générées
+        par IsaGenLic) suffit. Il est inutile de créer des licences dans
+        IsaGestLic (beaucoup plus lourd).
+      </p>
+      <p>
+        Lien vers un plan de test (à titre d’exemple ; la gestion des licences
+        secondaires et des volumétries n’est pas traitée car les concepts
+        n’existaient pas à l’époque) :
+        <a
+          href="http://prod.groupeisagri.com/pv/Isapv/04.%20Test/01.%20Plans%20de%20test/02.%20Version%201.00/01.%20Transversal/Divers%20Transversal/Protection%20de%20l%27application%20PV.xls"
+          >Plan test protection PV</a
+        >
+      </p>
+      <p>
+        <strong
+          >Il faut en plus vérifier le bon fonctionnement de l’intégration
+          complète</strong
+        >
+        (récupération de la licence). Le but est de vérifier que la licence est
+        bien récupérée depuis IsaGestLic et s’active correctement. Pour ce
+        faire, il est nécessaire de faire le test avec une (et une seule)
+        licence client existant dans IsaGestLic (pour un client fictif de
+        manière à ne pas lui consommer une activation) et sur un poste non
+        interne connecté à Internet (pour obliger la licence à s’activer).
+      </p>
+      <p>
+        Par contre, il est inutile de tester des fonctionnements relevant du
+        cadre outils ou d’IsaGestLic tels que
+      </p>
+      <ul>
+        <li><p>L’activation sur une machine connectée ou non à internet</p></li>
+        <li>
+          <p>
+            Le changement de machine et le bon comptage du nombre d’activation
+          </p>
+        </li>
+        <li>
+          <p>
+            Le blocage en cas de changement de la date système, de non
+            activation dans les 7 jours, …
+          </p>
+        </li>
+        <li>
+          <p>Le blocage en cas de réactivation si le client est en impayé</p>
+        </li>
+        <li>
+          <p>
+            L’existence du message d’avertissement à l’entrée en cas de licence
+            école ou démo
+          </p>
+        </li>
+        <li>
+          <p>
+            L’avertissement puis le blocage en cas de volumétrie dépassée, de
+            licence secondaire approchant de sa date de fin de validité ou
+            expirée, de date de péremption proche ou atteinte …
+          </p>
+        </li>
+      </ul>
+      <p>
+        En effet, tous ces fonctionnements ont été testés lors de la mise en
+        place de la protection dans le 1<sup>er</sup> produit qui l’a utilisée
+        (Geofolia)
+      </p>
+      <h1 id="tests-à-mettre-en-œuvre-pour-une-nouvelle-version">
+        Tests à mettre en œuvre pour une nouvelle version
+      </h1>
+      <p>
+        En cas de nouvelle version sans changement dans les solutions
+        commerciales, les tests peuvent se limiter aux scénarios suivants :
+      </p>
+      <ul>
+        <li>
+          <p>
+            Cas du nouveau client : vérifier qu’on peut rentrer dans l’appli
+            (avec une licence de test)
+          </p>
+        </li>
+        <li>
+          <p>
+            Cas d’un passage de la version précédente à la version courante :
+            vérifier que l’éventuelle réactivation de la licence : sur un poste
+            non interne sur lequel la version précédente est installée et
+            activée (licence IsaGestLic et non une licence de test), non
+            connecté à Internet, installer la version à tester et vérifier que
+            la clé d’activation est bien demandée (ou pas selon qu’une
+            réactivation est requise ou pas)
+          </p>
+        </li>
+        <li>
+          <p>
+            Vérifier la date de péremption : mettre la date du micro au-delà de
+            la date de péremption de la version et vérifier que le message
+            d’avertissement s’affiche bien.
+          </p>
+        </li>
+      </ul>
+      <h1
+        id="comment-gérer-le-besoin-des-projets-de-savoir-si-on-est-dans-un-contexte-de-test-ou-de-maintenance"
+      >
+        Comment gérer le besoin des projets de savoir si on est dans un contexte
+        de test ou de maintenance
+      </h1>
+      <p>
+        Les projets ont besoin de savoir si on est dans un contexte de test ou
+        de maintenance, par rapport au contexte de production. Pour par ex
+        éviter d’activer un service Web externe déclaratif (douane, DSN,
+        naissance d’animaux, …).
+      </p>
+      <p>
+        Il faut alors pouvoir connaitre si le poste est considéré comme un poste
+        interne à Isagri sur la base de la présence du jeton interne de la
+        protection.
+      </p>
+      <p>
+        Pour cela, il faut utiliser la méthode <a
+          href="http://projectsrv2010/sites/Coordination/SystemeDocumentaire/DocRefIsagriNet/html/4617b148-f2e5-e770-4236-870e5b7c560f.aspx"
+          >InternalLicenceProvider</a
+        >.IsEmployeeMachine() qui retourne
+        <a
+          href="http://projectsrv2010/sites/Coordination/SystemeDocumentaire/DocRefIsagriNet/html/c824a694-7bad-012b-9dc7-fd46a61bac95.aspx"
+          >BusinessResult</a
+        >
+        dans la Value vaut true si le l’application s’exécute avec un serveur de
+        base de donnée déclaré comme interne à Isagri.
+      </p>
+      <p>bool isEmployeeMachine = false;</p>
+      <p>
+        <a
+          href="http://projectsrv2010/sites/Coordination/SystemeDocumentaire/DocRefIsagriNet/html/c824a694-7bad-012b-9dc7-fd46a61bac95.aspx"
+          >BusinessResult</a
+        >&lt;bool&gt; brIsEmployeeMachine =
+        <a
+          href="http://projectsrv2010/sites/Coordination/SystemeDocumentaire/DocRefIsagriNet/html/4617b148-f2e5-e770-4236-870e5b7c560f.aspx"
+          >InternalLicenceProvider</a
+        >.IsEmployeeMachine();
+      </p>
+      <p>If(brIsEmployeeMachine.IsSuccess)</p>
+      <p>{</p>
+      <p>isEmployeeMachine = brIsEmployeeMachine.Value;</p>
+      <p>}</p>
+    </main>
+
+    <footer>
+      <p>FPO…</p>
+    </footer>
+  </body>
+</html>

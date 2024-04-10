@@ -1,254 +1,429 @@
-<p><strong>Contenu</strong></p>
-<p><a href="#contexte-et-objet">I. Contexte et objet
-<span>2</span></a></p>
-<p><a href="#contexte">Contexte <span>2</span></a></p>
-<p><a href="#objet">Objet <span>2</span></a></p>
-<p><a href="#prerequis">II. Prerequis <span>2</span></a></p>
-<p><a href="#licences-de-tests">III. Licences de tests
-<span>3</span></a></p>
-<p><a href="#postes-internes">IV. Postes internes <span>5</span></a></p>
-<p><a href="#historique">V. Historique <span>9</span></a></p>
-<h1 id="contexte-et-objet">Contexte et objet</h1>
-<h2 class="unnumbered" id="contexte">Contexte</h2>
-<p>La protection a pour objectif de contrôler que nos clients utilisent
-leur logiciel conformément à ce qu’ils ont acheté.  La réécriture des
-applications Isagri a nécessité une réécriture complète du système de
-protection « Protection 2013 »). Sa mise en œuvre est complexe et fait
-intervenir de nombreuses équipes (Dev outils, DRI « GISA » et « GRC »,
-MktM, MktPr, Dev Progiciel, CQL Progiciel, ADV – Clientèle, SL, IAH, ...
-France et export).</p>
-<p>Ce document fait partie d’une série de documentations expliquant le
-fonctionnement et la mise en œuvre de la protection 2013 dans les
-applications Convergence. Pour une vision générale des documentations
-disponibles, cf. <a
-href="http://projectsrv2010/sites/Coordination/SystemeDocumentaire/_layouts/DocIdRedir.aspx?ID=R6RHQAPNUWS3-52-255">ici</a></p>
-<h2 class="unnumbered" id="objet">Objet</h2>
-<p>Ce document décrit les utilitaires qui existent pour tester la
-protection 2013. Il s’adresse aux salariés (dev, test, SL), CIMs,
-partenaires qui doivent tester le bon fonctionnement de la protection
-2013.</p>
-<p>Ce document est un document interne qui ne doit pas être diffusé à
-l’extérieur de l’entreprise.</p>
-<h1 id="prerequis">Prerequis</h1>
-<p>Pour comprendre le présent document, il faut avoir lu le document
-« <a
-href="http://projectsrv2010/sites/Coordination/SystemeDocumentaire/_layouts/DocIdRedir.aspx?ID=R6RHQAPNUWS3-52-256">Protection
-2013 : principes généraux</a> »</p>
-<h1 id="licences-de-tests">Licences de tests</h1>
-<p>Les développeurs, testeurs, formateurs … ont besoin de licences « sur
-mesure » pour pouvoir tester le bon fonctionnement de la protection (par
-exemple pour vérifier la désactivation de tel bouton, menu, zone de
-saisie, … selon les modules fonctionnels présents dans la licence). Il
-s’agit de licences de tests.</p>
-<p>Elles ne sont pas gérées dans le SI Isagri (serait trop lourd de
-devoir créer un client, un domaine, les solutions commerciales
-adéquates, … ) mais sont construites sur mesure par le développeur,
-testeur, formateur, … en fonction de ses besoins grâce à une application
-ad’hoc. Cette application (IP.Licence.GenLic.Application.exe ou
-<strong>IsaGenLic</strong> en abrégé pour « Application
-<strong>Isa</strong>gri de <strong>gén</strong>ération de
-<strong>lic</strong>ences) est développée par l’équipe « Développement
-progiciel Outils » et est disponible sur
-P:\Outils\Utilitaires\IsaGenLic.</p>
-<p>Elle offre 2 fonctionnalités : <a
-href="http://projectsrv2010/sites/Coordination/_layouts/DocIdRedir.aspx?ID=R6RHQAPNUWS3-23-884">Voir
-doc d’utilisation</a></p>
-<ul>
-<li><p>La possibilité de générer une licence de tests pour un domaine
-existant, en saisissant l’application concernées, les modules
-fonctionnels autorisés, les volumétries autorisées, le pays de
-fonctionnement, etc … Ces licences de tests ne requièrent pas activation
-mais ne sont utilisables que sur des <a
-href="http://projectsrv2010/sites/Coordination/SystemeDocumentaire/DocOfficielsSansValidation/Protection_2013_fonctionnement_salarie.docm#_Postes_internes">postes
-internes</a> (pour éviter leur diffusion à l’extérieur).</p></li>
-</ul>
-<p><img src="media/image1.png"
-style="width:6.66389in;height:4.50417in" /></p>
-<ul>
-<li><p>La possibilité de visualiser le contenu d’une licence
-existante</p></li>
-</ul>
-<p><img src="media/image2.png"
-style="width:6.50417in;height:4.40833in" /></p>
-<h1 id="postes-internes">Postes internes</h1>
-<h3 class="unnumbered" id="de-quoi-sagit-il">De quoi s’agit-il ?</h3>
-<p>Les développeurs, testeurs, CTL, CIMs, … doivent pouvoir effectuer
-des tests, maintenances, … sur des jeux de données de clients. De ce
-fait, le comportement des licences doit être particulier sur leur poste
-(par exemple, il ne faut pas que l’utilisation d’un jeu de données de
-client requière activation de la licence du client pour le poste du
-salarié en « consommant » une installation au détriment du client).</p>
-<p>Les postes en question sont identifiés comme « postes internes ».</p>
-<p>Il peut s’agir de poste de salariés Isagri (du siège ou terrain), de
-CIMs, de salariés de filiales, de salariés de partenaires (distributeurs
-qui font du support), …</p>
-<h3 class="unnumbered"
-id="comment-un-poste-est-il-reconnu-comme-poste-interne">Comment un
-poste est-il reconnu comme poste interne ? </h3>
-<p>Un jeton à jour doit être installé sur le poste concerné. Ce jeton
-est spécifique au poste (ne peut donc être copié d’un poste à l’autre)
-et a une durée de vie limitée à 2 mois.</p>
-<p>2 étapes sont nécessaires</p>
-<h4 class="unnumbered"
-id="identification-du-poste-comme-potentiellement-interne">Identification
-du poste comme « potentiellement interne »</h4>
-<p>Pour automatiser la recherche de jeton, l’utilisateur doit lancer sur
-son poste l’application « InternalProtectionDeployment.exe »
-(application disponible sur T:\Installations des applications
-communes\InternalProtection2013). A noter que cette application est
-lancée par la DRI à l’initialisation de tout nouveau poste salarié
-(équipes du siège ou distantes). Cela a pour effet de «  marquer » le
-poste comme « potentiellement interne »</p>
-<p>C’est le poste où s’exécute la couche « IHM » qui est identifié comme
-interne ou non</p>
-<p>InternalProtectionDeployment.exe /U « démarque » le poste comme
-« potentiellement interne ». La recherche de jeton poste interne n’est
-plus faite.</p>
-<p><strong>ATTENTION</strong> : merci d’utiliser la dernière version
-d’InternalProtectionDeployment avant d’utiliser l’option /U  car les
-versions précédentes de /u provoquent des effets de bord conduisant
-indirectement à l’invalidation des licences déjà activées en plus de la
-désinstallation du jeton interne.</p>
-<p>La dernière version date de Janvier 2017 : version 6.46.0 de l’exe
-(clic droit Propriétés/Détails dans l’explorateur), qui déploie la
-version 1.0.5 de la dll JetonInterne2013.dll (T:\Installations des
-applications communes\InternalProtection2013\).</p>
-<p>Le traitement qui provoquait cet effet de bord fait maintenant
-l’objet d’une commande distincte : /ResetIdMachine, qui ne devrait
-qu’être rarement utilisée sans un avis préalable de la RCP
-Protection.</p>
-<h4 class="unnumbered" id="rapatriement-du-jeton">Rapatriement du
-jeton</h4>
-<p>Sur un poste marqué comme « Potentiellement interne », on déclenche
-automatiquement, lors de l’entrée dans une application Isagri protégée
-par la protection 2013, le rapatriement sur le poste d’un nouveau jeton
-si nécessaire (absence de jeton ou jeton présent mais expiré ou dont la
-date d’expiration est proche : &lt;= 30 jours). Un poste d’un client
-n’étant pas marqué comme « potentiellement interne », on ne cherche donc
-pas à y rapatrier un jeton interne.</p>
-<p>Le rapatriement du jeton est complètement transparent si le poste est
-connecté au réseau interne Isagri au moment de la recherche.</p>
-<p>Si ce n’est pas le cas (poste de commerciaux, de CIMs, de salariés de
-filiales), l’utilisateur est invité à s’authentifier (login et mots de
-passe Active Directory) pour pouvoir récupérer un jeton valide.</p>
-<p><img src="media/image3.png" style="width:3.03194in;height:1.55972in"
-alt="jeton_nouvelle_version" /></p>
-<p>Tous les utilisateurs de postes internes (y compris CIMs, salariés de
-filiales) doivent donc être connus de l’AD et rattachés au groupe
-adéquat par la DRI</p>
-<p>Une fois obtenu, le jeton est valable 2 mois (même si le poste n’est
-pas connecté au réseau Isagri ou à Internet : poste de formateur qui
-part en clientèle, …) pour le poste en question. En cas de changement de
-poste, un nouveau jeton est requis.</p>
-<p>La recherche de jeton est exécutée 1 fois par mois au maximum.</p>
-<p>Ce fonctionnement permet de bloquer au bout de 2 mois maximum les
-salariés, CIMs, distributeurs, … qui ont quitté l’entreprise ou rompu
-leur contrat.</p>
-<p>26/04/2018 :</p>
-<p>Pour éviter de devoir gérer dans notre AD des comptes pour des
-utilisateurs externes à l’entreprise qui auraient besoin d’un jeton
-interne (c’est le cas de quelques clients prestataires qui ont besoin de
-remonter des sauvegardes de leurs clients équipes en gestion commerciale
-pour intervenir sur le dossier en question puis le renvoyer au client),
-une évolution a été apportée par la DRI pour permettre de créer des
-utilisateurs de jetons internes en dehors de l’AD.</p>
-<p>Pour cela, accéder à IsaBOSC (<a
-href="http://isabosc.groupeisagri.com">http://isabosc.groupeisagri.com</a>)
-puis menu « Gestion des utilisateurs », « Jeton interne » (accès est
-réservé à D. Lemal et T. Hardion)</p>
-<p>Pour créer un utilisateur, saisir un identifiant et un mot de
-passe.</p>
-<p><img src="media/image4.png" style="width:4.125in;height:2.05208in"
-alt="cid:image001.png@01D3DD49.B79BABA0" /></p>
-<p>Le mot de passe peut aussi être généré aléatoirement en cliquant sur
-le lien « générer » (génère un mot de passe de 10 caractères
-alpha-numériques + symboles). Attention, une fois l’utilisateur
-enregistré, on ne peut plus voir son mot de passe. Par contre, on peut
-modifier le mot de passe en cliquant sur « Editer » de la ligne
-correspondante dans le tableau :</p>
-<p><img src="media/image5.png" style="width:7.11458in;height:1.83776in"
-alt="cid:image002.png@01D3DD49.B79BABA0" /></p>
-<p>Pour obtenir le jeton interne, l’utilisateur ainsi créé suit la même
-procédure qu’un salarié non connecté au réseau interne Isagri : il
-renseigne son identifiant et le mot de passe qui lui a été
-communiqué.</p>
-<h3 class="unnumbered"
-id="quelles-particularités-de-fonctionnement">Quelles particularités de
-fonctionnement ?</h3>
-<p>Pour qu'une poste soit considéré comme poste interne, 2 conditions
-sont nécessaires :</p>
-<ul>
-<li><p>Le poste doit être "potentiellement" interne : on y lancé
-InternalProtectionDeployment.exe</p></li>
-<li><p>Le jeton poste interne doit être présent et valide (correspondre
-à la machine courante et ne pas avoir expiré)</p></li>
-</ul>
-<p>Il y a 4 particularités pour les postes internes.</p>
-<ul>
-<li><p>On peut utiliser un domaine de client avec la licence
-correspondante (contenue dans la sauvegarde que l’on aura récupérée du
-client) sur un poste interne sans devoir l’activer (le poste interne est
-toujours reconnu comme une machine valide pour la licence).</p></li>
-<li><p>Sur un poste interne, si la date de péremption du logiciel ou la
-date de fin de validité de la licence approche, l’affichage du
-1<sup>er</sup> message d’avertissement ne déclenche pas le compte à
-rebours pour le blocage effectif (sinon, le client qui remonterait la
-sauvegarde de ses données que le CTL lui a renvoyée après une
-maintenance risquerait de se retrouver bloqué à l’entrée dans son
-domaine, sans avoir vu le message d’avertissement au
-préalable).</p></li>
-<li><p>Une licence démo n’a pas de date d’expiration sur un poste
-interne</p></li>
-<li><p>Une licence de test (qualifiée comme tel dans IsaGenLic) ne peut
-être utilisée que sur un poste interne</p></li>
-</ul>
-<h3 class="unnumbered"
-id="utilisation-de-vrai-licence-client-pour-les-tests-maj-du-26022021">Utilisation
-de vrai licence client pour les tests (Maj du 26/02/2021)<br />
-</h3>
-<p>Dans le cadre de l’enchantement client, une évolution a été faite
-récemment pour les applications en mode hébergées (FAH)</p>
-<p>Cette évolution consiste à réaliser une activation silencieuse de la
-licence, ce qui évite tout simplement de proposer cette étape visuelle
-d’activation pour les clients :</p>
-<p><img src="media/image6.png"
-style="width:6.09375in;height:3.83333in" /></p>
-<p>En effet, cette étape est inutile pour le client étant donné que
-l’activation d’une licence FAH entraine l’association lien machine sur
-nos propres serveurs hébergés et non pas un lien avec la machine du
-client.</p>
-<p>Dans le parcours d’un client FAH, celui-ci reçoit des identifiants de
-connexion par mail et son domaine est déjà initialisé par nos soins, il
-n’a « juste » qu’à saisir ses identifiants pour s’authentifier dans son
-application et n’a pas à réaliser des étapes supplémentaires
-d’initialisation de son domaine/licence.</p>
-<p>Cette évolution peut avoir des impacts pour les salariés internes,
-notamment Dev &amp; CQL :</p>
-<ul>
-<li><p>Il faut être vigilant sur l’utilisation d’une licence client sur
-un environnement de PROD.</p></li>
-<li><p>Tant que vous utilisez le jeton interne, il n’y aura pas de
-conséquence, l’activation devenue silencieuse n’aura aucun impact sur la
-licence du client.</p></li>
-<li><p>Tant que vous utilisez des environnements de TEST, il n’y aura
-également pas d’impact.</p></li>
-<li><p>Mais s’il vous arrive pour une raison quelconque de désactiver le
-jeton interne et d’utiliser la licence d’un client sur un environnement
-de PROD, alors il n’y aura plus cette fenêtre d’activation pour vous
-rappeler que vous êtes en train d’utiliser une licence client et cela va
-donc entrainer une activation automatique de la licence sur votre propre
-machine ! (*)</p></li>
-</ul>
-<p>(*) : Pour être exacte, le problème ne peut se produire que si vous
-simulez un environnement FAH sur votre poste (ex :  HostingType =
-Shared), que vous avez désactivé le jeton interne et que vous êtes câblé
-sur l’environnement IsaGestLic de PROD : Ce cas doit être très rare mais
-nous ne sommes pas à l’abri que cela puisse arriver, alors soyez
-vigilant svp.</p>
-<p>Pour info, un flash a été réalisé sur le fonctionnement du jeton
-interne et ses impacts ainsi que le fait de pointer ou non sur les
-services de démo des outils (dont Isagestlic) :</p>
-<p><a
-href="https://web.microsoftstream.com/video/7697119f-5316-4d12-b050-e61eaf3a2245?channelId=037a750e-318d-4cfd-b003-448627e121e0">https://web.microsoftstream.com/video/7697119f-5316-4d12-b050-e61eaf3a2245?channelId=037a750e-318d-4cfd-b003-448627e121e0</a></p>
-<h1 id="historique">Historique</h1>
-<p>Cf. historique géré dans le système documentaire</p>
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Protection 2013 : Fonctionnement salarié</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+      }
+      header,
+      footer {
+        background-color: #007bff;
+        color: white;
+        text-align: center;
+        padding: 1em;
+      }
+      main {
+        padding: 20px;
+      }
+      section {
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Protection 2013 : Fonctionnement salarié</h1>
+    </header>
+
+    <main>
+      <div class="content">
+        <h1 id="contexte-et-objet">Contexte et objet</h1>
+        <h2 class="unnumbered" id="contexte">Contexte</h2>
+        <p>
+          La protection a pour objectif de contrôler que nos clients utilisent
+          leur logiciel conformément à ce qu’ils ont acheté.  La réécriture des
+          applications Isagri a nécessité une réécriture complète du système de
+          protection « Protection 2013 »). Sa mise en œuvre est complexe et fait
+          intervenir de nombreuses équipes (Dev outils, DRI « GISA » et « GRC »,
+          MktM, MktPr, Dev Progiciel, CQL Progiciel, ADV – Clientèle, SL, IAH,
+          ... France et export).
+        </p>
+        <p>
+          Ce document fait partie d’une série de documentations expliquant le
+          fonctionnement et la mise en œuvre de la protection 2013 dans les
+          applications Convergence. Pour une vision générale des documentations
+          disponibles, cf.
+          <a
+            href="http://projectsrv2010/sites/Coordination/SystemeDocumentaire/_layouts/DocIdRedir.aspx?ID=R6RHQAPNUWS3-52-255"
+            >ici</a
+          >
+        </p>
+        <h2 class="unnumbered" id="objet">Objet</h2>
+        <p>
+          Ce document décrit les utilitaires qui existent pour tester la
+          protection 2013. Il s’adresse aux salariés (dev, test, SL), CIMs,
+          partenaires qui doivent tester le bon fonctionnement de la protection
+          2013.
+        </p>
+        <p>
+          Ce document est un document interne qui ne doit pas être diffusé à
+          l’extérieur de l’entreprise.
+        </p>
+        <h1 id="prerequis">Prerequis</h1>
+        <p>
+          Pour comprendre le présent document, il faut avoir lu le document « <a
+            href="http://projectsrv2010/sites/Coordination/SystemeDocumentaire/_layouts/DocIdRedir.aspx?ID=R6RHQAPNUWS3-52-256"
+            >Protection 2013 : principes généraux</a
+          > »
+        </p>
+        <h1 id="licences-de-tests">Licences de tests</h1>
+        <p>
+          Les développeurs, testeurs, formateurs … ont besoin de licences « sur
+          mesure » pour pouvoir tester le bon fonctionnement de la protection
+          (par exemple pour vérifier la désactivation de tel bouton, menu, zone
+          de saisie, … selon les modules fonctionnels présents dans la licence).
+          Il s’agit de licences de tests.
+        </p>
+        <p>
+          Elles ne sont pas gérées dans le SI Isagri (serait trop lourd de
+          devoir créer un client, un domaine, les solutions commerciales
+          adéquates, … ) mais sont construites sur mesure par le développeur,
+          testeur, formateur, … en fonction de ses besoins grâce à une
+          application ad’hoc. Cette application
+          (IP.Licence.GenLic.Application.exe ou
+          <strong>IsaGenLic</strong> en abrégé pour « Application
+          <strong>Isa</strong>gri de <strong>gén</strong>ération de
+          <strong>lic</strong>ences) est développée par l’équipe « Développement
+          progiciel Outils » et est disponible sur
+          P:\Outils\Utilitaires\IsaGenLic.
+        </p>
+        <p>
+          Elle offre 2 fonctionnalités :
+          <a
+            href="http://projectsrv2010/sites/Coordination/_layouts/DocIdRedir.aspx?ID=R6RHQAPNUWS3-23-884"
+            >Voir doc d’utilisation</a
+          >
+        </p>
+        <ul>
+          <li>
+            <p>
+              La possibilité de générer une licence de tests pour un domaine
+              existant, en saisissant l’application concernées, les modules
+              fonctionnels autorisés, les volumétries autorisées, le pays de
+              fonctionnement, etc … Ces licences de tests ne requièrent pas
+              activation mais ne sont utilisables que sur des
+              <a
+                href="http://projectsrv2010/sites/Coordination/SystemeDocumentaire/DocOfficielsSansValidation/Protection_2013_fonctionnement_salarie.docm#_Postes_internes"
+                >postes internes</a
+              >
+              (pour éviter leur diffusion à l’extérieur).
+            </p>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <p>
+              La possibilité de visualiser le contenu d’une licence existante
+            </p>
+          </li>
+        </ul>
+        <h1 id="postes-internes">Postes internes</h1>
+        <h3 class="unnumbered" id="de-quoi-sagit-il">De quoi s’agit-il ?</h3>
+        <p>
+          Les développeurs, testeurs, CTL, CIMs, … doivent pouvoir effectuer des
+          tests, maintenances, … sur des jeux de données de clients. De ce fait,
+          le comportement des licences doit être particulier sur leur poste (par
+          exemple, il ne faut pas que l’utilisation d’un jeu de données de
+          client requière activation de la licence du client pour le poste du
+          salarié en « consommant » une installation au détriment du client).
+        </p>
+        <p>Les postes en question sont identifiés comme « postes internes ».</p>
+        <p>
+          Il peut s’agir de poste de salariés Isagri (du siège ou terrain), de
+          CIMs, de salariés de filiales, de salariés de partenaires
+          (distributeurs qui font du support), …
+        </p>
+        <h3
+          class="unnumbered"
+          id="comment-un-poste-est-il-reconnu-comme-poste-interne"
+        >
+          Comment un poste est-il reconnu comme poste interne ?
+        </h3>
+        <p>
+          Un jeton à jour doit être installé sur le poste concerné. Ce jeton est
+          spécifique au poste (ne peut donc être copié d’un poste à l’autre) et
+          a une durée de vie limitée à 2 mois.
+        </p>
+        <p>2 étapes sont nécessaires</p>
+        <h4
+          class="unnumbered"
+          id="identification-du-poste-comme-potentiellement-interne"
+        >
+          Identification du poste comme « potentiellement interne »
+        </h4>
+        <p>
+          Pour automatiser la recherche de jeton, l’utilisateur doit lancer sur
+          son poste l’application « InternalProtectionDeployment.exe »
+          (application disponible sur T:\Installations des applications
+          communes\InternalProtection2013). A noter que cette application est
+          lancée par la DRI à l’initialisation de tout nouveau poste salarié
+          (équipes du siège ou distantes). Cela a pour effet de «  marquer » le
+          poste comme « potentiellement interne »
+        </p>
+        <p>
+          C’est le poste où s’exécute la couche « IHM » qui est identifié comme
+          interne ou non
+        </p>
+        <p>
+          InternalProtectionDeployment.exe /U « démarque » le poste comme
+          « potentiellement interne ». La recherche de jeton poste interne n’est
+          plus faite.
+        </p>
+        <p>
+          <strong>ATTENTION</strong> : merci d’utiliser la dernière version
+          d’InternalProtectionDeployment avant d’utiliser l’option /U  car les
+          versions précédentes de /u provoquent des effets de bord conduisant
+          indirectement à l’invalidation des licences déjà activées en plus de
+          la désinstallation du jeton interne.
+        </p>
+        <p>
+          La dernière version date de Janvier 2017 : version 6.46.0 de l’exe
+          (clic droit Propriétés/Détails dans l’explorateur), qui déploie la
+          version 1.0.5 de la dll JetonInterne2013.dll (T:\Installations des
+          applications communes\InternalProtection2013\).
+        </p>
+        <p>
+          Le traitement qui provoquait cet effet de bord fait maintenant l’objet
+          d’une commande distincte : /ResetIdMachine, qui ne devrait qu’être
+          rarement utilisée sans un avis préalable de la RCP Protection.
+        </p>
+        <h4 class="unnumbered" id="rapatriement-du-jeton">
+          Rapatriement du jeton
+        </h4>
+        <p>
+          Sur un poste marqué comme « Potentiellement interne », on déclenche
+          automatiquement, lors de l’entrée dans une application Isagri protégée
+          par la protection 2013, le rapatriement sur le poste d’un nouveau
+          jeton si nécessaire (absence de jeton ou jeton présent mais expiré ou
+          dont la date d’expiration est proche : &lt;= 30 jours). Un poste d’un
+          client n’étant pas marqué comme « potentiellement interne », on ne
+          cherche donc pas à y rapatrier un jeton interne.
+        </p>
+        <p>
+          Le rapatriement du jeton est complètement transparent si le poste est
+          connecté au réseau interne Isagri au moment de la recherche.
+        </p>
+        <p>
+          Si ce n’est pas le cas (poste de commerciaux, de CIMs, de salariés de
+          filiales), l’utilisateur est invité à s’authentifier (login et mots de
+          passe Active Directory) pour pouvoir récupérer un jeton valide.
+        </p>
+        <p>
+          <img
+            src="media/image3.png"
+            style="width: 3.03194in; height: 1.55972in"
+            alt="jeton_nouvelle_version"
+          />
+        </p>
+        <p>
+          Tous les utilisateurs de postes internes (y compris CIMs, salariés de
+          filiales) doivent donc être connus de l’AD et rattachés au groupe
+          adéquat par la DRI
+        </p>
+        <p>
+          Une fois obtenu, le jeton est valable 2 mois (même si le poste n’est
+          pas connecté au réseau Isagri ou à Internet : poste de formateur qui
+          part en clientèle, …) pour le poste en question. En cas de changement
+          de poste, un nouveau jeton est requis.
+        </p>
+        <p>La recherche de jeton est exécutée 1 fois par mois au maximum.</p>
+        <p>
+          Ce fonctionnement permet de bloquer au bout de 2 mois maximum les
+          salariés, CIMs, distributeurs, … qui ont quitté l’entreprise ou rompu
+          leur contrat.
+        </p>
+        <p>26/04/2018 :</p>
+        <p>
+          Pour éviter de devoir gérer dans notre AD des comptes pour des
+          utilisateurs externes à l’entreprise qui auraient besoin d’un jeton
+          interne (c’est le cas de quelques clients prestataires qui ont besoin
+          de remonter des sauvegardes de leurs clients équipes en gestion
+          commerciale pour intervenir sur le dossier en question puis le
+          renvoyer au client), une évolution a été apportée par la DRI pour
+          permettre de créer des utilisateurs de jetons internes en dehors de
+          l’AD.
+        </p>
+        <p>
+          Pour cela, accéder à IsaBOSC (<a
+            href="http://isabosc.groupeisagri.com"
+            >http://isabosc.groupeisagri.com</a
+          >) puis menu « Gestion des utilisateurs », « Jeton interne » (accès
+          est réservé à D. Lemal et T. Hardion)
+        </p>
+        <p>
+          Pour créer un utilisateur, saisir un identifiant et un mot de passe.
+        </p>
+        <p>
+          <img
+            src="media/image4.png"
+            style="width: 4.125in; height: 2.05208in"
+            alt="cid:image001.png@01D3DD49.B79BABA0"
+          />
+        </p>
+        <p>
+          Le mot de passe peut aussi être généré aléatoirement en cliquant sur
+          le lien « générer » (génère un mot de passe de 10 caractères
+          alpha-numériques + symboles). Attention, une fois l’utilisateur
+          enregistré, on ne peut plus voir son mot de passe. Par contre, on peut
+          modifier le mot de passe en cliquant sur « Editer » de la ligne
+          correspondante dans le tableau :
+        </p>
+        <p>
+          Pour obtenir le jeton interne, l’utilisateur ainsi créé suit la même
+          procédure qu’un salarié non connecté au réseau interne Isagri : il
+          renseigne son identifiant et le mot de passe qui lui a été communiqué.
+        </p>
+        <h3 class="unnumbered" id="quelles-particularités-de-fonctionnement">
+          Quelles particularités de fonctionnement ?
+        </h3>
+        <p>
+          Pour qu'une poste soit considéré comme poste interne, 2 conditions
+          sont nécessaires :
+        </p>
+        <ul>
+          <li>
+            <p>
+              Le poste doit être "potentiellement" interne : on y lancé
+              InternalProtectionDeployment.exe
+            </p>
+          </li>
+          <li>
+            <p>
+              Le jeton poste interne doit être présent et valide (correspondre à
+              la machine courante et ne pas avoir expiré)
+            </p>
+          </li>
+        </ul>
+        <p>Il y a 4 particularités pour les postes internes.</p>
+        <ul>
+          <li>
+            <p>
+              On peut utiliser un domaine de client avec la licence
+              correspondante (contenue dans la sauvegarde que l’on aura
+              récupérée du client) sur un poste interne sans devoir l’activer
+              (le poste interne est toujours reconnu comme une machine valide
+              pour la licence).
+            </p>
+          </li>
+          <li>
+            <p>
+              Sur un poste interne, si la date de péremption du logiciel ou la
+              date de fin de validité de la licence approche, l’affichage du
+              1<sup>er</sup>
+              message d’avertissement ne déclenche pas le compte à rebours pour
+              le blocage effectif (sinon, le client qui remonterait la
+              sauvegarde de ses données que le CTL lui a renvoyée après une
+              maintenance risquerait de se retrouver bloqué à l’entrée dans son
+              domaine, sans avoir vu le message d’avertissement au préalable).
+            </p>
+          </li>
+          <li>
+            <p>
+              Une licence démo n’a pas de date d’expiration sur un poste interne
+            </p>
+          </li>
+          <li>
+            <p>
+              Une licence de test (qualifiée comme tel dans IsaGenLic) ne peut
+              être utilisée que sur un poste interne
+            </p>
+          </li>
+        </ul>
+        <h3
+          class="unnumbered"
+          id="utilisation-de-vrai-licence-client-pour-les-tests-maj-du-26022021"
+        >
+          Utilisation de vrai licence client pour les tests (Maj du
+          26/02/2021)<br />
+        </h3>
+        <p>
+          Dans le cadre de l’enchantement client, une évolution a été faite
+          récemment pour les applications en mode hébergées (FAH)
+        </p>
+        <p>
+          Cette évolution consiste à réaliser une activation silencieuse de la
+          licence, ce qui évite tout simplement de proposer cette étape visuelle
+          d’activation pour les clients :
+        </p>
+        <p>
+          En effet, cette étape est inutile pour le client étant donné que
+          l’activation d’une licence FAH entraine l’association lien machine sur
+          nos propres serveurs hébergés et non pas un lien avec la machine du
+          client.
+        </p>
+        <p>
+          Dans le parcours d’un client FAH, celui-ci reçoit des identifiants de
+          connexion par mail et son domaine est déjà initialisé par nos soins,
+          il n’a « juste » qu’à saisir ses identifiants pour s’authentifier dans
+          son application et n’a pas à réaliser des étapes supplémentaires
+          d’initialisation de son domaine/licence.
+        </p>
+        <p>
+          Cette évolution peut avoir des impacts pour les salariés internes,
+          notamment Dev &amp; CQL :
+        </p>
+        <ul>
+          <li>
+            <p>
+              Il faut être vigilant sur l’utilisation d’une licence client sur
+              un environnement de PROD.
+            </p>
+          </li>
+          <li>
+            <p>
+              Tant que vous utilisez le jeton interne, il n’y aura pas de
+              conséquence, l’activation devenue silencieuse n’aura aucun impact
+              sur la licence du client.
+            </p>
+          </li>
+          <li>
+            <p>
+              Tant que vous utilisez des environnements de TEST, il n’y aura
+              également pas d’impact.
+            </p>
+          </li>
+          <li>
+            <p>
+              Mais s’il vous arrive pour une raison quelconque de désactiver le
+              jeton interne et d’utiliser la licence d’un client sur un
+              environnement de PROD, alors il n’y aura plus cette fenêtre
+              d’activation pour vous rappeler que vous êtes en train d’utiliser
+              une licence client et cela va donc entrainer une activation
+              automatique de la licence sur votre propre machine ! (*)
+            </p>
+          </li>
+        </ul>
+        <p>
+          (*) : Pour être exacte, le problème ne peut se produire que si vous
+          simulez un environnement FAH sur votre poste (ex :  HostingType =
+          Shared), que vous avez désactivé le jeton interne et que vous êtes
+          câblé sur l’environnement IsaGestLic de PROD : Ce cas doit être très
+          rare mais nous ne sommes pas à l’abri que cela puisse arriver, alors
+          soyez vigilant svp.
+        </p>
+        <p>
+          Pour info, un flash a été réalisé sur le fonctionnement du jeton
+          interne et ses impacts ainsi que le fait de pointer ou non sur les
+          services de démo des outils (dont Isagestlic) :
+        </p>
+        <p>
+          <a
+            href="https://web.microsoftstream.com/video/7697119f-5316-4d12-b050-e61eaf3a2245?channelId=037a750e-318d-4cfd-b003-448627e121e0"
+            >https://web.microsoftstream.com/video/7697119f-5316-4d12-b050-e61eaf3a2245?channelId=037a750e-318d-4cfd-b003-448627e121e0</a
+          >
+        </p>
+        <h1 id="historique">Historique</h1>
+        <p>Cf. historique géré dans le système documentaire</p>
+      </div>
+    </main>
+
+    <footer>
+      <p>FPO…</p>
+    </footer>
+  </body>
+</html>

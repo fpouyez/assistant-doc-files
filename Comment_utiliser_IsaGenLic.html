@@ -1,0 +1,367 @@
+<table>
+<colgroup>
+<col style="width: 47%" />
+<col style="width: 26%" />
+<col style="width: 26%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td colspan="3">Comment utiliser IsaGenLic ou GenLic</td>
+</tr>
+<tr class="even">
+<td>Auteur : Amélie SCHNEIDER</td>
+<td>Création : 07/03/17</td>
+<td>Modification : 10/11/17</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Contenu</strong></p>
+<p><a href="#contexte-et-objet">I. Contexte et objet
+<span>3</span></a></p>
+<p><a href="#contexte">Contexte <span>3</span></a></p>
+<p><a href="#objet">Objet <span>3</span></a></p>
+<p><a href="#voir-aussi">II. Voir aussi <span>3</span></a></p>
+<p><a href="#présentation-générale">III. Présentation générale
+<span>3</span></a></p>
+<p><a href="#paramétrer-lapplication">IV. Paramétrer l’application
+<span>3</span></a></p>
+<p><a href="#paramétrage-des-sources-de-données">Paramétrage des sources
+de données <span>3</span></a></p>
+<p><a href="#paramétrage-des-modules">Paramétrage des modules
+<span>3</span></a></p>
+<p><a href="#paramétrage-des-activités">Paramétrage des activités
+<span>4</span></a></p>
+<p><a href="#paramétrage-des-volumétries">Paramétrage des volumétries
+<span>4</span></a></p>
+<p><a
+href="#récupération-du-paramétrage-saisi-sur-un-autre-poste">Récupération
+du paramétrage saisi sur un autre poste <span>4</span></a></p>
+<p><a href="#créer-une-licence">V. Créer une licence
+<span>5</span></a></p>
+<p><a href="#créer-une-nouvelle-licence-dans-un-domaine-existant">Créer
+une nouvelle licence dans un domaine existant <span>5</span></a></p>
+<p><a
+href="#créer-une-nouvelle-licence-dans-un-nouveau-domaine-obsolète-à-partir-de-la-7.2.0">Créer
+une nouvelle licence dans un nouveau domaine (obsolète à partir de la
+7.2.0) <span>7</span></a></p>
+<p><a href="#ouvrir-une-licence-existante">VI. Ouvrir une licence
+existante <span>8</span></a></p>
+<p><a href="#installer-une-licence-existante-en-base">VII. Installer une
+licence existante en base <span>9</span></a></p>
+<p><a
+href="#récupérer-les-modules-et-les-volumétries-dune-licence-dans-le-presse-papier">VIII.
+Récupérer les modules et les volumétries d’une licence dans le
+presse-papier <span>10</span></a></p>
+<p><a
+href="#créer-une-licence-pour-un-agriculteur-en-mode-partenaire-amp">IX.
+Créer une licence pour un agriculteur en mode partenaire (AMP)
+<span>10</span></a></p>
+<p><a href="#rappel">Rappel <span>10</span></a></p>
+<p><a href="#création-de-la-licence">Création de la licence
+<span>10</span></a></p>
+<p><a
+href="#enregistrement-de-la-licence-dans-la-base-de-lorganisme">Enregistrement
+de la licence dans la base de l’organisme <span>10</span></a></p>
+<p><a href="#problèmes-connus">X. Problèmes connus
+<span>11</span></a></p>
+<p><a
+href="#affichage-des-id-de-ressource-au-lieu-des-libellés">Affichage des
+Id de ressource au lieu des libellés <span>11</span></a></p>
+<h1 id="contexte-et-objet">Contexte et objet</h1>
+<h2 class="unnumbered" id="contexte">Contexte</h2>
+<h2 class="unnumbered" id="objet">Objet</h2>
+<p>Ce document va décrire les différentes fonctionnalités disponibles
+dans l’application IsaGenLic (ou Genlic).</p>
+<h1 id="voir-aussi">Voir aussi</h1>
+<h1 id="présentation-générale">Présentation générale</h1>
+<p>Ce document va décrire les différentes fonctionnalités disponibles
+dans l’application IsaGenLic.</p>
+<p>Pour démarrer l’application, il faut lancer
+« IP.Licence.GenLic.Application.exe »</p>
+<p>La dernière version de l’application (sans paramétrage de défini) est
+présente sur P:\Outils\Utilitaires\IsagenLic\Main. Il suffit de la
+copier sur votre PC pour pouvoir l’utiliser.</p>
+<h1 id="paramétrer-lapplication">Paramétrer l’application</h1>
+<p>Avant de pouvoir créer ou ouvrir une licence, il faut paramétrer
+différents éléments via le groupe « Configuration » du ruban
+« Accueil ».</p>
+<p><img src="media/image1.png"
+style="width:3.11681in;height:0.78383in" /></p>
+<h2 class="unnumbered"
+id="paramétrage-des-sources-de-données">Paramétrage des sources de
+données</h2>
+<p>Pour pouvoir ouvrir une licence depuis une base de données,
+enregistrer une licence directement dans une base ou installer une
+licence en base, il faut configurer les sources de données disponibles
+via le bouton « Gestion des sources de données ».</p>
+<p>Une source de donnée est décrite par le nom de la machine et le nom
+de l’instance SQL où se trouve la base de données avec laquelle on veut
+travailler.</p>
+<p><img src="media/image2.png"
+style="width:2.02793in;height:1.18002in" /></p>
+<h2 class="unnumbered" id="paramétrage-des-modules">Paramétrage des
+modules</h2>
+<p>Pour pouvoir affecter les modules à une licence, il faut au préalable
+les décrire via le bouton « Gestion des modules ».</p>
+<p>Un module est décrit par un code et un libellé.<br />
+C’est le code qui sera transporté dans la licence, il doit donc être
+identique au code utilisé dans votre application.</p>
+<p><img src="media/image3.png"
+style="width:3.81616in;height:1.47328in" /></p>
+<h2 class="unnumbered" id="paramétrage-des-activités">Paramétrage des
+activités</h2>
+<p>Pour pouvoir affecter la (ou les) activité à une licence, il faut au
+préalable les décrire via le bouton « Gestion des activités ».</p>
+<p>Une activité est décrite par un code et un libellé.<br />
+C’est le code qui sera transporté dans la licence, il doit donc être
+identique au code utilisé dans votre application.</p>
+<p><img src="media/image4.png"
+style="width:1.82499in;height:1.24159in" /></p>
+<h2 class="unnumbered" id="paramétrage-des-volumétries">Paramétrage des
+volumétries</h2>
+<p>Pour pouvoir affecter la (ou les) volumétries autorisés sur une
+licence, il faut au préalable décrire les natures de volumétries
+disponibles pour l’application via le bouton « Gestion des
+volumétries ».</p>
+<p>Une nature de volumétrie est décrite par un code et un libellé.<br />
+C’est le code qui sera transporté dans la licence, il doit donc être
+identique au code utilisé dans votre application.</p>
+<p><img src="media/image5.png"
+style="width:2.53835in;height:1.27626in" /></p>
+<h2 class="unnumbered"
+id="récupération-du-paramétrage-saisi-sur-un-autre-poste">Récupération
+du paramétrage saisi sur un autre poste</h2>
+<p>Les éléments paramétrés sont stockées dans des fichiers présents à
+côté de l’exe. Il est donc possible de les copier d’un poste à un autre
+pour éviter de devoir tout ressaisir via l’application même si le
+paramétrage a été fait pour un autre logiciel Isagri.</p>
+<ul>
+<li><p>Sources de données = datasources.xml</p></li>
+<li><p>Modules = [RadicalAppli].Modules.xml</p></li>
+<li><p>Activités = activities.xml</p></li>
+<li><p>Volumétries = [RadicalAppli].Volumes.xml</p></li>
+</ul>
+<p>Si le paramétrage a été fait pour un autre logiciel Isagri, il suffit
+de renommer le fichier des modules et celui des volumétries en
+remplaçant le [RadicalAppli].</p>
+<h1 id="créer-une-licence">Créer une licence</h1>
+<p>L’application permet de créer une licence pour un domaine existant.
+Jusqu’à la 7.2.0 de l’application, on permettait aussi de créer une
+licence dans un nouveau domaine.<br />
+Il est préconisé d’utiliser l’option « Nouvelle licence dans un domaine
+existant » pour éviter de consommer des domaines utilisateurs. Une plage
+de n° de domaine a été réservée à cet effet et ces domaines sont flagués
+comme « domaine de test ».</p>
+<p><img src="media/image6.png"
+style="width:2.16037in;height:1.14445in" /></p>
+<h2 class="unnumbered"
+id="créer-une-nouvelle-licence-dans-un-domaine-existant">Créer une
+nouvelle licence dans un domaine existant</h2>
+<p>Cliquer sur le bouton « Nouvelle licence dans un domaine
+existant »</p>
+<h3 class="unnumbered"
+id="renseigner-les-informations-générales-de-la-licence">Renseigner les
+informations générales de la licence</h3>
+<p><img src="media/image7.png"
+style="width:3.67411in;height:3.9107in" /></p>
+<p>Renseigner un identifiant entre 1 et 99 (inclus) = Plage réservée
+pour les domaines de test.</p>
+<p>La langue est obligatoire.<br />
+Avant la V7.2.0, la langue était une zone de saisie et elle devait être
+saisie en minuscule.</p>
+<p>Saisie libre de type numérique mais il peut être utile pour la
+retrouver facilement dans la base de mettre le même identifiant que le
+domaine.</p>
+<p>Saisie libre mais il peut être utile pour la retrouver facilement
+dans la base de mettre le même identifiant que le domaine</p>
+<ul>
+<li><p>Nom domaine</p>
+<ul>
+<li><p>Le nom du domaine sera généré automatiquement lors de
+l’enregistrement.</p></li>
+</ul></li>
+<li><p>Identifiant client responsable</p>
+<ul>
+<li><p>A ne renseigner que pour les licences d’agriculteur en mode
+partenaire.<br />
+Dans ce cas, l’identifiant est l’identifiant client de l’organisme de
+référence et l’identifiant du domaine est celui du domaine de
+l’organisme.</p></li>
+</ul></li>
+<li><p>Produit</p>
+<ul>
+<li><p>Pour spécifier qu’une licence est valable pour un produit blanc
+en particulier, il faut renseigner ce champ avec le code du
+produit.</p></li>
+<li><p>Si ce champ n’est pas renseigné, on considère alors que la
+licence est valable pour un produit « Isagri ».</p></li>
+</ul></li>
+</ul>
+<h3 class="unnumbered"
+id="renseigner-les-modules-de-la-licence">Renseigner les modules de la
+licence</h3>
+<p><img src="media/image8.png"
+style="width:2.84054in;height:2.87988in" /></p>
+<p>Cocher les modules souhaités</p>
+<h3 class="unnumbered"
+id="renseigner-les-activités-de-la-licence">Renseigner les activités de
+la licence</h3>
+<p><img src="media/image9.png"
+style="width:2.97745in;height:1.44241in" /></p>
+<p>Cocher les activités souhaitées</p>
+<h3 class="unnumbered"
+id="renseigner-les-volumétries-de-la-licence">Renseigner les volumétries
+de la licence</h3>
+<p><img src="media/image10.png"
+style="width:4.53253in;height:1.63492in" /></p>
+<p>Sélectionner la nature de volumétrie et l’activité pour laquelle la
+volumétrie s’applique.</p>
+<p>Si l’activité n’est pas renseignée alors la valeur de la volumétrie
+s’applique toutes activités confondues.</p>
+<h3 class="unnumbered" id="enregistrement">Enregistrement</h3>
+<p>L’enregistrement de la licence peut se faire dans un fichier (.lic)
+ou directement dans une base de données.</p>
+<p>Lors de l’enregistrement dans une base de données, le domaine de la
+licence doit déjà exister dans la base de données.<br />
+Cette option permet d’enregistrer les licences des agriculteurs en mode
+partenaire dans la base de l’organisme qui contient déjà le domaine et
+la licence de l’organisme</p>
+<h2 class="unnumbered"
+id="créer-une-nouvelle-licence-dans-un-nouveau-domaine-obsolète-à-partir-de-la-7.2.0">Créer
+une nouvelle licence dans un nouveau domaine (obsolète à partir de la
+7.2.0)</h2>
+<p>Cliquer sur le bouton « Nouvelle licence dans un nouveau
+domaine »</p>
+<p>Un nouvel identifiant de domaine unique est généré via un appel à un
+service DRI (comme lors de la création d’un domaine via IsaGestLic).</p>
+<p>Les étapes de création de la licence sont les mêmes que lors de la
+création d’une licence dans un domaine existant (décrit ci-dessus).</p>
+<p>La différence est que l’on doit saisir le nom du domaine et que
+l’identifiant du domaine n’est pas saisissable.</p>
+<p><img src="media/image11.png"
+style="width:3.56832in;height:3.73757in" /></p>
+<h1 id="ouvrir-une-licence-existante">Ouvrir une licence existante</h1>
+<p>L’application permet d’ouvrir licence à partir d’un fichier ou
+directement à partir d’une licence installée dans une base de données
+via le bouton « Ouvrir une licence depuis… ».<br />
+<img src="media/image12.png"
+style="width:1.35075in;height:1.29447in" /></p>
+<p>Cette fonctionnalité permet de voir le contenu d’une licence interne
+ou client.<br />
+S’il s’agit d’une licence client, aucune modification n’est
+possible.<br />
+S’il s’agit d’une licence interne, les modules, activités et volumétries
+sont totalement modifiables. Concernant les informations générales,
+certaines données ne peuvent être modifiées.</p>
+<p><img src="media/image13.png"
+style="width:2.59674in;height:2.40381in" /></p>
+<p>Pour enregistrer les modifications, il suffit d’utiliser le bouton
+« disquette » et l’enregistrement se fera alors directement dans la
+licence (dans le fichier si ouverture depuis un fichier, dans la base de
+données sinon)</p>
+<p>L’onglet « Détail » permet de voir le contenu saisi dans les autres
+onglets mais il permet aussi de voir d’autres informations enregistrées
+qui peuvent être utile lors d’une maintenance.</p>
+<p><img src="media/image14.png"
+style="width:5.1696in;height:2.83445in" /></p>
+<p>Si la licence n’a pas été activée, affichage de la date limitée pour
+activée.</p>
+<p>Les conditions d’utilisation sont-elles acceptées ?</p>
+<p>Date de blocage et son motif.</p>
+<p>Si la licence a été activée, une section « Activation » apparait
+alors avec la date, la version de dernière activation, …</p>
+<h1 id="installer-une-licence-existante-en-base">Installer une licence
+existante en base</h1>
+<p>L’application permet d’installer une licence directement dans une
+base de données via le bouton « Installation licence en Base ».<br />
+<img src="media/image15.png"
+style="width:0.75894in;height:0.79343in" /></p>
+<p>Au clic sur le bouton, il vous sera demandé de sélectionner le
+fichier lic à installer puis de sélectionner la base de données de
+destination.</p>
+<p><img src="media/image16.png"
+style="width:3.74286in;height:1.7026in" /></p>
+<p>Lors de l’enregistrement de la licence dans la base de données, une
+nouvelle licence est créée si elle n’existe pas déjà. Si la licence
+existe déjà, elle est mise à jour. Cela permet de mettre à jour une
+licence qui ne pointait pas sur le bon domaine.<br />
+IsaGenLic en profite pour mettre à jour le nom du domaine dans la base.
+Le domaine de la licence doit déjà exister dans la base de données.</p>
+<h1
+id="récupérer-les-modules-et-les-volumétries-dune-licence-dans-le-presse-papier">Récupérer
+les modules et les volumétries d’une licence dans le presse-papier</h1>
+<p>Il est possible d’exporter vers le presse-papier les modules et les
+volumétries via les deux boutons disponibles dans l’onglet de la licence
+ouverte :<br />
+<img src="media/image17.png"
+style="width:2.59275in;height:0.58358in" /></p>
+<p>Cela facilite la comparaison avec des listes de référence, notamment
+quand il y a beaucoup de modules techniques (autour de 100 possibles en
+compta). On peut en effet copier le résultat dans Excel ou dans un autre
+outil pour faire les comparaisons.</p>
+<h1
+id="créer-une-licence-pour-un-agriculteur-en-mode-partenaire-amp">Créer
+une licence pour un agriculteur en mode partenaire (AMP)</h1>
+<h2 class="unnumbered" id="rappel">Rappel</h2>
+<p>Un AMP est un agriculteur en mode partenaire avec un organisme. Il
+peut saisir lui-même ses données dans le logiciel mais ses données sont
+stockées dans le domaine de l’organisme.</p>
+<p>Un AMP possède sa propre licence qui est enregistrée dans le domaine
+de l’organisme.</p>
+<p>Pour utiliser le logiciel, l’AMP doit se connecter avec son
+Identifiant Client et son login/mot de passe.</p>
+<h2 class="unnumbered" id="création-de-la-licence">Création de la
+licence</h2>
+<p>Renseigner les différentes infos de la licence comme décrit dans le
+paragraphe <a href="#_Toc478660674">Créer une nouvelle licence dans un
+domaine existant</a>.</p>
+<p>La licence de l’AMP est <strong>une licence de type
+« Individuel »</strong>.</p>
+<p>Elle doit <strong>avoir comme « Identifiant domaine » l’identifiant
+domaine de l’organisme</strong> et <strong>son « Identifiant client
+responsable » doit être l’identifiant client de
+l’organisme</strong>.</p>
+<p>Par contre elle doit avoir <strong>un « Identifiant Licence » et un
+« Identifiant Client » différent de l’organisme</strong>.</p>
+<h2 class="unnumbered"
+id="enregistrement-de-la-licence-dans-la-base-de-lorganisme">Enregistrement
+de la licence dans la base de l’organisme</h2>
+<p><img src="media/image18.png"
+style="width:3.89147in;height:0.52825in" /></p>
+<h3 class="unnumbered"
+id="domaine-de-lorganisme-existant-en-base-de-donnée">Domaine de
+l’organisme existant en base de donnée</h3>
+<p>Si le domaine de l’organisme a déjà été initialisé et que vous n’avez
+pas besoin de réutiliser plus tard cette licence AMP, il suffit
+d’enregistrer la licence directement dans la base de données de
+l’organisme via le bouton « Enregistrer en base de donnée » ou via la
+disquette en sélectionnant le radio-bouton « Base de données » dans la
+modale qui s’ouvre.</p>
+<p>Il vous sera alors demander de sélectionner la base de données de
+destination.</p>
+<p><img src="media/image16.png"
+style="width:3.74286in;height:1.7026in" /></p>
+<p>Pour rappel, l’enregistrement direct en base de données ne peut se
+faire que si le domaine de la licence existe déjà dans la base.</p>
+<h3 class="unnumbered"
+id="domaine-de-lorganisme-non-existant-en-base-de-donnée">Domaine de
+l’organisme non existant en base de donnée</h3>
+<p>Si le domaine de l’organisme n’existe pas encore en base de données
+ou que vous avez besoin de garder cette licence AMP pour la réutiliser,
+il suffit d’enregistrer la licence dans un fichier via le bouton
+« Enregistrer dans un fichier » ou via la disquette en sélectionnant le
+radio-bouton « Fichier » dans la modale qui s’ouvre.</p>
+<p>Lorsque le domaine de l’organisme aura été initialisé, il suffira
+d’enregistrer la licence AMP comme expliqué dans le paragraphe <a
+href="#_Toc498083149">Installer une licence existante en base</a></p>
+<h1 id="problèmes-connus">Problèmes connus</h1>
+<h2 class="unnumbered"
+id="affichage-des-id-de-ressource-au-lieu-des-libellés">Affichage des Id
+de ressource au lieu des libellés</h2>
+<p><img src="media/image19.png"
+style="width:5.75504in;height:3.14256in" /></p>
+<p>Si vous lancez l’utilitaire depuis le réseau, il est très probable
+que les libellés soient remplacés par leur Id de ressource (comme
+ci-dessus).</p>
+<p>Pour être sûr de voir les libellés, il suffit de copier le répertoire
+en local.</p>
